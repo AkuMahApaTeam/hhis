@@ -1,0 +1,8 @@
+/.project
+/backend/web/assets
+/frontend/web/assets
+/backend/runtime
+/frontend/runtime
+/common/config/main-local.php
+/.idea
+/vendor
