@@ -10,7 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'homeUrl' => '/hhis2',
+//    'homeUrl' => '/hhis2',
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
         'redactor' => [
@@ -48,7 +48,7 @@ return [
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+//            'showScriptName' => false,
          ],
         'urlManagerBackend' => [
             'class' => 'yii\web\urlManager',
@@ -74,9 +74,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
-        'request' => [
-            'baseUrl' => '/hhis2',
-        ],
+//        'request' => [
+//            'baseUrl' => '/hhis2',
+//        ],
         'user' => [
             'identityClass' => 'frontend\models\Mahasiswa',
             'enableAutoLogin' => true,
@@ -99,12 +99,12 @@ return [
             'errorAction' => 'site/error',
         ],
 
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
+//        'urlManager' => [
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
+//            'rules' => [
+//            ],
+//        ],
 
     ],
     'params' => $params,
