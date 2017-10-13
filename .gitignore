@@ -6,3 +6,4 @@
 /common/config/main-local.php
 /.idea
 /vendor
+composer.lock

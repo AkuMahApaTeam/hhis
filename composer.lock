@@ -871,7 +871,7 @@
                 "autocomplete",
                 "typeahead"
             ],
-            "time": "2016-07-10T07:55:54+00:00"
+            "time": "2016-07-10 07:55:54"
         },
         {
             "name": "bower-asset/typeahead.js",
@@ -937,7 +937,11 @@
             "license": [
                 "MIT"
             ],
+<<<<<<< HEAD
             "time": "2017-10-12T10:12:03+00:00"
+=======
+            "time": "2017-10-12 10:12:03"
+>>>>>>> ef5283916021f20e704a76440ef673d10449e1fc
         },
         {
             "name": "cebe/markdown",
@@ -2060,7 +2064,7 @@
                 "option",
                 "select"
             ],
-            "time": "2017-08-01T11:43:55+00:00"
+            "time": "2017-08-01 11:43:55"
         },
         {
             "name": "kartik-v/yii2-date-range",
@@ -5245,7 +5249,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-03-24T17:32:35+00:00"
+            "time": "2017-03-24 17:32:35"
         },
         {
             "name": "zxbodya/yii2-tinymce",
@@ -5290,7 +5294,7 @@
                 "wysiwyg",
                 "yii2"
             ],
-            "time": "2015-11-29T16:06:03+00:00"
+            "time": "2015-11-29 16:06:03"
         }
     ],
     "packages-dev": [

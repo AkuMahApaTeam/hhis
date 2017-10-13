@@ -92,7 +92,7 @@ class Angka {
     }
 
     public static function randomKey(){
-        return date("ymds").$this->randomNumber(4);
+        return date("ymds")$this->randomNumber(4);
     }
     
     public static function randomNumber($length) {
