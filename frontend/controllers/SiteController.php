@@ -79,12 +79,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $modelEvent = Event::find()->limit(6)->orderBy(['tanggal' => SORT_DESC])->all();
-        $modelBerita = Berita::find()->orderBy(['tanggal' => SORT_DESC])->limit(6)->all();
-        return $this->render('index', [
-            'modelEvent' => $modelEvent,
-            'modelBerita' => $modelBerita
-        ]);
+//        $modelEvent = Event::find()->limit(6)->orderBy(['tanggal' => SORT_DESC])->all();
+//        $modelBerita = Berita::find()->orderBy(['tanggal' => SORT_DESC])->limit(6)->all();
+//        return $this->render('index', [
+//            'modelEvent' => $modelEvent,
+//            'modelBerita' => $modelBerita
+//        ]);
+
+        return $this->render('oleose');
 
     }
 
@@ -255,7 +257,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-      public function actionPasiensignup()
+    public function actionPasiensignup()
     {
         $model = new PasienSignupForm();
         if ($model->load(Yii::$app->request->post())) {

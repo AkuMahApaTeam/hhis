@@ -2,6 +2,7 @@
 
 namespace api\modules\v1\controllers;
 
+use frontend\models\PasienSignupForm;
 use frontend\models\SignupForm;
 use yii\rest\ActiveController;
 use common\models\User;
@@ -67,13 +68,15 @@ use yii;
      }
 
      public function actionSignup(){
-         $model = new SignupForm();
+         $model = new PasienSignupForm();
 
          // load data dari POST request
          $model->load(Yii::$app->getRequest()->getBodyParams(), '');
 
          if($user = $model->signup()){
              return $user;
+         }else{
+             return "pasien signup error";
          }
 
      }

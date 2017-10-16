@@ -11,19 +11,5 @@ use yii\rest\ActiveController;
  */
 class PasienController extends ActiveController
 {
-  public function behaviors()
-  {
-      return [
-          [
-              'class' => \yii\filters\ContentNegotiator::className(),
-              'only' => ['index', 'view'],
-              'formats' => [
-                  'application/json' => \yii\web\Response::FORMAT_JSON,
-              ],
-          ],
-      ];
-  }
 
-    public $modelClass = 'api\modules\v1\models\Pasien';
-//    public $
 }

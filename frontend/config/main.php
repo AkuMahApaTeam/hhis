@@ -46,37 +46,6 @@ return [
             'siteKey' => '6Lcc-hYUAAAAAIMKvGFTwi5fSXjEGhfL4GfcYpWV',
             'secret' => '6Lcc-hYUAAAAAE1aXqLgelxAmUvyM5RYkcJj7j_G',
         ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-//            'showScriptName' => false,
-         ],
-        'urlManagerBackend' => [
-            'class' => 'yii\web\urlManager',
-            'baseUrl' => 'backend/web/uploads/mahasiswa/foto',
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-        ],
-        'urlManagerBerita' => [
-            'class' => 'yii\web\urlManager',
-            'baseUrl' => 'backend/web/uploads/berita/',
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-        ],
-        'urlManagerEvent' => [
-            'class' => 'yii\web\urlManager',
-            'baseUrl' => 'backend/web/uploads/event/',
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-        ],
-        'urlManagerSeminar' => [
-            'class' => 'yii\web\urlManager',
-            'baseUrl' => 'backend/web/uploads/seminar/',
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-        ],
-//        'request' => [
-//            'baseUrl' => '/hhis2',
-//        ],
         'user' => [
             'identityClass' => 'frontend\models\Mahasiswa',
             'enableAutoLogin' => true,
@@ -98,14 +67,12 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
-//        'urlManager' => [
-//            'enablePrettyUrl' => true,
-//            'showScriptName' => false,
-//            'rules' => [
-//            ],
-//        ],
-
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+            ],
+        ],
     ],
     'params' => $params,
 ];

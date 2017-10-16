@@ -1,102 +1,52 @@
-<div class="toolbar">
-    <div class="uou-block-1a blog">
+<?php
+
+?>
+<div class="pre-loader">
+    <div class="load-con">
+        <img src="<?= Yii::$app->request->baseUrl.'/themes/Oleose/assets/img/freeze/logo.png' ?>" class="animated fadeInDown" alt="">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+</div>
+
+<header>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-            <ul class="quick-nav">
-                <li><a href="<?= Yii::$app->request->baseUrl ?>/about">About Us</a></li>
-                <li><a href="<?= Yii::$app->request->baseUrl ?>/blog">Blog</a></li>
-                <li><a href="<?= Yii::$app->request->baseUrl ?>/contact">Contact Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="fa fa-bars fa-lg"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="<?= Yii::$app->request->baseUrl.'/themes/Oleose/assets/img/freeze/logo.png' ?>" alt="" class="logo">
+                </a>
+            </div>
 
-            <ul class="social">
-                <li><a href="#" class="fa fa-facebook"></a></li>
-                <li><a href="#" class="fa fa-twitter"></a></li>
-                <li><a href="#" class="fa fa-google-plus"></a></li>
-            </ul>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-            <ul class="authentication">
-                <?php
-                if (!Yii::$app->user->isGuest) {
-                    ?>
-                    <li><a href="<?= Yii::$app->request->baseUrl ?>/profile"> Hi <?= Yii::$app->user->identity->nama_lengkap ?></a></li>
-                    <li><a href="<?= Yii::$app->request->baseUrl ?>/site/logout"> logout</a></li>
-                <?php } else { ?>
-                    <li><a href="<?= Yii::$app->request->baseUrl ?>/site/login"> Login</a></li>
-                    <li><a href="<?= Yii::$app->request->baseUrl ?>/site/signup"> Register</a></li>
-                <?php }?>
-
-            </ul>
-
-            <div class="language">
-                <a href="#" class="toggle"><img src="<?= Yii::$app->request->baseUrl ?>/img/flags/32/NL.png" alt=""> INA</a>
-
-                <ul>
-                    <li><a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/img/flags/32/PT.png" alt=""> PT</a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">about</a>
                     </li>
-                    <li><a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/img/flags/32/FR.png" alt=""> FR</a>
+                    <li><a href="#features">features</a>
                     </li>
-                    <li><a href="#"><img src="<?= Yii::$app->request->baseUrl ?>/img/flags/32/ES.png" alt=""> ES</a>
+                    <li><a href="#reviews">reviews</a>
+                    </li>
+                    <li><a href="#screens">screens</a>
+                    </li>
+                    <li><a href="#demo">demo</a>
+                    </li>
+                    <li><a class="getApp" href="#getApp">get app</a>
+                    </li>
+                    <li><a href="#support">support</a>
                     </li>
                 </ul>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
-    </div> <!-- end .uou-block-1a -->
-</div> <!-- end toolbar -->
-
-<div class="header-nav">
-    <div class="box-shadow-for-ui">
-        <div class="uou-block-2b icons">
-            <div class="container">
-                <a href="<?= Yii::$app->request->baseUrl ?>" class="logo-top"><img src="<?= Yii::$app->request->baseUrl ?>/img/logo-ika-its.png"
-                                                  width="170px" alt=""></a>
-                <a href="#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
-
-                <nav class="nav">
-                    <ul class="sf-menu">
-                        <li class="active"><a href="<?= Yii::$app->request->baseUrl ?>"><i class="fa fa-home"></i> Home</a>
-
-                        </li>
-                        <li><a href="#"><i class="fa fa-users"></i> Networking</a>
-                            <ul class="demo-menu">
-                                <li><a href="<?= Yii::$app->request->baseUrl.'/alumni-directory' ?>">Alumni Directory</a></li>
-                                <li><a href="<?= Yii::$app->request->baseUrl.'/company-list' ?>">Company Directory</a></li>
-                                <li><a href="<?= Yii::$app->request->baseUrl.'/map' ?>">Regional</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="<?= Yii::$app->request->baseUrl.'/forum' ?>"><i class="fa fa-comments"></i> Discussion Group</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-thumbs-up"></i> Endowment</a>
-                            <ul class="demo-menu">
-                                <li><a href="<?= Yii::$app->request->baseUrl.'/endowment' ?>">Personal Endowment</a></li>
-                                <li><a href="<?= Yii::$app->request->baseUrl.'/endowment/corporate' ?>">Corporate Endowment</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-calendar"></i> Event & Activity</a>
-                            <ul class="demo-menu">
-                                <li><a href="<?= Yii::$app->request->baseUrl ?>/news">News & Article</a></li>
-                                <li><a href="regional-event.html">Regional Event</a></li>
-                                <li><a href="group-activity.html">Group Activity</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-star"></i> Jobs</a>
-                            <ul class="demo-menu">
-                                <li><a href="<?= Yii::$app->request->baseUrl ?>/vacancies">Vacancies</a></li>
-                                <li><a href="<?= Yii::$app->request->baseUrl ?>/volunteer">Volunteer</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-search-plus"></i> About</a>
-                            <ul class="demo-menu">
-                                <li><a href="<?= Yii::$app->request->baseUrl ?>/about">About Us</a></li>
-                                <li><a href="<?= Yii::$app->request->baseUrl ?>/ika-its">IKA ITS</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div> <!-- end .uou-block-2b -->
-    </div>
-</div> <!-- edn header-navm -->
+        <!-- /.container-->
+    </nav>
