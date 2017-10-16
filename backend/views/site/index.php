@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = $this->title;
      <div class="col-md-2">
     </div>
     <div class="col-md-8" style="text-align: center">
-      <img src="http://localhost/hhis2/backend/web/dist/logo.png" alt="User Image" width="80%"/>
+      <img src="<?= Yii::$app->request->baseUrl. '/dist/logo.png'?>" alt="User Image" width="80%"/>
     </div>
     <div class="col-md-2">
     </div>

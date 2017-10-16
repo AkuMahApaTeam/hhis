@@ -10,3 +10,4 @@ composer.lock
 /frontend/views/layouts/main.php.backup
 /frontend/views/layouts/footer.php.backup
 /frontend/views/layouts/navbar.php.backup
+/backend/config/main-local.php
