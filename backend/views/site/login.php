@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="login-box">
     <div class="login-logo">
-        <b align="center"><?= Html::encode($this->title) ?></b> HHIS
+        <b align="center"><?= Html::encode($this->title) ?></b> PaMedHis
     </div>
 <div class="login-box-body">
 
