@@ -69,14 +69,23 @@ use yii;
 
      public function actionSignup(){
          $model = new PasienSignupForm();
-
+         $response = [];
          // load data dari POST request
          $model->load(Yii::$app->getRequest()->getBodyParams(), '');
 
          if($user = $model->signup()){
-             return $user;
+             $response = [
+                 'status' => 'success',
+                 'message' => 'login berhasil!',
+                 'data' => $user
+             ];
+             return $response;
          }else{
-             return "pasien signup error";
+             $response = [
+                 'status' => 'failed',
+                 'message' => 'login gagal!',
+             ];
+             return $response;
          }
 
      }
