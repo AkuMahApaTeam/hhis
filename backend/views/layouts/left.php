@@ -5,11 +5,11 @@
         <!-- Sidebar user panel -->
         <div class="user-panel" style="text-align: center">
             <div class="center">
-                <img src="<?=Yii::getAlias('@web')."/img/itspng.png"?>" height="auto" width="150px" alt="User Image"/>
+                <img src="<?= Yii::$app->request->baseUrl. '/dist/logo.png'?>" alt="User Image" width="30%"/>
             </div><br>
             <div style="color: #ffffff">
-                <b>Health History<br>
-                    Information System
+                <b>Patient<br>
+                    Medical History
                 </b>
             </div>
         </div>

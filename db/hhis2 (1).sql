@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2017 at 03:49 AM
+-- Generation Time: Oct 19, 2017 at 04:49 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -336,7 +336,8 @@ CREATE TABLE `dokter` (
 --
 
 INSERT INTO `dokter` (`id_dokter`, `id_no_izin`, `email`, `alamat_rumah`, `alamat_praktik`, `nama_dokter`, `no_telp`, `password`, `id_kota`, `id_provinsi`, `id_user`) VALUES
-(1, 2, 'faruqfadhil7@gmail.com', 'SHDHSADVGHSV', 'HSDGHJS', 'sherly', 'HSDGS', 'frq03051997', 1105, 12, 47);
+(1, 2, 'faruqfadhil7@gmail.com', 'SHDHSADVGHSV', 'HSDGHJS', 'sherly', 'HSDGS', 'frq03051997', 1105, 12, 47),
+(3, 3, 'dokter2@gmail.com', 'socah', 'bangkalan', 'ainun', '098736372', 'ainun03051997', 3526, 35, 60);
 
 -- --------------------------------------------------------
 
@@ -1591,7 +1592,9 @@ CREATE TABLE `no_izin_dokter` (
 --
 
 INSERT INTO `no_izin_dokter` (`id_no_izin`, `no_izin`, `keahlian`) VALUES
-(2, 'D001', 1);
+(2, 'D001', 1),
+(3, 'D002', 5),
+(4, 'D003', 3);
 
 -- --------------------------------------------------------
 
@@ -1690,81 +1693,87 @@ CREATE TABLE `riwayat` (
   `keluhan_utama` text,
   `diagnosa` int(11) NOT NULL,
   `larangan` text,
-  `note` text,
+  `pemeriksa_penunjang` text,
   `tgl_periksa` date DEFAULT NULL,
-  `perawatan` varchar(25) NOT NULL
+  `perawatan` varchar(25) NOT NULL,
+  `advis` text NOT NULL,
+  `head` text NOT NULL,
+  `neck` text NOT NULL,
+  `thorax` text NOT NULL,
+  `abdomen` text NOT NULL,
+  `ekstremitas` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `riwayat`
 --
 
-INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `id_dokter`, `umur`, `berat_badan`, `tinggi_badan`, `riwayat_kesehatan_keluarga`, `keluhan_utama`, `diagnosa`, `larangan`, `note`, `tgl_periksa`, `perawatan`) VALUES
-(1, 1, 1, 32, 123, 123, 'tidak ada', 'pusing', 26, 'kurangi minum es', 'tidak ada', '2017-10-10', 'rumah'),
-(2, 1, 1, 23, 23, 123, 'tidak ada', 'sakit perut', 37, 'tidak boleh merokok', 'tidak ada', '2017-10-11', 'rumah'),
-(3, 1, 1, 33, 123, 123, 'tidak ada', 'sakit nyeri', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah'),
-(4, 1, 1, 22, 123, 123, 'tidak ada', 'mules', 46, 'tidak boleh konsumsi gula', 'tidak ada', '2017-11-13', 'rumah'),
-(5, 1, 1, 31, 123, 123, 'tidak ada', 'nyeri tulang', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-11-11', 'rumah'),
-(6, 1, 1, 44, 123, 123, 'tidak ada', 'mual,panas', 66, 'tidak boleh konsumsi lemak', 'tidak ada', '2017-12-14', 'rumah'),
-(7, 1, 1, 34, 123, 123, 'tidak ada', 'panas,batuk berdahak', 16, 'tidak boleh konsumsi junk food', 'tidak ada', '2017-10-16', 'rumah'),
-(8, 1, 1, 23, 123, 123, 'tidak ada', 'panas,batuk', 76, 'tidak boleh konsumsi gula', 'tidak ada', '2017-01-15', 'rumah'),
-(9, 1, 1, 23, 123, 123, 'tidak ada', 'rahang nyeri', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-02-17', 'rumah'),
-(10, 1, 1, 23, 123, 123, 'tidak ada', 'kepala sakit sebelah', 16, 'kurangi bergadang', 'tidak ada', '2017-03-18', 'rumah'),
-(11, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-19', 'rumah'),
-(12, 1, 1, 23, 123, 123, 'tidak ada', 'mata memerah', 16, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-20', 'rumah'),
-(13, 1, 1, 23, 123, 123, 'tidak ada', 'sakit kepala sebelah', 26, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-21', 'rumah'),
-(14, 1, 1, 23, 123, 123, 'tidak ada', 'badan nyeri semua', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-22', 'rumah'),
-(15, 1, 1, 23, 123, 123, 'tidak ada', 'perut kembung', 76, 'kurangi bergadang', 'tidak ada', '2017-11-10', 'rumah'),
-(16, 1, 1, 23, 123, 123, 'tidak ada', 'demam,batuk berdahak', 66, 'tidak boleh karbohidrat', 'tidak ada', '2017-12-10', 'rumah'),
-(17, 1, 1, 23, 123, 123, 'tidak ada', 'mual dan demam', 86, 'tidak boleh konsumsi gula', 'tidak ada', '2017-05-10', 'rumah'),
-(18, 1, 1, 23, 123, 123, 'tidak ada', 'muntah muntah', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-06-10', 'rumah'),
-(19, 1, 1, 23, 123, 123, 'tidak ada', 'mual dan muntah', 86, 'tidak boleh karbohidrat', 'tidak ada', '2017-01-10', 'rumah'),
-(20, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 16, 'kurangi bergadang', 'tidak ada', '2017-02-02', 'rumah'),
-(21, 1, 1, 23, 123, 123, 'tidak ada', 'panas dan demam', 36, 'tidak boleh karbohidrat', 'tidak ada', '2017-02-03', 'rumah'),
-(22, 1, 1, 23, 123, 123, 'tidak ada', 'demam tinggi', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-14', 'rumah'),
-(23, 1, 1, 23, 123, 123, 'tidak ada', 'demam tinggi', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-11-16', 'rumah'),
-(24, 1, 1, 23, 123, 123, 'tidak ada', 'menggigil', 86, 'tidak boleh konsumsi gula', 'tidak ada', '2017-04-17', 'rumah'),
-(25, 1, 1, 23, 123, 123, 'tidak ada', 'demam dan menggigil', 26, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-06', 'rumah'),
-(26, 1, 1, 23, 123, 123, 'tidak ada', 'pusing kepala sebelah', 56, 'kurangi bergadang', 'tidak ada', '2017-10-07', 'rumah'),
-(27, 1, 1, 23, 123, 123, 'tidak ada', 'pusing seluruh kepala', 76, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-09', 'rumah'),
-(28, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 66, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-30', 'rumah'),
-(29, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 67, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-27', 'rumah'),
-(30, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 68, 'kurangi bergadang', 'tidak ada', '2017-01-15', 'rumah'),
-(31, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 68, 'tidak boleh konsumsi gula', 'tidak ada', '2017-04-27', 'rumah'),
-(32, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 63, 'kurangi bergadang', 'tidak ada', '2017-06-23', 'rumah'),
-(33, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 61, 'tidak boleh konsumsi gula', 'tidak ada', '2017-08-26', 'rumah'),
-(34, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 64, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-27', 'rumah'),
-(35, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 46, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-29', 'rumah'),
-(36, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-25', 'rumah'),
-(37, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 26, 'kurangi bergadang', 'tidak ada', '2017-07-18', 'rumah'),
-(38, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'kurangi minum es', 'tidak ada', '2017-06-19', 'rumah'),
-(39, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 67, 'tidak boleh konsumsi gula', 'tidak ada', '2017-05-20', 'rumah'),
-(40, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 66, 'kurangi bergadang', 'tidak ada', '2017-04-20', 'rumah'),
-(41, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 65, 'kurangi minum es', 'tidak ada', '2017-03-21', 'rumah'),
-(42, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 64, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-22', 'rumah'),
-(43, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-23', 'rumah'),
-(44, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 26, 'kurangi minum es', 'tidak ada', '2017-11-24', 'rumah'),
-(45, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-26', 'rumah'),
-(46, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'kurangi bergadang', 'tidak ada', '2018-10-29', 'rumah'),
-(47, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 26, 'kurangi minum es', 'tidak ada', '2017-10-30', 'rumah'),
-(48, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 16, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-12', 'rumah'),
-(49, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 65, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah'),
-(50, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-27', 'rumah'),
-(51, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 63, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-29', 'rumah'),
-(52, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 62, 'kurangi minum es', 'tidak ada', '2017-10-26', 'rumah'),
-(53, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 61, 'kurangi bergadang', 'tidak ada', '2017-10-26', 'rumah'),
-(54, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 96, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-25', 'rumah'),
-(55, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 86, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-28', 'rumah'),
-(56, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 76, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-20', 'rumah'),
-(57, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 66, 'kurangi bergadang', 'tidak ada', '2017-10-21', 'rumah'),
-(58, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh karbohidrat', 'tidak ada', '2018-10-22', 'rumah'),
-(59, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-23', 'rumah'),
-(60, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'kurangi minum es', 'tidak ada', '2017-10-22', 'rumah'),
-(61, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 56, 'tidak boleh konsumsi gula', 'tidak ada', '2018-10-21', 'rumah'),
-(62, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 46, 'kurangi bergadang', 'tidak ada', '2018-10-23', 'rumah'),
-(63, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-27', 'rumah'),
-(64, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'kurangi bergadang', 'tidak ada', '2017-10-20', 'rumah'),
-(65, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-29', 'rumah');
+INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `id_dokter`, `umur`, `berat_badan`, `tinggi_badan`, `riwayat_kesehatan_keluarga`, `keluhan_utama`, `diagnosa`, `larangan`, `pemeriksa_penunjang`, `tgl_periksa`, `perawatan`, `advis`, `head`, `neck`, `thorax`, `abdomen`, `ekstremitas`) VALUES
+(1, 1, 1, 32, 123, 123, 'tidak ada', 'pusing', 26, 'kurangi minum es', 'tidak ada', '2017-10-10', 'rumah', '', '', '', '', '', ''),
+(2, 1, 1, 23, 23, 123, 'tidak ada', 'sakit perut', 37, 'tidak boleh merokok', 'tidak ada', '2017-10-11', 'rumah', '', '', '', '', '', ''),
+(3, 1, 1, 33, 123, 123, 'tidak ada', 'sakit nyeri', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah', '', '', '', '', '', ''),
+(4, 1, 1, 22, 123, 123, 'tidak ada', 'mules', 46, 'tidak boleh konsumsi gula', 'tidak ada', '2017-11-13', 'rumah', '', '', '', '', '', ''),
+(5, 1, 1, 31, 123, 123, 'tidak ada', 'nyeri tulang', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-11-11', 'rumah', '', '', '', '', '', ''),
+(6, 1, 1, 44, 123, 123, 'tidak ada', 'mual,panas', 66, 'tidak boleh konsumsi lemak', 'tidak ada', '2017-12-14', 'rumah', '', '', '', '', '', ''),
+(7, 1, 1, 34, 123, 123, 'tidak ada', 'panas,batuk berdahak', 16, 'tidak boleh konsumsi junk food', 'tidak ada', '2017-10-16', 'rumah', '', '', '', '', '', ''),
+(8, 1, 1, 23, 123, 123, 'tidak ada', 'panas,batuk', 76, 'tidak boleh konsumsi gula', 'tidak ada', '2017-01-15', 'rumah', '', '', '', '', '', ''),
+(9, 1, 1, 23, 123, 123, 'tidak ada', 'rahang nyeri', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-02-17', 'rumah', '', '', '', '', '', ''),
+(10, 1, 1, 23, 123, 123, 'tidak ada', 'kepala sakit sebelah', 16, 'kurangi bergadang', 'tidak ada', '2017-03-18', 'rumah', '', '', '', '', '', ''),
+(11, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-19', 'rumah', '', '', '', '', '', ''),
+(12, 1, 1, 23, 123, 123, 'tidak ada', 'mata memerah', 16, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
+(13, 1, 1, 23, 123, 123, 'tidak ada', 'sakit kepala sebelah', 26, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-21', 'rumah', '', '', '', '', '', ''),
+(14, 1, 1, 23, 123, 123, 'tidak ada', 'badan nyeri semua', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-22', 'rumah', '', '', '', '', '', ''),
+(15, 1, 1, 23, 123, 123, 'tidak ada', 'perut kembung', 76, 'kurangi bergadang', 'tidak ada', '2017-11-10', 'rumah', '', '', '', '', '', ''),
+(16, 1, 1, 23, 123, 123, 'tidak ada', 'demam,batuk berdahak', 66, 'tidak boleh karbohidrat', 'tidak ada', '2017-12-10', 'rumah', '', '', '', '', '', ''),
+(17, 1, 1, 23, 123, 123, 'tidak ada', 'mual dan demam', 86, 'tidak boleh konsumsi gula', 'tidak ada', '2017-05-10', 'rumah', '', '', '', '', '', ''),
+(18, 1, 1, 23, 123, 123, 'tidak ada', 'muntah muntah', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-06-10', 'rumah', '', '', '', '', '', ''),
+(19, 1, 1, 23, 123, 123, 'tidak ada', 'mual dan muntah', 86, 'tidak boleh karbohidrat', 'tidak ada', '2017-01-10', 'rumah', '', '', '', '', '', ''),
+(20, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 16, 'kurangi bergadang', 'tidak ada', '2017-02-02', 'rumah', '', '', '', '', '', ''),
+(21, 1, 1, 23, 123, 123, 'tidak ada', 'panas dan demam', 36, 'tidak boleh karbohidrat', 'tidak ada', '2017-02-03', 'rumah', '', '', '', '', '', ''),
+(22, 1, 1, 23, 123, 123, 'tidak ada', 'demam tinggi', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-14', 'rumah', '', '', '', '', '', ''),
+(23, 1, 1, 23, 123, 123, 'tidak ada', 'demam tinggi', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-11-16', 'rumah', '', '', '', '', '', ''),
+(24, 1, 1, 23, 123, 123, 'tidak ada', 'menggigil', 86, 'tidak boleh konsumsi gula', 'tidak ada', '2017-04-17', 'rumah', '', '', '', '', '', ''),
+(25, 1, 1, 23, 123, 123, 'tidak ada', 'demam dan menggigil', 26, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-06', 'rumah', '', '', '', '', '', ''),
+(26, 1, 1, 23, 123, 123, 'tidak ada', 'pusing kepala sebelah', 56, 'kurangi bergadang', 'tidak ada', '2017-10-07', 'rumah', '', '', '', '', '', ''),
+(27, 1, 1, 23, 123, 123, 'tidak ada', 'pusing seluruh kepala', 76, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-09', 'rumah', '', '', '', '', '', ''),
+(28, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 66, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-30', 'rumah', '', '', '', '', '', ''),
+(29, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 67, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
+(30, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 68, 'kurangi bergadang', 'tidak ada', '2017-01-15', 'rumah', '', '', '', '', '', ''),
+(31, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 68, 'tidak boleh konsumsi gula', 'tidak ada', '2017-04-27', 'rumah', '', '', '', '', '', ''),
+(32, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 63, 'kurangi bergadang', 'tidak ada', '2017-06-23', 'rumah', '', '', '', '', '', ''),
+(33, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 61, 'tidak boleh konsumsi gula', 'tidak ada', '2017-08-26', 'rumah', '', '', '', '', '', ''),
+(34, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 64, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
+(35, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 46, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-29', 'rumah', '', '', '', '', '', ''),
+(36, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-25', 'rumah', '', '', '', '', '', ''),
+(37, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 26, 'kurangi bergadang', 'tidak ada', '2017-07-18', 'rumah', '', '', '', '', '', ''),
+(38, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'kurangi minum es', 'tidak ada', '2017-06-19', 'rumah', '', '', '', '', '', ''),
+(39, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 67, 'tidak boleh konsumsi gula', 'tidak ada', '2017-05-20', 'rumah', '', '', '', '', '', ''),
+(40, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 66, 'kurangi bergadang', 'tidak ada', '2017-04-20', 'rumah', '', '', '', '', '', ''),
+(41, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 65, 'kurangi minum es', 'tidak ada', '2017-03-21', 'rumah', '', '', '', '', '', ''),
+(42, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 64, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-22', 'rumah', '', '', '', '', '', ''),
+(43, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-23', 'rumah', '', '', '', '', '', ''),
+(44, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 26, 'kurangi minum es', 'tidak ada', '2017-11-24', 'rumah', '', '', '', '', '', ''),
+(45, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
+(46, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'kurangi bergadang', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', ''),
+(47, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 26, 'kurangi minum es', 'tidak ada', '2017-10-30', 'rumah', '', '', '', '', '', ''),
+(48, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 16, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-12', 'rumah', '', '', '', '', '', ''),
+(49, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 65, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah', '', '', '', '', '', ''),
+(50, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
+(51, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 63, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', ''),
+(52, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 62, 'kurangi minum es', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
+(53, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 61, 'kurangi bergadang', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
+(54, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 96, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-25', 'rumah', '', '', '', '', '', ''),
+(55, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 86, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-28', 'rumah', '', '', '', '', '', ''),
+(56, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 76, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
+(57, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 66, 'kurangi bergadang', 'tidak ada', '2017-10-21', 'rumah', '', '', '', '', '', ''),
+(58, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh karbohidrat', 'tidak ada', '2018-10-22', 'rumah', '', '', '', '', '', ''),
+(59, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-23', 'rumah', '', '', '', '', '', ''),
+(60, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'kurangi minum es', 'tidak ada', '2017-10-22', 'rumah', '', '', '', '', '', ''),
+(61, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 56, 'tidak boleh konsumsi gula', 'tidak ada', '2018-10-21', 'rumah', '', '', '', '', '', ''),
+(62, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 46, 'kurangi bergadang', 'tidak ada', '2018-10-23', 'rumah', '', '', '', '', '', ''),
+(63, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-27', 'rumah', '', '', '', '', '', ''),
+(64, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'kurangi bergadang', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
+(65, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2042,7 +2051,8 @@ INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_res
 (46, 'hhis_dokter', '', '$2y$13$nhPuLPza9KqYlxH85yJmue36mHmQUSOmdbLNT/2B8LDh4PL24r1C6', NULL, 'hhis@gmail.com', 10, 1507000611, 1507000611, 8),
 (47, 'faruqfadhil7@gmail.com', 'apydnEJfGibjtXyaeKvqDCf_PVASXDcN', '$2y$13$LO6uiP7734OAS/hRfQ.Q7u7VYzoGc3dd8ZW7R9kefBQOmiMtHJEOW', NULL, 'faruqfadhil7@gmail.com', 10, 1507129608, 1507129608, 8),
 (48, 'ristekbempens@gmail.com', 'uwroUmK8ho9E0VffCrEwHEk4MKEeuo4J', '$2y$13$o8IlNVxpIKfLKPsft.pg6.c5uFNluyOFVbNLH4J1bFR/7UMaRChe6', NULL, 'ristekbempens@gmail.com', 10, 1507309719, 1507309719, 7),
-(55, 'adhisma@gmail.com', 'm4al26mcWB8RqBw-hNDTWxB_Bno0OjZK', '$2y$13$apAAUP2jSFG9TyT95Y.0JeOaJQ4mxr29YkQEaBPsE7Ry5c1kNhqcG', NULL, 'adhisma@gmail.com', 10, 1507653835, 1507653835, 7);
+(55, 'adhisma@gmail.com', 'm4al26mcWB8RqBw-hNDTWxB_Bno0OjZK', '$2y$13$apAAUP2jSFG9TyT95Y.0JeOaJQ4mxr29YkQEaBPsE7Ry5c1kNhqcG', NULL, 'adhisma@gmail.com', 10, 1507653835, 1507653835, 7),
+(60, 'dokter2@gmail.com', '2NQdcLuVdbohlgVWZosCCloDQRZ7_Js_', '$2y$13$nEI5Gh6JG/CHTDzOYLW0POoWkAkE4qFmmm17/9ZCJLtjyvaaVv4ey', NULL, 'dokter2@gmail.com', 10, 1507876227, 1507876227, 8);
 
 --
 -- Indexes for dumped tables
@@ -2406,7 +2416,7 @@ ALTER TABLE `daftar_penyakit`
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
-  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `donasi`
 --
@@ -2541,7 +2551,7 @@ ALTER TABLE `nilai`
 -- AUTO_INCREMENT for table `no_izin_dokter`
 --
 ALTER TABLE `no_izin_dokter`
-  MODIFY `id_no_izin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_no_izin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `pasien`
 --
@@ -2591,7 +2601,7 @@ ALTER TABLE `status_mahasiswa`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- Constraints for dumped tables
 --

@@ -5,7 +5,7 @@
 namespace app\models\base;
 
 use Yii;
-
+use yii\web\UploadedFile;
 /**
  * This is the base-model class for table "artikel".
  *
@@ -24,6 +24,7 @@ abstract class Artikel extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+     public $file1;
     public static function tableName()
     {
         return 'artikel';
@@ -37,7 +38,9 @@ abstract class Artikel extends \yii\db\ActiveRecord
     {
         return [
             [['judul', 'deskripsi', 'abstrak'], 'string'],
-            [['image'], 'string', 'max' => 255]
+            [['image'], 'string', 'max' => 255],
+             [['image'], 'safe'],
+            [['file1'], 'file', 'extensions'=>'gif,jpg'],
         ];
     }
 
@@ -54,6 +57,22 @@ abstract class Artikel extends \yii\db\ActiveRecord
             'abstrak' => 'Abstrak',
         ];
     }
+     public function beforeSave($insert){
+    if(parent::beforeSave($insert)){
+        if (Yii::$app->request->isPost) {
+            $this->file1 = UploadedFile::getInstance($this, 'file1');
+            if ($this->file1 && $this->validate()) {
+
+                $this->file1->saveAs('uploads/' . $this->file1->baseName . '.' .$this->file1->extension);
+                $this->image = 'uploads/'.$this->file1->baseName . '.' .$this->file1->extension;
+                return true;
+            }
+        }
+    }
+    else{
+      return false;
+    }
+  }
 
 
 

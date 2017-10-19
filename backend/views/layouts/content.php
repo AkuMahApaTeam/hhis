@@ -37,7 +37,7 @@ use dmstr\widgets\Alert;
 
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0
+        <b>Version</b> 2.0
     </div>
     <strong>Copyright &copy; <?=date("Y")?> <a href="http://hhis.tk">hhis.tk</a>.</strong> All rights
     reserved.
