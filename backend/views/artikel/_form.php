@@ -40,7 +40,7 @@ use yii\helpers\StringHelper;
 			<?= $form->field($model, 'abstrak')->textarea(['rows' => 6]) ?>
 
 <!-- attribute image -->
-			<?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+			  <?= $form->field($model, 'file1')->fileInput() ?>
         </p>
         <?php $this->endBlock(); ?>
         

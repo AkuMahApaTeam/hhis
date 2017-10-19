@@ -19,9 +19,15 @@ use Yii;
  * @property string $keluhan_utama
  * @property integer $diagnosa
  * @property string $larangan
- * @property string $note
+ * @property string $pemeriksa_penunjang
  * @property string $tgl_periksa
  * @property string $perawatan
+* @property string $advis 
+* @property string $head 
+* @property string $neck 
+* @property string $thorax 
+* @property string $abdomen 
+* @property string $ekstremitas
  *
  * @property \app\models\Pasien $idPasien
  * @property \app\models\Dokter $idDokter
@@ -48,9 +54,9 @@ abstract class Riwayat extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_pasien', 'id_dokter', 'diagnosa', 'perawatan'], 'required'],
+             [['id_pasien', 'id_dokter', 'diagnosa', 'perawatan', 'advis', 'head', 'neck', 'thorax', 'abdomen', 'ekstremitas'], 'required'],
             [['id_pasien', 'id_dokter', 'umur', 'berat_badan', 'tinggi_badan', 'diagnosa'], 'integer'],
-            [['riwayat_kesehatan_keluarga', 'keluhan_utama', 'larangan', 'note'], 'string'],
+             [['riwayat_kesehatan_keluarga', 'keluhan_utama', 'larangan', 'pemeriksa_penunjang', 'advis', 'head', 'neck', 'thorax', 'abdomen', 'ekstremitas'], 'string'],
             [['tgl_periksa'], 'safe'],
             [['perawatan'], 'string', 'max' => 25],
             [['id_pasien'], 'exist', 'skipOnError' => true, 'targetClass' => \app\models\Pasien::className(), 'targetAttribute' => ['id_pasien' => 'id_pasien']],
@@ -75,9 +81,15 @@ abstract class Riwayat extends \yii\db\ActiveRecord
             'keluhan_utama' => 'Keluhan Utama',
             'diagnosa' => 'Diagnosa',
             'larangan' => 'Larangan',
-            'note' => 'Note',
+             'pemeriksa_penunjang' => 'Pemeriksa Penunjang',
             'tgl_periksa' => 'Tgl Periksa',
             'perawatan' => 'Perawatan',
+              'advis' => 'Advis', 
+           'head' => 'Head', 
+           'neck' => 'Neck', 
+           'thorax' => 'Thorax', 
+           'abdomen' => 'Abdomen', 
+           'ekstremitas' => 'Ekstremitas', 
         ];
     }
 

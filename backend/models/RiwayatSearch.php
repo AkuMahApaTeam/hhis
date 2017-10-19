@@ -19,7 +19,7 @@ public function rules()
 {
 return [
 [['id_riwayat', 'id_pasien', 'id_dokter', 'umur', 'berat_badan', 'tinggi_badan', 'diagnosa'], 'integer'],
-            [['riwayat_kesehatan_keluarga', 'keluhan_utama', 'larangan', 'note', 'tgl_periksa', 'perawatan'], 'safe'],
+            [['riwayat_kesehatan_keluarga', 'keluhan_utama', 'larangan',  'tgl_periksa', 'perawatan'], 'safe'],
 ];
 }
 
@@ -69,7 +69,6 @@ $query->andFilterWhere([
         $query->andFilterWhere(['like', 'riwayat_kesehatan_keluarga', $this->riwayat_kesehatan_keluarga])
             ->andFilterWhere(['like', 'keluhan_utama', $this->keluhan_utama])
             ->andFilterWhere(['like', 'larangan', $this->larangan])
-            ->andFilterWhere(['like', 'note', $this->note])
             ->andFilterWhere(['like', 'perawatan', $this->perawatan]);
 
 return $dataProvider;
@@ -104,7 +103,6 @@ $query->andFilterWhere([
         $query->andFilterWhere(['like', 'riwayat_kesehatan_keluarga', $this->riwayat_kesehatan_keluarga])
             ->andFilterWhere(['like', 'keluhan_utama', $this->keluhan_utama])
             ->andFilterWhere(['like', 'larangan', $this->larangan])
-            ->andFilterWhere(['like', 'note', $this->note])
             ->andFilterWhere(['like', 'perawatan', $this->perawatan]);
 
 return $dataProvider;
