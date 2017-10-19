@@ -23,7 +23,7 @@ if($num>0){
 
     // products array
     $products_arr=array();
-    $products_arr["records"]=array();
+    $products_arr["datakota"]=array();
 
     // retrieve our table contents
     // fetch() is faster than fetchAll()
@@ -34,13 +34,14 @@ if($num>0){
         // just $name only
         extract($row);
 
+
         $product_item=array(
             "id_kab" => $id_kab,
             "id_prov" => $id_prov,
             "nama" => $nama,
         );
 
-        array_push($products_arr["records"], $product_item);
+        array_push($products_arr["datakota"], $product_item);
     }
 
     echo json_encode($products_arr);
