@@ -64,7 +64,7 @@ return [
 		*/
 
         'response' => [
-            'class' => 'yii\web\Response',
+            'format' => yii\web\Response::FORMAT_JSON,
             'on beforeSend' => function ($event) {
                 $response = $event->sender;
                 if ($response->data !== null && Yii::$app->request->get('suppress_response_code')) {
@@ -193,7 +193,18 @@ return [
                         '{id}' => '<id:\\w+>'
                     )
                 ],
-
+                [
+                    'class'      => 'yii\rest\UrlRule',
+                    'controller' => [
+                        'v1/provinsi'
+                    ],
+                    'extraPatterns' => [
+                        'GET status' => 'status',
+                    ],
+                    'tokens'     => [
+                        '{id}' => '<id:\\w+>'
+                    ],
+                ],
 				/*
 				* route anything here into our versioned path of stuff...
 				* this is typically for controllers that act on Get/Post params directly
