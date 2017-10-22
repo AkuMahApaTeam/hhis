@@ -29,11 +29,6 @@ AppAsset::register($this);
     <?= $content ?>
     <?= $this->render('footer') ?>
     <?php $this->endBody() ?>
-<script>
-    $(document).ready(function() {
-        appMaster.preLoader();
-    });
-</script>
 </body>
 </html>
 <?php $this->endPage() ?>
