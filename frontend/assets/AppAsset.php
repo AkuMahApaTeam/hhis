@@ -12,22 +12,27 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-//        'themes/medico/assets/css/bootstrap.min.css',
-        'themes/medico/assets/css/main.css',
-        'themes/medico/assets/css/animations.css',
-        'themes/medico/assets/css/fonts.css',
-        'themes/medico/assets/layerslider/css/layerslider.css'
+        'themes/SevenApp/css/bootstrap.min.css',
+        'themes/SevenApp/css/animate.css',
+        'themes/SevenApp/css/font-awesome.min.css',
+        'themes/SevenApp/css/owl.carousel.css',
+        'themes/SevenApp/css/owl.theme.css',
+        'themes/SevenApp/css/styles.css',
     ];
 
     public $js = [
-//        'themes/medico/assets/js/jquery-1.11.1.min.js',
-//        'themes/medico/assets/js/bootstrap.min.js',
-        'themes/medico/assets/js/modernizr-2.6.2.min.js',
-        'themes/medico/assets/js/compressed.js',
-        'themes/medico/assets/js/main.js'
+        'themes/SevenApp/js/jquery.min.js',
+        'themes/SevenApp/js/bootstrap.min.js',
+//        'themes/SevenApp/js/modernizr.custom.32033.js',
+        'themes/SevenApp/js/owl.carousel.min.js',
+        'themes/SevenApp/js/waypoints.min.js',
+'https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false',
+        'themes/SevenApp/rs-plugin/js/jquery.themepunch.plugins.min.js',
+        'themes/SevenApp/rs-plugin/js/jquery.themepunch.revolution.min.js',
+        'themes/SevenApp/js/script.js',
     ];
     public $depends = [
 //        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+//        'yii\bootstrap\BootstrapAsset',
     ];
 }

@@ -20,11 +20,13 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <script src="<?= Yii::$app->request->baseUrl.'/themes/SevenApp/js/modernizr.custom.32033.js' ?>"></script>
+
     <?php $this->head() ?>
 </head>
-<body>
+<body cz-shortcut-listen="true">
 <?php $this->beginBody() ?>
-
+<!---->
     <?= $this->render('navbar') ?>
     <?= $content ?>
     <?= $this->render('footer') ?>

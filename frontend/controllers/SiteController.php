@@ -86,7 +86,7 @@ class SiteController extends Controller
 //            'modelBerita' => $modelBerita
 //        ]);
 
-        return $this->render('medico');
+        return $this->render('sevenapp');
 
     }
 
