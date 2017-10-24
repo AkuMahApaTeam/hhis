@@ -2,38 +2,12 @@
 <footer id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-push-2 clearfix">
+            <div class="col-md-8 col-md-push-2">
                 <div class="section-heading scrollpoint sp-effect3">
-                    <h3>sevenapp<span> get in touch</span></h3>
+                    <h3>PaMedHis<span> get in touch</span></h3>
                     <span class="divider"></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore reiciendis vel reprehenderit expedit!</p>
+                    <p>Record and Help you to remember your medical history </p>
                 </div>
-            </div>
-            <div class="col-md-12">
-                <form role="form">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-6 spirat">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6 spirat">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Your Message">
-                            <span class="input-group-btn">
-                                        <button class="btn" type="button">submit your message</button>
-                                    </span>
-                        </div>
-                    </div>
-                </form>
             </div>
             <div class="col-md-12">
                 <div class="social">
@@ -46,7 +20,7 @@
                     </ul>
                 </div>
                 <p class="rights">
-                    2014 <span>SevenApp</span> Landing Page Developed by <a href="http://www.scoopthemes.com"><span>ScoopThemes</span></a>
+                    2017 <span>PaMedHis</span> Landing Page Developed with <a href="http://www.scoopthemes.com"><span>ScoopThemes</span></a>
                 </p>
             </div>
         </div>
