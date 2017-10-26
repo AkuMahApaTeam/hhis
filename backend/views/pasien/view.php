@@ -13,7 +13,7 @@ use dmstr\bootstrap\Tabs;
 */
 $copyParams = $model->attributes;
 
-$this->title = 'Pasien';
+$this->title = 'pasien';
 $this->params['breadcrumbs'][] = ['label' =>  'Pasiens', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => (string)$model->id_pasien, 'url' => ['view', 'id_pasien' => $model->id_pasien]];
 $this->params['breadcrumbs'][] = 'View';
@@ -48,7 +48,7 @@ $this->params['breadcrumbs'][] = 'View';
 
             <?= Html::a(
             '<span class="glyphicon glyphicon-copy"></span> ' . 'Copy',
-            ['create', 'id_pasien' => $model->id_pasien, 'Pasien'=>$copyParams],
+            ['create', 'id_pasien' => $model->id_pasien, 'pasien' =>$copyParams],
             ['class' => 'btn btn-success']) ?>
 
             <?= Html::a(

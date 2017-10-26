@@ -7,8 +7,8 @@ use yii\helpers\Html;
 * @var app\models\Pasien $model
 */
     
-$this->title =  'Pasien' . " " . $model->id_pasien . ', ' . 'Edit';
-$this->params['breadcrumbs'][] = ['label' => 'Pasien', 'url' => ['index']];
+$this->title =  'pasien' . " " . $model->id_pasien . ', ' . 'Edit';
+$this->params['breadcrumbs'][] = ['label' => 'pasien', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => (string)$model->id_pasien, 'url' => ['view', 'id_pasien' => $model->id_pasien]];
 $this->params['breadcrumbs'][] = 'Edit';
 ?>

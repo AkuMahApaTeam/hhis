@@ -18,7 +18,7 @@ use yii\helpers\ArrayHelper;
 <div class="pasien-form">
 
     <?php $form = ActiveForm::begin([
-    'id' => 'Pasien',
+    'id' => 'pasien',
     'layout' => 'horizontal',
     'enableClientValidation' => true,
     'errorSummaryCssClass' => 'error-summary alert alert-error'
@@ -73,7 +73,7 @@ use yii\helpers\ArrayHelper;
                     'encodeLabels' => false,
                     'items' => [ 
                         [
-    'label'   =>  'Pasien',
+    'label'   => 'pasien',
     'content' => $this->blocks['main'],
     'active'  => true,
 ],
