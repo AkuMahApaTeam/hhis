@@ -43,7 +43,7 @@ header.masthead .mh-slider {
 }
 
 #slider {
-  background-image: url(../img/bk.jpg);
+  background-image: url(../img/bk3.jpg);
   overflow: hidden;
   background-attachment: fixed;
   position: relative;
@@ -221,11 +221,11 @@ header.masthead .mh-slider {
   transition: all 0.25s ease-in-out;
 }
 #nav .navbar-nav li a:hover {
-  color: #de5749;
+  color: #19a085;
   background: none;
 }
 #nav .navbar-nav li.active a {
-  color: #de5749;
+  color: #19a085;
 }
 #nav .navbar-nav.social {
   margin-left: 15px;
@@ -253,7 +253,7 @@ section {
   padding: 75px 0;
 }
 section#features {
-  background: #de5749;
+  background: #19a085;
 }
 section#features .feature {
   text-align: center;
@@ -660,7 +660,7 @@ section#testimonials .carousel .carousel-indicators li.active {
   height: 18px;
 }
 section#team {
-  background: #de5749;
+  background: #19a085;
 }
 section#team .car-next, section#team .car-prev {
   text-align: center;
@@ -701,7 +701,7 @@ section#team .member {
 }
 section#team .member img {
   width: 150px;
-  border: 2px solid white;
+/*  border: 2px solid white;*/
 }
 section#team .member .media .pull-left {
   margin-right: 20px;
@@ -934,14 +934,10 @@ footer .rights a {
 }
 
 .form-control {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  -o-border-radius: 0px;
-  border-radius: 0px;
+  border-radius: 10px !important;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: none;
+  border: 1px solid #19a085;
 }
 
 .btn:active, .btn.active {
@@ -974,7 +970,7 @@ footer .rights a {
 
 .btn.btn-default {
   background: white;
-  color: #de5749;
+  color: #19a085;
 }
 .btn.btn-default:hover {
   background: none;
@@ -987,7 +983,7 @@ footer .rights a {
 }
 .btn.btn-empty:hover {
   background: white;
-  color: #de5749;
+  color: #19a085;
 }
 
 a {

@@ -21,15 +21,15 @@ class AppAsset extends AssetBundle
     ];
 
     public $js = [
-        'themes/SevenApp/js/jquery.min.js',
+        // 'themes/SevenApp/js/jquery.min.js',
         'themes/SevenApp/js/bootstrap.min.js',
 //        'themes/SevenApp/js/modernizr.custom.32033.js',
         'themes/SevenApp/js/owl.carousel.min.js',
         'themes/SevenApp/js/waypoints.min.js',
-'https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false',
+// 'https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false',
         'themes/SevenApp/rs-plugin/js/jquery.themepunch.plugins.min.js',
         'themes/SevenApp/rs-plugin/js/jquery.themepunch.revolution.min.js',
-        'themes/SevenApp/js/script.js',
+        // 'themes/SevenApp/js/script.js',
     ];
     public $depends = [
 //        'yii\web\YiiAsset',
