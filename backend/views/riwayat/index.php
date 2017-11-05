@@ -53,7 +53,7 @@ $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTempla
             'items' => [
             [
                 'url' => ['pasien/index'],
-                'label' => '<i class="glyphicon glyphicon-arrow-left"></i> ' .  'Pasien',
+                'label' => '<i class="glyphicon glyphicon-arrow-left"></i> ' . 'pasien',
             ],
                                 [
                 'url' => ['dokter/index'],

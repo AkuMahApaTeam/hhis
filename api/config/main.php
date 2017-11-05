@@ -174,17 +174,14 @@ return [
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'v1/riwayat',   // our test country api rule handles 1 id parameter
-                    'tokens' => array(
-                        '{id}' => '<id:\\w+>'
-                    )
                 ],
-                [
-                    'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/riwayatpa',   // our test country api rule handles 1 id parameter
-                    'tokens' => array(
-                        '{id}' => '<id:\\w+>'
-                    )
-                ],
+//                [
+//                    'class' => 'yii\rest\UrlRule',
+//                    'controller' => 'v1/riwayatpa',   // our test country api rule handles 1 id parameter
+//                    'tokens' => array(
+//                        '{id}' => '<id:\\w+>'
+//                    )
+//                ],
 
                 [
                     'class' => 'yii\rest\UrlRule',

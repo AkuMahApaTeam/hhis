@@ -1,68 +1,56 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: aal
- * Date: 7/16/17
- * Time: 2:24 PM
- */
+
 namespace api\modules\v1\controllers;
-use Yii;
-use yii\helpers\ArrayHelper;
 
-class RiwayatController extends \yii\rest\Controller
+use yii\rest\ActiveController;
+
+/**
+ * Country Controller API
+ *
+ * @author Budi Irawan <deerawan@gmail.com>
+ */
+class RiwayatController extends ActiveController
 {
-    protected function verbs()
-    {
-        return [
-            'insert' => ['POST'],
-        ];
-    }
-//    public function actionInsert(){
-//        $exec = Yii::$app->db->createCommand()
-//            ->insert('guestbook', [
-//                'name' => $_POST['name'],
-//                'message' => $_POST['message'],
-//            ])->execute();
-//        $msg = ($exec)?"SUKSES":"ERROR KAKA";
-//        return ['data'=>$msg];
-//    }
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => \yii\filters\ContentNegotiator::className(),
-                'only' => ['index', 'view'],
-                'formats' => [
-                    'application/json' => \yii\web\Response::FORMAT_JSON,
-                ],
-            ],
-        ];
-    }
-    public function actionView($nik){
+  public function behaviors()
+  {
+      return [
+          [
+              'class' => \yii\filters\ContentNegotiator::className(),
+              'only' => ['index', 'view'],
+              'formats' => [
+                  'application/json' => \yii\web\Response::FORMAT_JSON,
+              ],
+          ],
+      ];
+  }
+
+    public function actionView($id_pasien){
 
 
-        $pasien = \app\models\base\Riwayat::find()->where(['nik' => $nik])->one();
-        $id_pasien = \frontend\models\pasien\Pasien::find()
-            ->select('id_pasien')
-            ->where(['nik' => $nik])
-            ->one();
-        $riwayat = \frontend\models\riwayat\Riwayat::find()->where(['id_pasien' => $id_pasien])->all();
-        $id_dokter = \frontend\models\riwayat\Riwayat::find()
+//        $pasien = \app\models\base\Riwayat::find()->where(['id_pasien' => $id_pasien])->one();
+//        $id_pasien = \frontend\models\pasien\Pasien::find()
+//            ->select('id_pasien')
+//            ->where(['nik' => $nik])
+//            ->one();
+        $riwayat = \app\models\base\Riwayat::find()->where(['id_pasien' => $id_pasien])->all();
+        $id_dokter = \app\models\base\Riwayat::find()
             ->select('id_dokter')
             ->where(['id_pasien' => $id_pasien])
             ->one();
-        $dokter = \frontend\models\dokter\Dokter::find()->where(['id_dokter' => $id_dokter])->one();
+        $dokter = \app\models\base\Dokter::find()->where(['id_dokter' => $id_dokter])->one();
 
 //        return [$pasien,[\frontend\models\dokter\Dokter::find()->select('nama_dokter')
 //            ->where(['id_dokter' => $id_dokter])
 //            ->one()],$riwayat];
-        return ["id_pasien"=>$pasien->id_pasien,
-                "nama_pasien"=>$pasien->nama_pasien,
-                "alamat"=>$pasien->alamat,
-                "no_telp_pasien"=>$pasien->no_telp_pasien,
-                "gol_darah"=>$pasien->gol_darah,
-                "jenis_kelamin"=>$pasien->jenis_kelamin,
-                "nik"=>$pasien->nik,
-                "riwayat"=>$riwayat];
+        return ["id_pasien"=>$riwayat->id_pasien,
+            "nama_pasien"=>$riwayat->nama_pasien,
+            "alamat"=>$riwayat->alamat,
+            "no_telp_pasien"=>$riwayat->no_telp_pasien,
+            "gol_darah"=>$riwayat->gol_darah,
+            "jenis_kelamin"=>$riwayat->jenis_kelamin,
+            "nik"=>$riwayat->nik,
+            "riwayat"=>$riwayat];
     }
+
+//    public $modelClass = 'api\modules\v1\models\Riwayat';
 }
