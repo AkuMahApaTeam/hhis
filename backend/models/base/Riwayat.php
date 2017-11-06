@@ -117,7 +117,4 @@ abstract class Riwayat extends \yii\db\ActiveRecord
         return $this->hasOne(\app\models\DaftarPenyakit::className(), ['id' => 'diagnosa']);
     }
 
-
-
-
 }
