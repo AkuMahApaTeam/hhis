@@ -38,7 +38,6 @@ class RiwayatController extends Controller
     }
 
     public function actionView($id_user){
-        $diagnosas = '';
         $id_pasien = \api\modules\v1\models\Pasien::find()
             ->select('id_pasien')
             ->where(['id_user' => $id_user])
@@ -84,12 +83,12 @@ class RiwayatController extends Controller
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $id_diagnosa =  \api\modules\v1\models\Riwayat::find()
-            ->select(['diagnosa','id_pasien'])
+            ->select('diagnosa')
             ->where(['id_pasien' => $id_pasien])
-            ->all();
+            ->one();
         $diagnosa = \api\modules\v1\models\DaftarPenyakit::find()
             ->select(['nama_penyakit','id'])
-            ->where(['id' => $diagnosas])
+            ->where(['id' => $id_diagnosa])
             ->all();
         $larangan = \api\modules\v1\models\Riwayat::find()
             ->select(['larangan', 'id_pasien'])
@@ -172,14 +171,9 @@ class RiwayatController extends Controller
             }
 //
 
-            $iddiagnosas = '';
-            foreach ($id_diagnosa as $idd) {
-                if($idd->id_pasien == $model->id_pasien){
-                    $iddiagnosas = $idd->diagnosa;
-                }
-            }
+            $diagnosas = '';
             foreach ($diagnosa as $ds) {
-                if($ds->id == $iddiagnosas){
+                if($ds->id == $model->diagnosa){
                     $diagnosas = $ds->nama_penyakit;
                 }
             }
@@ -216,7 +210,7 @@ class RiwayatController extends Controller
                 'tinggi_badan' => $tingban,
                 'riwayat_penyakit_keluarga' => $riwayatkesehatankeluarga,
                 'keluhan_utama' => $keluhanutama,
-                'id_diagnosa' => $iddiagnosas,
+//                'id_diagnosa' => $iddiagnosas,
                 'diagnosa' => $diagnosas,
                 'larangan' => $larangans,
                 'tgl_periksa' => $tglperiksas,
