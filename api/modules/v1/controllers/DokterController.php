@@ -25,5 +25,4 @@ class DokterController extends ActiveController
   }
 
     public $modelClass = 'api\modules\v1\models\Dokter';
-//    public $
 }
