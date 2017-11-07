@@ -151,17 +151,7 @@ return [
 
                 [
                     'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/pasien',   // our test country api rule handles 1 id parameter
-                    'tokens' => array(
-                        '{id}' => '<id:\\w+>'
-                    )
-                ],
-                [
-                    'class' => 'yii\rest\UrlRule',
-                    'controller' => 'v1/pasienid',   // our test country api rule handles 1 id parameter
-                    'tokens' => array(
-                        '{id}' => '<id:\\w+>'
-                    )
+                    'controller' => 'v1/pasien',   // our test country api rule handles 1 id parameter)
                 ],
                 [
                     'class' => 'yii\rest\UrlRule',

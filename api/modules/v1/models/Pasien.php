@@ -26,7 +26,7 @@ class Pasien extends ActiveRecord
      */
     public static function primaryKey()
     {
-        return ['nik'];
+        return ['id_pasien'];
     }
 
     /**
@@ -35,7 +35,21 @@ class Pasien extends ActiveRecord
     public function rules()
     {
         return [
-            [['id_riwayat', 'id_pasien', 'id_dokter', 'umur','berat_badan','tinggi_badan','riwayat_kesehatan_keluarga','keluhan_utama','diagnosa','larangan','note','tgl_periksa','perawatan'], 'required']
+            [['id_kota', 'id_provinsi', 'password'], 'required'],
+            [['nik', 'id_kota', 'id_provinsi'], 'integer'],
+            [['nama_pasien', 'alamat'], 'string', 'max' => 255],
+            [['no_telp_pasien'], 'string', 'max' => 15],
+            [['gol_darah'], 'string', 'max' => 2],
+            [['jenis_kelamin'], 'string', 'max' => 10],
+            ['nik', 'trim'],
+            ['nik', 'required'],
+            [['nik'], 'unique', 'skipOnError' => true, 'targetClass' => Pasien::className(), 'targetAttribute' => ['nik' => 'nik']],
+            ['email', 'trim'],
+            ['email', 'required'],
+            ['email', 'email'],
+            ['email', 'unique', 'targetClass' => 'frontend\models\Pasien', 'message' => 'This email address has already been taken.'],
+
+            [['password'], 'string', 'max' => 25]
         ];
     }
 }

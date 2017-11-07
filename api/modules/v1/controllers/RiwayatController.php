@@ -38,6 +38,7 @@ class RiwayatController extends Controller
     }
 
     public function actionView($id_user){
+        $diagnosas = '';
         $id_pasien = \api\modules\v1\models\Pasien::find()
             ->select('id_pasien')
             ->where(['id_user' => $id_user])
@@ -51,55 +52,55 @@ class RiwayatController extends Controller
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $nama_dokter = \api\modules\v1\models\Dokter::find()
-            ->select('nama_dokter')
+            ->select(['nama_dokter', 'id_dokter'])
             ->where(['id_dokter' => $id_dokter])
             ->all();
         $no_telp_dokter = \api\modules\v1\models\Dokter::find()
-            ->select('no_telp')
+            ->select(['no_telp', 'id_dokter'])
             ->where(['id_dokter' => $id_dokter])
             ->all();
         $alamat_praktik = \api\modules\v1\models\Dokter::find()
-            ->select('alamat_praktik')
+            ->select(['alamat_praktik','id_dokter'])
             ->where(['id_dokter' => $id_dokter])
             ->all();
         $umur = \api\modules\v1\models\Riwayat::find()
-            ->select('umur')
+            ->select(['umur','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $berat_badan= \api\modules\v1\models\Riwayat::find()
-            ->select('berat_badan')
+            ->select(['berat_badan','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $tinggi_badan = \api\modules\v1\models\Riwayat::find()
-            ->select('tinggi_badan')
+            ->select(['tinggi_badan','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $riwayat_kesehatan_keluarga= \api\modules\v1\models\Riwayat::find()
-            ->select('riwayat_kesehatan_keluarga')
+            ->select(['riwayat_kesehatan_keluarga','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $keluhan_utama = \api\modules\v1\models\Riwayat::find()
-            ->select('keluhan_utama')
+            ->select(['keluhan_utama','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $id_diagnosa =  \api\modules\v1\models\Riwayat::find()
-            ->select('diagnosa')
+            ->select(['diagnosa','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
-            ->one();
+            ->all();
         $diagnosa = \api\modules\v1\models\DaftarPenyakit::find()
-            ->select('nama_penyakit')
-            ->where(['id' => $id_diagnosa])
+            ->select(['nama_penyakit','id'])
+            ->where(['id' => $diagnosas])
             ->all();
         $larangan = \api\modules\v1\models\Riwayat::find()
-            ->select('larangan')
+            ->select(['larangan', 'id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $tgl_periksa= \api\modules\v1\models\Riwayat::find()
-            ->select('tgl_periksa')
+            ->select(['tgl_periksa', 'id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $perawatan = \api\modules\v1\models\Riwayat::find()
-            ->select('perawatan')
+            ->select(['perawatan','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
 
@@ -113,28 +114,120 @@ class RiwayatController extends Controller
         $data = [];
 
         foreach ($riwayat as $model) {
+
+            $dokter = '';
+            foreach ($nama_dokter as $dok) {
+                if($dok->id_dokter == $model->id_dokter){
+                    $dokter = $dok->nama_dokter;
+                }
+            }
+
+            $notelpdokter = '';
+            foreach ($no_telp_dokter as $telp) {
+                if($telp->id_dokter == $model->id_dokter){
+                    $notelpdokter = $telp->no_telp;
+                }
+            }
+
+            $alamatpraktik = '';
+            foreach ($alamat_praktik as $almt) {
+                if($almt->id_dokter == $model->id_dokter){
+                    $alamatpraktik = $almt->alamat_praktik;
+                }
+            }
+
+            $umr= 0;
+            foreach ($umur as $um) {
+                if($um->id_pasien == $model->id_pasien){
+                    $umr = $um->umur;
+                }
+            }
+
+            $berban= 0;
+            foreach ($berat_badan as $bb) {
+                if($bb->id_pasien == $model->id_pasien){
+                    $berban = $bb->berat_badan;
+                }
+            }
+
+            $tingban=0;
+            foreach ($tinggi_badan as $tb) {
+                if($tb->id_pasien == $model->id_pasien){
+                    $tingban = $tb->tinggi_badan;
+                }
+            }
+
+            $riwayatkesehatankeluarga = '';
+            foreach ($riwayat_kesehatan_keluarga as $rkk) {
+                if($rkk->id_pasien == $model->id_pasien){
+                    $riwayatkesehatankeluarga = $rkk->riwayat_kesehatan_keluarga;
+                }
+            }
+
+            $keluhanutama = '';
+            foreach ($keluhan_utama as $ku) {
+                if($ku->id_pasien == $model->id_pasien){
+                    $keluhanutama = $ku->keluhan_utama;
+                }
+            }
+//
+
+            $iddiagnosas = '';
+            foreach ($id_diagnosa as $idd) {
+                if($idd->id_pasien == $model->id_pasien){
+                    $iddiagnosas = $idd->diagnosa;
+                }
+            }
+            foreach ($diagnosa as $ds) {
+                if($ds->id == $iddiagnosas){
+                    $diagnosas = $ds->nama_penyakit;
+                }
+            }
+
+            $larangans = '';
+            foreach ($larangan as $lr) {
+                if($lr->id_pasien == $model->id_pasien){
+                    $larangans = $lr->larangan;
+                }
+            }
+
+            $tglperiksas = '';
+            foreach ($tgl_periksa as $tglperiksa) {
+                if($tglperiksa->id_pasien == $model->id_pasien){
+                    $tglperiksas = $tglperiksa->tgl_periksa;
+                }
+            }
+
+            $perawatans = '';
+            foreach ($perawatan as $prw) {
+                if($prw->id_pasien == $model->id_pasien){
+                    $perawatans = $prw->perawatan;
+                }
+            }
             $data[] = [
                 'id_riwayat' => $model->id_riwayat,
                 'id_pasien' => $model->id_pasien,
-                'nama_pasien' => $nama_pasien[0]->nama_pasien,
-                'nama_dokter' => $nama_dokter[0]->nama_dokter,
-                'no_telp_dokter' => $no_telp_dokter[0]->no_telp,
-                'alamat_praktik' => $alamat_praktik[0]->alamat_praktik,
-                'umur' => $umur[0]->umur,
-                'berat_badan' => $berat_badan[0]->berat_badan,
-                'tinggi_badan' => $tinggi_badan[0]->tinggi_badan,
-                'riwayat_penyakit_keluarga' => $riwayat_kesehatan_keluarga[0]->riwayat_kesehatan_keluarga,
-                'keluhan_utama' => $keluhan_utama[0]->keluhan_utama,
-                'diagnosa' => $diagnosa[0]->nama_penyakit,
-                'larangan' => $larangan[0]->larangan,
-                'tgl_periksa' => $tgl_periksa[0]->tgl_periksa,
-                'perawatan' => $perawatan[0]->perawatan,
+                'id_dokter' => $model->id_dokter,
+                'nama_dokter' => $dokter,
+                'no_telp_dokter' => $notelpdokter,
+                'alamat_praktik' => $alamatpraktik,
+                'umur' => $umr,
+                'berat_badan' => $berban,
+                'tinggi_badan' => $tingban,
+                'riwayat_penyakit_keluarga' => $riwayatkesehatankeluarga,
+                'keluhan_utama' => $keluhanutama,
+                'id_diagnosa' => $iddiagnosas,
+                'diagnosa' => $diagnosas,
+                'larangan' => $larangans,
+                'tgl_periksa' => $tglperiksas,
+                'perawatan' => $perawatans,
                 'advis' => $model->advis,
                 'head' => $model->head,
                 'neck' => $model->neck,
                 'thorax' => $model->thorax,
                 'abdomen' => $model->abdomen,
-                'ekstremitas' => $model->ekstremitas
+                'ekstremitas' => $model->ekstremitas,
+//                'tes' => "nama_pasien" => $nmpasien->nama_pasien
             ];
         }
         return [
