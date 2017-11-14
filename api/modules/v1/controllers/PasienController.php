@@ -52,15 +52,20 @@ class PasienController extends Controller
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $nama_dokter = \api\modules\v1\models\Dokter::find()
-            ->select('nama_dokter')
+            ->select(['nama_dokter', 'id_dokter'])
             ->where(['id_dokter' => $id_dokter])
+            ->distinct()
             ->all();
         $no_telp_dokter = \api\modules\v1\models\Dokter::find()
-            ->select('no_telp')
+            ->select(['no_telp','id_dokter'])
             ->where(['id_dokter' => $id_dokter])
             ->all();
         $alamat_praktik = \api\modules\v1\models\Dokter::find()
-            ->select('alamat_praktik')
+            ->select(['alamat_praktik','id_dokter'])
+            ->where(['id_dokter' => $id_dokter])
+            ->all();
+        $alamat_rumah = \api\modules\v1\models\Dokter::find()
+            ->select(['alamat_rumah','id_dokter'])
             ->where(['id_dokter' => $id_dokter])
             ->all();
         $umur = \api\modules\v1\models\Riwayat::find()
@@ -104,22 +109,54 @@ class PasienController extends Controller
             ->where(['id_pasien' => $id_pasien])
             ->all();
 
-
-        $dokter = \api\modules\v1\models\Riwayat::find()
-            ->select('id_dokter')
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
         $pasien = \api\modules\v1\models\Pasien::find()
             ->where(['id_pasien'=> $id_pasien])->all();
 
         $data = [];
         $datadokter = [];
 
-//        foreach ($dokter as $model ){
-//            $datadokter[] =[
-//                $model
-//            ];
-//        }
+        $riwayat = \api\modules\v1\models\Riwayat::find()
+            ->select('id_dokter')
+            ->where(['id_pasien'=> $id_pasien])
+            ->distinct()
+            ->all();
+        foreach ($riwayat as $model) {
+
+            $nmdokter = '';
+            foreach ($nama_dokter as $dok) {
+                if($dok->id_dokter == $model->id_dokter){
+                    $nmdokter = $dok->nama_dokter;
+                }
+            }
+
+            $notelpdokter = '';
+            foreach ($no_telp_dokter as $telp) {
+                if($telp->id_dokter == $model->id_dokter){
+                    $notelpdokter = $telp->no_telp;
+                }
+            }
+
+            $alamatpraktik = '';
+            foreach ($alamat_praktik as $almt) {
+                if($almt->id_dokter == $model->id_dokter){
+                    $alamatpraktik = $almt->alamat_praktik;
+                }
+            }
+            $alamatrumah = '';
+            foreach ($alamat_rumah as $almt_rumah) {
+                if($almt_rumah->id_dokter == $model->id_dokter){
+                    $alamatrumah = $almt_rumah->alamat_rumah;
+                }
+            }
+
+            $datadokter[] = [
+                'nama_dokter' => $nmdokter,
+                'no_telp_dokter' => $notelpdokter,
+                'alamat_praktik' => $alamatpraktik,
+                'alamat_rumah' => $alamatrumah,
+            ];
+        }
+
         foreach ($pasien as $model) {
             $data[] = [
                 'id_pasien' => $model->id_pasien,
@@ -134,9 +171,11 @@ class PasienController extends Controller
                 'alamat' => $model->alamat,
                 'larangan' => $larangan[0]->larangan,
                 'pemeriksaan_terbaru' => $tgl_periksa[0]->tgl_periksa,
-                'dokter' => $dokter
+                'dokter' => $datadokter
             ];
         }
+
+
         return [
             "status" => "sukses",
             "data" => $data

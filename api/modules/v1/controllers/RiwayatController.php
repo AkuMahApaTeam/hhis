@@ -77,6 +77,7 @@ class RiwayatController extends Controller
         $riwayat_kesehatan_keluarga= \api\modules\v1\models\Riwayat::find()
             ->select(['riwayat_kesehatan_keluarga','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
+            ->distinct()
             ->all();
         $keluhan_utama = \api\modules\v1\models\Riwayat::find()
             ->select(['keluhan_utama','id_pasien'])
@@ -105,8 +106,6 @@ class RiwayatController extends Controller
 
         $riwayat = \api\modules\v1\models\Riwayat::find()
             ->where(['id_pasien'=> $id_pasien])->all();
-        $dokter = \api\modules\v1\models\Riwayat::find()
-            ->where(['id_dokter'=> $id_dokter])->all();
         $pasien = \api\modules\v1\models\Riwayat::find()
             ->where(['id_pasien'=> $id_pasien])->all();
 
