@@ -18,11 +18,10 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/iconpicker/dist/js/fontawesome-iconpicker.js',
-
     ];
     public $depends = [
-//        'yii\web\YiiAsset',
-//        'yii\bootstrap\BootstrapAsset',
+       'yii\web\YiiAsset',
+       'yii\bootstrap\BootstrapAsset',
     ];
 
     public $jsOptions = ['position'=>View::POS_HEAD];
