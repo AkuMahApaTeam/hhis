@@ -107,4 +107,30 @@ $query->andFilterWhere([
 
 return $dataProvider;
 }
+public function searchGrafik($params,$id_pasien)
+{
+// $query = Riwayat::find()
+// ->select([
+//     'COUNT(Riwayat.diagnosa) AS jum_diagnosa ',
+//     'daftar_penyakit.nama_penyakit'
+// ])
+// ->andWhere('Riwayat.id_pasien = '.$id_pasien)
+// ->leftJoin('daftar_penyakit','Riwayat.diagnosa = daftar_penyakit.id')
+// ->groupBy('Riwayat.diagnosa');
+    $db = Yii::$app->db;
+    $dataProvider = $db->createCommand('SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya from riwayat r, daftar_penyakit d WHERE r.id_pasien=1 AND r.diagnosa = d.id GROUP BY(r.diagnosa)')->queryAll();
+// $dataProvider = new ActiveDataProvider([
+// 'query' => $query,
+// ]);
+//var_dump($dataProvider);
+
+$this->load($params);
+
+if (!$this->validate()) {
+// uncomment the following line if you do not want to any records when validation fails
+// $query->where('0=1');
+return $dataProvider;
+}
+return $dataProvider;
+}
 }

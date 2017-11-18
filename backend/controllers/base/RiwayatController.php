@@ -13,6 +13,7 @@ use yii\web\HttpException;
 use yii\helpers\Url;
 use yii\filters\AccessControl;
 use dmstr\bootstrap\Tabs;
+use Yii;
 
 /**
  * RiwayatController implements the CRUD actions for Riwayat model.
@@ -67,6 +68,24 @@ class RiwayatController extends Controller
             'dataProvider' => $dataProvider,
             'searchModel' => $searchModel,
             'modelPasien' => $modelPasien,
+        ]);
+    }
+    public function actionGrafik()
+    {
+        $id_user =Yii::$app->user->identity->id;
+        $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+        $searchModel = new RiwayatSearch;
+        $dataProvider = $searchModel->searchGrafik($_GET, $id_pasien->id_pasien);
+       // $modelPasien = $this->findModelPasien($id);
+
+        Tabs::clearLocalStorage();
+
+        Url::remember();
+        \Yii::$app->session['__crudReturnUrl'] = null;
+
+        return $this->render('grafik', [
+            'dataProvider' => $dataProvider,
+           
         ]);
     }
 

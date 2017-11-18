@@ -37,8 +37,8 @@ use Yii;
 abstract class Riwayat extends \yii\db\ActiveRecord
 {
 
-
-
+     // public $jum_diagnosa;
+     // public $nama_penyakit;
     /**
      * @inheritdoc
      */
