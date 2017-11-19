@@ -133,4 +133,79 @@ return $dataProvider;
 }
 return $dataProvider;
 }
+
+public function searchGrafik_one($params,$id_pasien)
+{
+    $date_one = date('m');
+    $year_one = date('Y');
+
+// $query = Riwayat::find()
+// ->select([
+//     'COUNT(Riwayat.diagnosa) AS jum_diagnosa ',
+//     'daftar_penyakit.nama_penyakit'
+// ])
+// ->andWhere('Riwayat.id_pasien = '.$id_pasien)
+// ->leftJoin('daftar_penyakit','Riwayat.diagnosa = daftar_penyakit.id')
+// ->groupBy('Riwayat.diagnosa');
+    $db = Yii::$app->db;
+    $dataProvider = $db->createCommand("
+        SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya from riwayat r, daftar_penyakit d WHERE r.id_pasien=1 AND r.diagnosa = d.id AND r.tgl_periksa LIKE '".$year_one."_".$date_one."___' GROUP BY(r.diagnosa)
+        ")->queryAll();
+// $dataProvider = new ActiveDataProvider([
+// 'query' => $query,
+// ]);
+//var_dump($dataProvider);
+
+$this->load($params);
+
+if (!$this->validate()) {
+// uncomment the following line if you do not want to any records when validation fails
+// $query->where('0=1');
+return $dataProvider;
+}
+return $dataProvider;
+}
+
+public function searchGrafik_three($params,$id_pasien)
+{
+    $date_one = date('m');
+    $year_one = date('Y');
+    $day = 1;
+    $date_three =  $date_one-3;
+   $year_three = $year_one;
+    if($date_three < 0){
+        $old_three = $date_three;
+        $date_three = 13 + $old_three;
+        $year_three = $year_one-1;
+    }
+
+    //var_dump($year_one);
+// $query = Riwayat::find()
+// ->select([
+//     'COUNT(Riwayat.diagnosa) AS jum_diagnosa ',
+//     'daftar_penyakit.nama_penyakit'
+// ])
+// ->andWhere('Riwayat.id_pasien = '.$id_pasien)
+// ->leftJoin('daftar_penyakit','Riwayat.diagnosa = daftar_penyakit.id')
+// ->groupBy('Riwayat.diagnosa');
+    $db = Yii::$app->db;
+    $dataProvider = $db->createCommand("
+        SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya from riwayat r, daftar_penyakit d WHERE r.id_pasien=1 AND r.diagnosa = d.id AND r.tgl_periksa BETWEEN '".$year_three."-".$date_three."-".$day."' AND '".$year_one."-".$date_one."-".$day."' GROUP BY(r.diagnosa)
+        ")->queryAll();
+    // SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya, r.tgl_periksa from riwayat r, daftar_penyakit d WHERE r.id_pasien=1 AND r.diagnosa = d.id AND r.tgl_periksa BETWEEN "2017-8-1" AND "2017-11-1" GROUP BY(r.diagnosa)
+// $dataProvider = new ActiveDataProvider([
+// 'query' => $query,
+// ]);
+//var_dump($dataProvider);
+
+$this->load($params);
+
+if (!$this->validate()) {
+// uncomment the following line if you do not want to any records when validation fails
+// $query->where('0=1');
+return $dataProvider;
+}
+return $dataProvider;
+}
+
 }

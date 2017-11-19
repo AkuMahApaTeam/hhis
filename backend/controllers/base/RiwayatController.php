@@ -89,6 +89,46 @@ class RiwayatController extends Controller
         ]);
     }
 
+    public function actionOne_months()
+    {
+        $id_user =Yii::$app->user->identity->id;
+        $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+        $searchModel = new RiwayatSearch;
+        $dataProvider = $searchModel->searchGrafik_one($_GET, $id_pasien->id_pasien);
+       // $modelPasien = $this->findModelPasien($id);
+
+        Tabs::clearLocalStorage();
+
+        Url::remember();
+        \Yii::$app->session['__crudReturnUrl'] = null;
+
+        return $this->render('grafik', [
+            'dataProvider' => $dataProvider,
+           
+        ]);
+    }
+    
+    public function actionThree_months()
+    {
+        $id_user =Yii::$app->user->identity->id;
+        $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+        $searchModel = new RiwayatSearch;
+        $dataProvider = $searchModel->searchGrafik_three($_GET, $id_pasien->id_pasien);
+       // $modelPasien = $this->findModelPasien($id);
+
+        Tabs::clearLocalStorage();
+
+        Url::remember();
+        \Yii::$app->session['__crudReturnUrl'] = null;
+
+        return $this->render('grafik', [
+            'dataProvider' => $dataProvider,
+           
+        ]);
+    }
+    
+
+
     /**
      * Displays a single Riwayat model.
      * @param integer $id_riwayat
