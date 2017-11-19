@@ -1,61 +1,41 @@
+
+<?php
+foreach ($dataProvider as $key) {
+     $b[] = ($key['namanya']);
+     $a[] = (int)($key['diagno']);
+ }
+//print_r($b);
+// foreach($dataProvider as $values){ 
+//  $a[0]= ($values['regional']); 
+//  $c[]= ($values['regional']); 
+//  $b[]= array(
+//     'type'=> 'column', 
+//     'name' =>$values['namanya'], 
+//     'data' => array((int)$values['jmlmsisdn'], (int)$values['jmlba'],(int)$values['jmlcb'], (int)$values['jmlcbu']) ); 
+// }
+?>
 <?=
 \dosamigos\highcharts\HighCharts::widget([
     'clientOptions' => [
         'chart' => [
-                'type'=>'pie',
-                'options3d'=>[
-                    'enabled' =>'true',
-                    'alpha' => 45,
-                    'beta' => 0
-
-                ]
+                'type' => 'bar'
         ],
         'title' => [
-             'text' => 'Fruit Consumption'
+             'text' => 'Grafik Riwayat Penyakit yang Pernah Dialami'
              ],
-        'plotOptions' =>[
-            'pie' =>[
-                'allowPointSelect' => 'true',
-                'cursor' => 'pointer',
-                'depth' => 35,
-                'dataLabels' =>[
-                    'enabled' => 'true',
-                    'format' => '{point.name}'
-                ]
+        'xAxis' => [
+            'categories' => $b
+        ],
+        'yAxis' => [
+            'title' => [
+                'text' => 'Jumlah'
             ]
         ],
         'series' => [
-
-            'type' =>'pie',
-            'name' => 'browser',
-            'data' =>[
-                ['Firefox',45.0],
-                ['iE',26.8],
-                ['Safari', 8.5],
-                ['Opera', 6.2],
-                ['Others', 0.7]
-
-            ]
-
-           
+            ['name' => 'Pernah berita sebanyak x kali', 'data' => $a]
+           // ['name' => 'John', 'data' => [5, 7, 3,1,2]]
         ]
     ]
 ]);
+ 
 ?>
-   <!--  series: [{
-        type: 'pie',
-        name: 'Browser share',
-        data: [
-            ['Firefox', 45.0],
-            ['IE', 26.8],
-            {
-                name: 'Chrome',
-                y: 12.8,
-                sliced: true,
-                selected: true
-            },
-            ['Safari', 8.5],
-            ['Opera', 6.2],
-            ['Others', 0.7]
-        ]
-    }] -->
