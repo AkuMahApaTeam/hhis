@@ -4,6 +4,8 @@ foreach ($dataProvider as $key) {
      $b[] = ($key['namanya']);
      $a[] = (int)($key['diagno']);
      $sortan[] = (int)($key['diagno']);
+     $keluhan_terbanyak[] = ($key['keluhan']);
+     $larangan_terbanyak[] = ($key['larangan']);
  }
  rsort($sortan);
  for ($i=0; $i < count($sortan) ; $i++) { 
@@ -12,6 +14,7 @@ foreach ($dataProvider as $key) {
         break;
      }
  }
+
 // foreach($dataProvider as $values){ 
 //  $a[0]= ($values['regional']); 
 //  $c[]= ($values['regional']); 
@@ -89,3 +92,27 @@ foreach ($dataProvider as $key) {
 ]);
  
 ?>
+<hr>
+<h3>Analitical</h3>
+<div class="alert alert-danger" role="alert">
+ <?php
+    echo "Sakit yang paling banyak anda alami adalah ".$b[$iterasi];
+ ?>
+</div>
+<hr>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Diagnose</th>
+      <th scope="col">Keluhan</th>
+      <th scope="col">Terapi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><?php echo $b[$iterasi] ?></td>
+      <td><?php echo $keluhan_terbanyak[$iterasi] ?> </td>
+      <td><?php echo $larangan_terbanyak[$iterasi] ?></td>
+    </tr>
+  </tbody>
+</table>

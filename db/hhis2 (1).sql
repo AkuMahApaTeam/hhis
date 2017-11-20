@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2017 at 04:49 AM
+-- Generation Time: Nov 20, 2017 at 07:29 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -1440,7 +1440,7 @@ INSERT INTO `menu` (`id`, `menu`, `icon`, `parent`, `module`, `controller`) VALU
 (34, 'Riwayat', 'fa fa-search', '', '2', 'pasien'),
 (35, 'Cari Pasien', 'fa fa-search', '34', '2', 'pasien'),
 (36, 'Kesehatanku', 'fa fa-heartbeat', '', '2', ''),
-(37, 'Grafik', 'fa fa-line-chart', '36', '2', 'riwayat');
+(37, 'Grafik', 'fa fa-pie-chart', '36', '2', 'riwayat/grafik');
 
 -- --------------------------------------------------------
 
@@ -1709,7 +1709,7 @@ CREATE TABLE `riwayat` (
 --
 
 INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `id_dokter`, `umur`, `berat_badan`, `tinggi_badan`, `riwayat_kesehatan_keluarga`, `keluhan_utama`, `diagnosa`, `larangan`, `pemeriksa_penunjang`, `tgl_periksa`, `perawatan`, `advis`, `head`, `neck`, `thorax`, `abdomen`, `ekstremitas`) VALUES
-(1, 1, 1, 32, 123, 123, 'tidak ada', 'pusing', 26, 'kurangi minum es', 'tidak ada', '2017-10-10', 'rumah', '', '', '', '', '', ''),
+(1, 1, 1, 32, 123, 123, 'tidak ada', 'pusing', 26, 'kurangi minum es', 'tidak ada', '2016-11-10', 'rumah', '', '', '', '', '', ''),
 (2, 1, 1, 23, 23, 123, 'tidak ada', 'sakit perut', 37, 'tidak boleh merokok', 'tidak ada', '2017-10-11', 'rumah', '', '', '', '', '', ''),
 (3, 1, 1, 33, 123, 123, 'tidak ada', 'sakit nyeri', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah', '', '', '', '', '', ''),
 (4, 1, 1, 22, 123, 123, 'tidak ada', 'mules', 46, 'tidak boleh konsumsi gula', 'tidak ada', '2017-11-13', 'rumah', '', '', '', '', '', ''),
@@ -2601,7 +2601,7 @@ ALTER TABLE `status_mahasiswa`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 --
 -- Constraints for dumped tables
 --
