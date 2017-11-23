@@ -2,7 +2,6 @@
 
 namespace api\modules\v1\controllers;
 
-use api\modules\v1\models\Riwayat;
 use yii\filters\VerbFilter;
 use yii\rest\ActiveController;
 use yii\rest\Controller;
@@ -31,8 +30,16 @@ class PasienController extends Controller
             ->select('id_pasien')
             ->where(['id_user' => $id_user])
             ->one();
+        $nama_pasien = \api\modules\v1\models\Pasien::find()
+            ->select('nama_pasien')
+            ->where(['id_pasien' => $id_pasien])
+            ->all();
         $id_dokter = \api\modules\v1\models\Riwayat::find()
             ->select('id_dokter')
+            ->where(['id_pasien' => $id_pasien])
+            ->all();
+        $no_telp_pasien = \api\modules\v1\models\Pasien::find()
+            ->select('no_telp_pasien')
             ->where(['id_pasien' => $id_pasien])
             ->all();
         $nama_dokter = \api\modules\v1\models\Dokter::find()
@@ -60,8 +67,14 @@ class PasienController extends Controller
             ->select(['berat_badan','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
             ->all();
-        $id_diagnosa = '';
-        $diagnosa='';
+        $id_diagnosa =  \api\modules\v1\models\Riwayat::find()
+            ->select('diagnosa')
+            ->where(['id_pasien' => $id_pasien])
+            ->one();
+        $diagnosa = \api\modules\v1\models\DaftarPenyakit::find()
+            ->select(['nama_penyakit','id'])
+            ->where(['id' => $id_diagnosa])
+            ->all();
         $larangan = \api\modules\v1\models\Riwayat::find()
             ->select(['larangan', 'id_pasien'])
             ->where(['id_pasien' => $id_pasien])
@@ -69,32 +82,34 @@ class PasienController extends Controller
         $pasien = \api\modules\v1\models\Pasien::find()
             ->where(['id_pasien'=> $id_pasien])->all();
 
-
         $data = [];
         $datadokter = [];
+
         $riwayat = \api\modules\v1\models\Riwayat::find()
-            ->select('*')
+            ->with('pasien')
             ->limit(1)
-            ->orderBy(['id_pasien' => SORT_DESC])
-            ->all();
-        $user = \api\modules\v1\models\User::find()
-            ->where(['id'=>$id_user])
-            ->all();
-        $daftar_penyakit = \api\modules\v1\models\DaftarPenyakit::find()
             ->all();
         foreach ($riwayat as $model) {
 
-            $id_riwayat= $model->id_riwayat;
-            $id_diagnosa = $model->diagnosa;
+            $berban= 0;
+            foreach ($berat_badan as $bb) {
+                if($bb->id_pasien == $model->id_pasien){
+                    $berban = $bb->berat_badan;
+                }
+            }
             $tingban = $model->tinggi_badan;
-            $berat_badan = $model->berat_badan;
-            $umur = $model->umur;
-            $larangan = $model->larangan;
 
             $nmdokter = '';
             foreach ($nama_dokter as $dok) {
                 if($dok->id_dokter == $model->id_dokter){
                     $nmdokter = $dok->nama_dokter;
+                }
+            }
+
+            $umr= 0;
+            foreach ($umur as $um) {
+                if($um->id_pasien == $model->id_pasien){
+                    $umr = $um->umur;
                 }
             }
 
@@ -119,6 +134,20 @@ class PasienController extends Controller
                 }
             }
 
+            $diagnosas = '';
+            foreach ($diagnosa as $ds) {
+                if($ds->id == $model->diagnosa){
+                    $diagnosas = $ds->nama_penyakit;
+                }
+            }
+
+            $larangans = '';
+            foreach ($larangan as $lr) {
+                if($lr->id_pasien == $model->id_pasien){
+                    $larangans = $lr->larangan;
+                }
+            }
+
             $datadokter[] = [
                 'nama_dokter' => $nmdokter,
                 'no_telp_dokter' => $notelpdokter,
@@ -127,38 +156,26 @@ class PasienController extends Controller
             ];
         }
 
-        foreach($user as $model){
-            $username = $model->username;
-            $password_hash = $model->password_hash;
-        }
-        foreach($daftar_penyakit as $model){
-                if($model->id == $id_diagnosa){
-                    $diagnosa = $model->nama_penyakit;
-                }
-        }
         foreach ($pasien as $model) {
             $data[] = [
 //                data dari tabel pasien
                 'id_pasien' => $model->id_pasien,
-                'id_riwayat' => $id_riwayat,
                 'nama_pasien' => $model->nama_pasien,
-                'umur' => $umur,
                 'jenis_kelamin' => $model->jenis_kelamin,
                 'email' => $model->email,
                 'golongan_darah' => $model->gol_darah,
                 'tinggi_badan' => $tingban,
-                'berat_badan' => $berat_badan,
+//                'berat_badan' => $berat_badan>berat_badan,
                 'no_telp' => $model->no_telp_pasien,
                 'alamat' => $model->alamat,
 ////                data dari  riwayat
-                'larangan' => $larangan,
-//                'id_diagnosa' => $id_diagnosa,
-                'diagnosa' => $diagnosa,
+//                'umur' => $umr,
+//                'larangan' => $larangans,
+//                'diagnosa' => $diagnosas,
 ////                dokter
-                'dokter' => $datadokter,
+//                'dokter' => $datadokter
 //                username dan password
-                'username' => $username,
-                'password' => $password_hash
+//                'username' =>
 
             ];
         }
@@ -169,8 +186,6 @@ class PasienController extends Controller
             "data" => $data
         ];
     }
-    public function actionIndex(){
-        return "hello";
-    }
+
     public $modelClass = 'api\modules\v1\models\Pasien';
 }

@@ -46,10 +46,6 @@ class RiwayatController extends Controller
             ->select('id_dokter')
             ->where(['id_pasien' => $id_pasien])
             ->all();
-        $nama_pasien = \api\modules\v1\models\Pasien::find()
-            ->select('nama_pasien')
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
         $nama_dokter = \api\modules\v1\models\Dokter::find()
             ->select(['nama_dokter', 'id_dokter'])
             ->where(['id_dokter' => $id_dokter])
@@ -62,56 +58,24 @@ class RiwayatController extends Controller
             ->select(['alamat_praktik','id_dokter'])
             ->where(['id_dokter' => $id_dokter])
             ->all();
-        $umur = \api\modules\v1\models\Riwayat::find()
-            ->select(['umur','id_pasien'])
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
-        $berat_badan= \api\modules\v1\models\Riwayat::find()
-            ->select(['berat_badan','id_pasien'])
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
-        $tinggi_badan = \api\modules\v1\models\Riwayat::find()
-            ->select(['tinggi_badan','id_pasien'])
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
-        $riwayat_kesehatan_keluarga= \api\modules\v1\models\Riwayat::find()
-            ->select(['riwayat_kesehatan_keluarga','id_pasien'])
-            ->where(['id_pasien' => $id_pasien])
-            ->distinct()
-            ->all();
-        $keluhan_utama = \api\modules\v1\models\Riwayat::find()
-            ->select(['keluhan_utama','id_pasien'])
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
-        $id_diagnosa =  \api\modules\v1\models\Riwayat::find()
-            ->select('diagnosa')
-            ->where(['id_pasien' => $id_pasien])
-            ->one();
-        $diagnosa = \api\modules\v1\models\DaftarPenyakit::find()
-            ->select(['nama_penyakit','id'])
-            ->where(['id' => $id_diagnosa])
-            ->all();
-        $larangan = \api\modules\v1\models\Riwayat::find()
-            ->select(['larangan', 'id_pasien'])
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
-        $tgl_periksa= \api\modules\v1\models\Riwayat::find()
-            ->select(['tgl_periksa', 'id_pasien'])
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
-        $perawatan = \api\modules\v1\models\Riwayat::find()
-            ->select(['perawatan','id_pasien'])
-            ->where(['id_pasien' => $id_pasien])
-            ->all();
 
         $riwayat = \api\modules\v1\models\Riwayat::find()
-            ->where(['id_pasien'=> $id_pasien])->all();
-        $pasien = \api\modules\v1\models\Riwayat::find()
-            ->where(['id_pasien'=> $id_pasien])->all();
+            ->select('*')
+            ->orderBy(['id_pasien' => SORT_DESC])
+            ->all();
+        $daftar_penyakit = \api\modules\v1\models\DaftarPenyakit::find()
+            ->all();
+
 
         $data = [];
 
         foreach ($riwayat as $model) {
+
+            foreach($daftar_penyakit as $m){
+                if($m->id == $model->   diagnosa){
+                    $diagnosa = $m->nama_penyakit;
+                }
+            }
 
             $dokter = '';
             foreach ($nama_dokter as $dok) {
@@ -134,69 +98,14 @@ class RiwayatController extends Controller
                 }
             }
 
-            $umr= 0;
-            foreach ($umur as $um) {
-                if($um->id_pasien == $model->id_pasien){
-                    $umr = $um->umur;
-                }
-            }
-
-            $berban= 0;
-            foreach ($berat_badan as $bb) {
-                if($bb->id_pasien == $model->id_pasien){
-                    $berban = $bb->berat_badan;
-                }
-            }
-
-            $tingban=0;
-            foreach ($tinggi_badan as $tb) {
-                if($tb->id_pasien == $model->id_pasien){
-                    $tingban = $tb->tinggi_badan;
-                }
-            }
-
-            $riwayatkesehatankeluarga = '';
-            foreach ($riwayat_kesehatan_keluarga as $rkk) {
-                if($rkk->id_pasien == $model->id_pasien){
-                    $riwayatkesehatankeluarga = $rkk->riwayat_kesehatan_keluarga;
-                }
-            }
-
-            $keluhanutama = '';
-            foreach ($keluhan_utama as $ku) {
-                if($ku->id_pasien == $model->id_pasien){
-                    $keluhanutama = $ku->keluhan_utama;
-                }
-            }
-//
-
-            $diagnosas = '';
-            foreach ($diagnosa as $ds) {
-                if($ds->id == $model->diagnosa){
-                    $diagnosas = $ds->nama_penyakit;
-                }
-            }
-
-            $larangans = '';
-            foreach ($larangan as $lr) {
-                if($lr->id_pasien == $model->id_pasien){
-                    $larangans = $lr->larangan;
-                }
-            }
-
-            $tglperiksas = '';
-            foreach ($tgl_periksa as $tglperiksa) {
-                if($tglperiksa->id_pasien == $model->id_pasien){
-                    $tglperiksas = $tglperiksa->tgl_periksa;
-                }
-            }
-
-            $perawatans = '';
-            foreach ($perawatan as $prw) {
-                if($prw->id_pasien == $model->id_pasien){
-                    $perawatans = $prw->perawatan;
-                }
-            }
+            $umr= $model->umur;
+            $berban= $model->berat_badan;
+            $tingban= $model->tinggi_badan;
+            $riwayatkesehatankeluarga = $model->riwayat_kesehatan_keluarga;
+            $keluhanutama = $model->keluhan_utama;
+            $larangan = $model->larangan;
+            $tglperiksas = $model->tgl_periksa;
+            $perawatans = $model->perawatan;
             $data[] = [
                 'id_riwayat' => $model->id_riwayat,
                 'id_pasien' => $model->id_pasien,
@@ -210,8 +119,8 @@ class RiwayatController extends Controller
                 'riwayat_penyakit_keluarga' => $riwayatkesehatankeluarga,
                 'keluhan_utama' => $keluhanutama,
 //                'id_diagnosa' => $iddiagnosas,
-                'diagnosa' => $diagnosas,
-                'larangan' => $larangans,
+                'diagnosa' => $diagnosa,
+                'larangan' => $larangan,
                 'tgl_periksa' => $tglperiksas,
                 'perawatan' => $perawatans,
                 'advis' => $model->advis,
@@ -220,9 +129,9 @@ class RiwayatController extends Controller
                 'thorax' => $model->thorax,
                 'abdomen' => $model->abdomen,
                 'ekstremitas' => $model->ekstremitas,
-//                'tes' => "nama_pasien" => $nmpasien->nama_pasien
             ];
         }
+
         return [
             "status" => "sukses",
             "data" => $data
