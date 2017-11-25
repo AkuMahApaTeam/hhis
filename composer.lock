@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "491134670885d4d8ff226ceb9511ac65",
+    "content-hash": "c3bcdb0075343f69c88ec4a8759b4b72",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -919,7 +919,7 @@
                 "autocomplete",
                 "typeahead"
             ],
-            "time": "2016-07-10 07:55:54"
+            "time": "2016-07-10T07:55:54+00:00"
         },
         {
             "name": "bower-asset/typeahead.js",
@@ -984,7 +984,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-10-14 08:42:41"
+            "time": "2017-10-14T08:42:41+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -2045,7 +2045,7 @@
                 "option",
                 "select"
             ],
-            "time": "2017-08-01 11:43:55"
+            "time": "2017-08-01T11:43:55+00:00"
         },
         {
             "name": "kartik-v/yii2-date-range",
@@ -5147,6 +5147,53 @@
             "time": "2016-03-18T14:09:46+00:00"
         },
         {
+            "name": "yiisoft/yii2-httpclient",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-httpclient.git",
+                "reference": "0417cb05f810890297f79877ccf51865834fb394"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/0417cb05f810890297f79877ccf51865834fb394",
+                "reference": "0417cb05f810890297f79877ccf51865834fb394",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.13"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\httpclient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "HTTP client extension for the Yii framework",
+            "keywords": [
+                "curl",
+                "http",
+                "httpclient",
+                "yii2"
+            ],
+            "time": "2017-11-03T11:22:03+00:00"
+        },
+        {
             "name": "yiisoft/yii2-jui",
             "version": "2.0.6",
             "source": {
@@ -5292,7 +5339,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-10-23 16:42:10"
+            "time": "2017-10-23T16:42:10+00:00"
         },
         {
             "name": "zxbodya/yii2-tinymce",
@@ -5337,7 +5384,7 @@
                 "wysiwyg",
                 "yii2"
             ],
-            "time": "2015-11-29 16:06:03"
+            "time": "2015-11-29T16:06:03+00:00"
         }
     ],
     "packages-dev": [

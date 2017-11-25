@@ -163,13 +163,13 @@ class RiwayatController extends Controller
             $diagnosa[] = (int)($model['diagno']);
             $nama[] = ($model['namanya']);
         }
-        $daftar_penyakit = \api\modules\v1\models\DaftarPenyakit::find()
-            ->all();
+
 
         return [
+            "status" => "sukses",
             "data" => [
-                'id_diagnosa' => $id_pasien,
-                'diagnosa' => $diagnosa,
+                'id_pasien' => $id_pasien,
+                'jumlah' => $diagnosa,
                 'nama' => $nama
             ]
 

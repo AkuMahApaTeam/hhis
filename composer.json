@@ -49,7 +49,8 @@
     "mpdf/mpdf":"*",
     "zxbodya/yii2-tinymce": "*@dev",
     "zxbodya/yii2-elfinder": "*@dev",
-    "2amigos/yii2-tinymce-widget": "~1.1"
+    "2amigos/yii2-tinymce-widget": "~1.1",
+    "yiisoft/yii2-httpclient": "^2.0"
   },
   "require-dev": {
     "yiisoft/yii2-codeception": "*",
