@@ -26,6 +26,16 @@ class RiwayatController extends Controller
      * @var boolean whether to enable CSRF validation for the actions in this controller.
      * CSRF validation is enabled only when both this property and [[Request::enableCsrfValidation]] are true.
      */
+    protected function verbs()
+    {
+        return [
+            'index' => ['GET', 'HEAD'],
+            'view' => ['GET', 'HEAD'],
+            'create' => ['POST'],
+            'update' => ['PUT', 'PATCH'],
+            'delete' => ['DELETE'],
+        ];
+    }
     public $enableCsrfValidation = false;
 
 
@@ -33,6 +43,7 @@ class RiwayatController extends Controller
      * Lists all Riwayat models.
      * @return mixed
      */
+
     public function actionIndex()
     {
         $searchModel = new RiwayatSearch;

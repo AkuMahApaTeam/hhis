@@ -147,29 +147,30 @@ class RiwayatController extends Controller
 
     public function actionGrafik($id_user)
     {
-        $id_pasien = \api\modules\v1\models\Pasien::find()
+        $objpasien= \api\modules\v1\models\Pasien::find()
             ->select('id_pasien')
             ->where(['id_user' => $id_user])
             ->one();
-//        SELECT count(r.diagnosa),d.nama_penyakit from riwayat r, daftar_penyakit d where r.id_pasien =1 AND r.diagnosa = d.id GROUP BY r.diagnosa
-        $riwayat = \api\modules\v1\models\Riwayat::find()
-            ->select('*')
-            ->orderBy(['id_pasien' => SORT_DESC])
-            ->all();
 
+        $id_pasien = $objpasien->id_pasien;
+//
+//        SELECT count(r.diagnosa),d.nama_penyakit from riwayat r, daftar_penyakit d where r.id_pasien =1 AND r.diagnosa = d.id GROUP BY r.diagnosa
+        $db = Yii::$app->db;
+        $dataProvider = $db->createCommand("SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=".$id_pasien."  AND r.diagnosa = d.id GROUP BY(r.diagnosa)")->queryAll();
+
+
+        foreach ($dataProvider as $model){
+            $diagnosa[] = (int)($model['diagno']);
+            $nama[] = ($model['namanya']);
+        }
         $daftar_penyakit = \api\modules\v1\models\DaftarPenyakit::find()
             ->all();
 
-        foreach ($riwayat as $model){
-
-        }
-        $diagnosa = \api\modules\v1\models\Riwayat::find()
-            ->select(['diagnosa','id_pasien'])
-            ->where(['id_pasien'=> $id_pasien])
-            ->count();
         return [
-            "penyakit" => [
-                'diagnosa' => $diagnosa
+            "data" => [
+                'id_diagnosa' => $id_pasien,
+                'diagnosa' => $diagnosa,
+                'nama' => $nama
             ]
 
         ];
