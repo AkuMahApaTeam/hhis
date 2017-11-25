@@ -188,7 +188,7 @@ class RiwayatController extends Controller
                 $client = new Client();
                 $response = $client->createRequest()
                     ->setMethod('post')
-                    ->addHeaders(['Authorization' => 'Bearer 02f85f51d61c8d9e9b3de9b21f0cebb0'])
+                    ->addHeaders(['Authorization' => 'Bearer f93bc16e7b193e9ec6f362e282b143f6'])
                     ->setUrl('https://api.mainapi.net/smsnotification/1.0.0/messages')
                     ->setData(['msisdn' => $Pasienmodel_forapi->no_telp_pasien, 'content' => 'Halo'.' '.$Pasienmodel_forapi->nama_pasien.' '.'kamu telah melakukan pemeriksaan pada tanggal '.' '.$date_now.' '.'oleh dokter'.' '.$AmodelDokter->nama_dokter.' '.'data kamu telah masuk dalam sistem kami, kami bisa pastikan data kamu bisa aman bersama kami.. SALAM PAMEDHIS, INDONESIA SEHAT !!! semoga kamu bisa segera sembuh dan melanjutkan aktivitas seperti biasanya '])
                     ->send();
