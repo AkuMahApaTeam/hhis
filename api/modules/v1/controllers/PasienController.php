@@ -52,6 +52,10 @@ class PasienController extends Controller
             ->select(['alamat_rumah','id_dokter'])
             ->where(['id_dokter' => $id_dokter])
             ->all();
+        $emails = \api\modules\v1\models\Dokter::find()
+            ->select(['email','id_dokter'])
+            ->where(['id_dokter' => $id_dokter])
+            ->all();
         $umur = \api\modules\v1\models\Riwayat::find()
             ->select(['umur','id_pasien'])
             ->where(['id_pasien' => $id_pasien])
@@ -119,11 +123,19 @@ class PasienController extends Controller
                 }
             }
 
+            $email = '';
+            foreach ($emails as $em) {
+                if($em->id_dokter == $model->id_dokter){
+                    $email = $em->email;
+                }
+            }
+
             $datadokter[] = [
                 'nama_dokter' => $nmdokter,
                 'no_telp_dokter' => $notelpdokter,
                 'alamat_praktik' => $alamatpraktik,
                 'alamat_rumah' => $alamatrumah,
+                'email' => $email
             ];
         }
 
