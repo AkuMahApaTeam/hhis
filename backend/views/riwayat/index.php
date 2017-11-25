@@ -10,7 +10,7 @@ use yii\grid\GridView;
     * @var backend\models\RiwayatSearch $searchModel
 */
 
-$this->title =  'Riwayats';
+$this->title =  'Riwayat Pasien';
 $this->params['breadcrumbs'][] = $this->title;
 
 if (isset($actionColumnTemplates)) {
@@ -21,12 +21,61 @@ Yii::$app->view->params['pageButtons'] = Html::a('<span class="glyphicon glyphic
     $actionColumnTemplateString = "{view} {update} {delete}";
 }
 $actionColumnTemplateString = '<div class="action-buttons">'.$actionColumnTemplateString.'</div>';
+
+foreach ($dataGrafik as $key) {
+     $b[] = ($key['namanya']);
+     $a[] = (int)($key['diagno']);
+     $sortan[] = (int)($key['diagno']);
+     $keluhan_terbanyak[] = ($key['keluhan']);
+     $larangan_terbanyak[] = ($key['larangan']);
+ }
+ rsort($sortan);
+ for ($i=0; $i < count($sortan) ; $i++) { 
+     if($a[$i] == $sortan[0]){
+        $iterasi = $i;
+        break;
+     }
+ }
+
 ?>
 <div class="giiant-crud riwayat-index">
+<div class="alert alert-danger" role="alert">
+ <?php
+    echo "3 Bulan Terakhir Sakit yang paling sering dialami oleh pasien adalah ".$b[$iterasi];
+ ?>
+</div>
+<hr>
 
     <?php
 //             echo $this->render('_search', ['model' =>$searchModel]);
         ?>
+
+<?=
+\dosamigos\highcharts\HighCharts::widget([
+    'clientOptions' => [
+        'chart' => [
+                'type' => 'bar'
+        ],
+        'title' => [
+             'text' => 'Grafik Riwayat Penyakit yang Pernah Dialami'
+             ],
+        'xAxis' => [
+            'categories' => $b
+        ],
+        'yAxis' => [
+            'title' => [
+                'text' => 'Jumlah'
+            ]
+        ],
+        'series' => [
+            ['name' => 'Kuantitias', 'data' => $a]
+           // ['name' => 'John', 'data' => [5, 7, 3,1,2]]
+        ]
+    ]
+]);
+ 
+?>
+<hr>
 
     
     <?php \yii\widgets\Pjax::begin(['id'=>'pjax-main', 'enableReplaceState'=> false, 'linkSelector'=>'#pjax-main ul.pagination a, th a', 'clientOptions' => ['pjax:success'=>'function(){alert("yo")}']]) ?>
