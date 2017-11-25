@@ -13,6 +13,7 @@ use yii\web\HttpException;
 use yii\helpers\Url;
 use yii\filters\AccessControl;
 use dmstr\bootstrap\Tabs;
+use yii\httpclient\Client;
 use Yii;
 
 /**
@@ -168,9 +169,29 @@ class RiwayatController extends Controller
     {
 
         $model = new Riwayat;
+        // for main api sms notification
+        $Pasienmodel_forapi = $this->findModelPasien($id);
+        $date_now = date('Y-m-d');
+        $Aquery = new \yii\db\Query();
+        $AshowId = $Aquery->select('id_dokter')->from('dokter')->where(['email' => $username])->one();
+
+        foreach ($AshowId as $val) {
+            $Aid_dokter = $val[0];
+        }
+        $AmodelDokter = $this->findModelDokter($Aid_dokter);
+
+        // for main api sms notification
 
         try {
+
             if ($model->load($_POST) && $model->validate() && $model->save()) {
+                $client = new Client();
+                $response = $client->createRequest()
+                    ->setMethod('post')
+                    ->addHeaders(['Authorization' => 'Bearer 02f85f51d61c8d9e9b3de9b21f0cebb0'])
+                    ->setUrl('https://api.mainapi.net/smsnotification/1.0.0/messages')
+                    ->setData(['msisdn' => $Pasienmodel_forapi->no_telp_pasien, 'content' => 'Halo'.' '.$Pasienmodel_forapi->nama_pasien.' '.'kamu telah melakukan pemeriksaan pada tanggal '.' '.$date_now.' '.'oleh dokter'.' '.$AmodelDokter->nama_dokter.' '.'data kamu telah masuk dalam sistem kami, kami bisa pastikan data kamu bisa aman bersama kami.. SALAM PAMEDHIS, INDONESIA SEHAT !!! semoga kamu bisa segera sembuh dan melanjutkan aktivitas seperti biasanya '])
+                    ->send();
 
                 return $this->redirect(['detail', 'id' => $id]);
             } elseif (!\Yii::$app->request->isPost) {
@@ -195,6 +216,8 @@ class RiwayatController extends Controller
             $id_dokter = $val[0];
         }
         $modelDokter = $this->findModelDokter($id_dokter);
+
+
 
         return $this->render('create',
             ['model' => $model,
