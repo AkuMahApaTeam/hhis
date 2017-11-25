@@ -139,10 +139,10 @@ class PasienController extends Controller
             ];
         }
 
-        foreach($user as $model){
-            $username = $model->username;
-            $password_hash = $model->password_hash;
-        }
+//        foreach($user as $model){
+//            $username = $model->username;
+//            $password_hash = $model->password_hash;
+//        }
         foreach($daftar_penyakit as $model){
                 if($model->id == $id_diagnosa){
                     $diagnosa = $model->nama_penyakit;
@@ -169,8 +169,8 @@ class PasienController extends Controller
 ////                dokter
                 'dokter' => $datadokter,
 //                username dan password
-                'username' => $username,
-                'password' => $password_hash
+//                'username' => $username,
+//                'password' => $password_hash
 
             ];
         }
