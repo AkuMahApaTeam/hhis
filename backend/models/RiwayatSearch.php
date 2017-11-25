@@ -118,7 +118,7 @@ public function searchGrafik($params,$id_pasien)
 // ->leftJoin('daftar_penyakit','Riwayat.diagnosa = daftar_penyakit.id')
 // ->groupBy('Riwayat.diagnosa');
     $db = Yii::$app->db;
-    $dataProvider = $db->createCommand('SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=1 AND r.diagnosa = d.id GROUP BY(r.diagnosa)')->queryAll();
+    $dataProvider = $db->createCommand("SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=".$id_pasien."  AND r.diagnosa = d.id GROUP BY(r.diagnosa)")->queryAll();
 // $dataProvider = new ActiveDataProvider([
 // 'query' => $query,
 // ]);
@@ -149,7 +149,7 @@ public function searchGrafik_one($params,$id_pasien)
 // ->groupBy('Riwayat.diagnosa');
     $db = Yii::$app->db;
     $dataProvider = $db->createCommand("
-        SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=1 AND r.diagnosa = d.id AND r.tgl_periksa LIKE '".$year_one."_".$date_one."___' GROUP BY(r.diagnosa)
+        SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=".$id_pasien." AND r.diagnosa = d.id AND r.tgl_periksa LIKE '".$year_one."_".$date_one."___' GROUP BY(r.diagnosa)
         ")->queryAll();
 // $dataProvider = new ActiveDataProvider([
 // 'query' => $query,
@@ -190,7 +190,7 @@ public function searchGrafik_three($params,$id_pasien)
 // ->groupBy('Riwayat.diagnosa');
     $db = Yii::$app->db;
     $dataProvider = $db->createCommand("
-        SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=1 AND r.diagnosa = d.id AND r.tgl_periksa BETWEEN '".$year_three."-".$date_three."-".$day."' AND '".$year_one."-".$date_one."-".$day."' GROUP BY(r.diagnosa)
+        SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=".$id_pasien."  AND r.diagnosa = d.id AND r.tgl_periksa BETWEEN '".$year_three."-".$date_three."-".$day."' AND '".$year_one."-".$date_one."-".$day."' GROUP BY(r.diagnosa)
         ")->queryAll();
     // SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya, r.tgl_periksa from riwayat r, daftar_penyakit d WHERE r.id_pasien=1 AND r.diagnosa = d.id AND r.tgl_periksa BETWEEN "2017-8-1" AND "2017-11-1" GROUP BY(r.diagnosa)
 // $dataProvider = new ActiveDataProvider([

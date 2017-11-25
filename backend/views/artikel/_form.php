@@ -1,80 +1,38 @@
 <?php
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use \dmstr\bootstrap\Tabs;
-use yii\helpers\StringHelper;
+use yii\widgets\ActiveForm;
+use zxbodya\yii2\tinymce\TinyMce;
+use zxbodya\yii2\elfinder\TinyMceElFinder;
 
-/**
-* @var yii\web\View $this
-* @var app\models\Artikel $model
-* @var yii\widgets\ActiveForm $form
-*/
-
+/* @var $this yii\web\View */
+/* @var $model app\models\Artikel */
+/* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="artikel-form">
 
-    <?php $form = ActiveForm::begin([
-    'id' => 'Artikel',
-    'layout' => 'horizontal',
-    'enableClientValidation' => true,
-    'errorSummaryCssClass' => 'error-summary alert alert-error'
-    ]
-    );
-    ?>
+    <?php $form = ActiveForm::begin(); ?>
 
-    <div class="">
-        <?php $this->beginBlock('main'); ?>
-
-        <p>
-            
-
-<!-- attribute judul -->
-			<?= $form->field($model, 'judul')->textarea(['rows' => 6]) ?>
-
-<!-- attribute deskripsi -->
-			<?= $form->field($model, 'deskripsi')->textarea(['rows' => 6]) ?>
-
-<!-- attribute abstrak -->
-			<?= $form->field($model, 'abstrak')->textarea(['rows' => 6]) ?>
-
-<!-- attribute image -->
-			  <?= $form->field($model, 'file1')->fileInput() ?>
-        </p>
-        <?php $this->endBlock(); ?>
-        
-        <?=
-    Tabs::widget(
-                 [
-                    'encodeLabels' => false,
-                    'items' => [ 
-                        [
-    'label'   =>  'Artikel',
-    'content' => $this->blocks['main'],
-    'active'  => true,
-],
-                    ]
-                 ]
-    );
-    ?>
-        <hr/>
-
-        <?php echo $form->errorSummary($model); ?>
-
-        <?= Html::submitButton(
-        '<span class="glyphicon glyphicon-check"></span> ' .
-        ($model->isNewRecord ? 'Create' : 'Save'),
+    <?= $form->field($model, 'judul')->textarea(['rows' => 1]) ?>
+    <?= $form->field($model, 'abstrak')->textarea(['rows' => 6]) ?>
+    <?=
+    $form->field($model, 'deskripsi')->widget(
+        TinyMce::className(),
         [
-        'id' => 'save-' . $model->formName(),
-        'class' => 'btn btn-success'
+            'fileManager' => [
+                'class' => TinyMceElFinder::className(),
+                'connectorRoute' => 'el-finder/connector',
+            ],
         ]
-        );
-        ?>
+    )
+    ?>
+  <?= $form->field($model, 'file1')->fileInput() ?>
 
-        <?php ActiveForm::end(); ?>
-
+    <div class="form-group">
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
-</div>
+    <?php ActiveForm::end(); ?>
 
+</div>

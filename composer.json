@@ -48,7 +48,8 @@
     "2amigos/yii2-highcharts-widget": "~1.0",
     "mpdf/mpdf":"*",
     "zxbodya/yii2-tinymce": "*@dev",
-    "zxbodya/yii2-elfinder": "*@dev"
+    "zxbodya/yii2-elfinder": "*@dev",
+    "2amigos/yii2-tinymce-widget": "~1.1"
   },
   "require-dev": {
     "yiisoft/yii2-codeception": "*",

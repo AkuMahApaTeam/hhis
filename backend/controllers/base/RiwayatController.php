@@ -58,6 +58,7 @@ class RiwayatController extends Controller
         $searchModel = new RiwayatSearch;
         $dataProvider = $searchModel->searchDetail($_GET, $id);
         $modelPasien = $this->findModelPasien($id);
+        $dataGrafik = $searchModel->searchGrafik_three($_GET, $id);
 
         Tabs::clearLocalStorage();
 
@@ -68,6 +69,7 @@ class RiwayatController extends Controller
             'dataProvider' => $dataProvider,
             'searchModel' => $searchModel,
             'modelPasien' => $modelPasien,
+            'dataGrafik' => $dataGrafik,
         ]);
     }
     public function actionGrafik()
