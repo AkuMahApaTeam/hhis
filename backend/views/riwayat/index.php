@@ -38,8 +38,12 @@ foreach ($dataGrafik as $key) {
  }
 
 ?>
+  <?php
+        if(\Yii::$app->user->identity->role == 8){
+    ?>
 <div class="giiant-crud riwayat-index">
 <div class="alert alert-danger" role="alert">
+  
  <?php
     echo "3 Bulan Terakhir Sakit yang paling sering dialami oleh pasien adalah ".$b[$iterasi];
  ?>
@@ -76,7 +80,9 @@ foreach ($dataGrafik as $key) {
  
 ?>
 <hr>
-
+<?php
+}
+?>
     
     <?php \yii\widgets\Pjax::begin(['id'=>'pjax-main', 'enableReplaceState'=> false, 'linkSelector'=>'#pjax-main ul.pagination a, th a', 'clientOptions' => ['pjax:success'=>'function(){alert("yo")}']]) ?>
 
