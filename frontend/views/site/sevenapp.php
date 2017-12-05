@@ -90,7 +90,7 @@
                         <div class="col-md-4 col-sm-4">
                             <div class="row">
                                 <div class="btn-group scrollpoint sp-effect4">
-                                     <a href="http://localhost/hhis2/backend/web/site/login" class="btn btn-empty side">Login</a>
+                                     <a href="http://hhis.tk/backend/web/site/login" class="btn btn-empty side">Login</a>
                                 </div>
                             </div>
                         </div>
