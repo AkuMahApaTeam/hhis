@@ -66,6 +66,7 @@ $form->field($model, 'id_no_izin')->dropDownList(
 
 <!-- attribute no_telp -->
 			<?= $form->field($model, 'no_telp')->textInput(['maxlength' => true]) ?>
+             <?= $form->field($model, 'file1')->fileInput()->label("Foto Profile") ?>
         </p>
         <?php $this->endBlock(); ?>
         

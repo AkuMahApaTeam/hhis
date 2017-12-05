@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use app\models\Pasien;
+use app\models\Dokter;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -28,12 +29,21 @@ use app\models\Pasien;
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <?php
-                                     $id_user =Yii::$app->user->identity->id;
-                                    $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
-                                ?>
-                            <img src="<?php echo Yii::$app->urlManager->createUrl('../../backend/web/'.$id_pasien->image); ?>" width="20px" height="auto" class="img-circle" alt="User Image"/>
+                           
 
+                            <?php
+                                  if(\Yii::$app->user->identity->role == 7){
+                                     $id_user =Yii::$app->user->identity->id;
+                                    $id_logon= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+                                }else if(\Yii::$app->user->identity->role == 8){
+                                     $id_user =Yii::$app->user->identity->id;
+                                    $id_logon= Dokter::find()->andWhere('id_user = '.$id_user)->one();
+                                }
+                                
+                                ?>
+                                 <?php     if(\Yii::$app->user->identity->role == 7 || \Yii::$app->user->identity->role == 8 ){?>
+                            <img src="<?php echo Yii::$app->urlManager->createUrl('../../backend/web/'.$id_logon->image); ?>" width="20px" height="auto" class="img-circle" alt="User Image"/>
+                            <?php }?>
                             <p>
                                 <?=Yii::$app->user->identity->username?>
                                <!--  <small>Member since Nov. 2012</small>
@@ -41,6 +51,7 @@ use app\models\Pasien;
                         </li>
                         <li class="user-footer">
                             <div class="pull-left">
+                                <?php  if(\Yii::$app->user->identity->role == 7){?>
                                 <?php
                                      $id_user =Yii::$app->user->identity->id;
                                     $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
@@ -50,6 +61,19 @@ use app\models\Pasien;
                                     ['/pasien/update','id_pasien'=>$id_pasien->id_pasien],
                                     ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
                                 ) ?>
+                                <?php }else if (\Yii::$app->user->identity->role == 8) {?>
+
+                                 <?php
+                                     $id_user =Yii::$app->user->identity->id;
+                                    $id_dokter= Dokter::find()->andWhere('id_user = '.$id_user)->one();
+                                ?>
+                                 <?= Html::a(
+                                    'Profile',
+                                    ['/dokter/update','id_dokter'=>$id_dokter->id_dokter],
+                                    ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
+                                ) ?>
+
+                                <?php } ?>
 
                                 <!-- <a href="" class="btn btn-default btn-flat">Profile</a> -->
                             </div>

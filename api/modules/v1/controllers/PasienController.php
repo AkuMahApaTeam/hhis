@@ -166,6 +166,7 @@ class PasienController extends Controller
                 'larangan' => $larangan,
 //                'id_diagnosa' => $id_diagnosa,
                 'diagnosa' => $diagnosa,
+                'image' => $model->image,                
 ////                dokter
                 'dokter' => $datadokter,
 //                username dan password

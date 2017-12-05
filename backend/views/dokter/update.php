@@ -7,7 +7,7 @@ use yii\helpers\Html;
 * @var app\models\Dokter $model
 */
     
-$this->title = Yii::t('models', 'Dokter') . " " . $model->id_dokter . ', ' . 'Edit';
+$this->title =  'Dokter' . " " . $model->id_dokter . ', ' . 'Edit';
 $this->params['breadcrumbs'][] = ['label' => 'Dokter', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => (string)$model->id_dokter, 'url' => ['view', 'id_dokter' => $model->id_dokter]];
 $this->params['breadcrumbs'][] = 'Edit';
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = 'Edit';
 <div class="giiant-crud dokter-update">
 
     <h1>
-        <?= Yii::t('models', 'Dokter') ?>
+            
         <small>
                         <?= $model->id_dokter ?>
         </small>

@@ -5,6 +5,7 @@
 namespace app\models\base;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the base-model class for table "dokter".
@@ -19,6 +20,7 @@ use Yii;
  * @property string $password
  * @property integer $id_kota
  * @property integer $id_provinsi
+ * @property string $image 
  * @property integer $id_user
  *
  * @property \app\models\NoIzinDokter $idNoIzin
@@ -29,10 +31,10 @@ abstract class Dokter extends \yii\db\ActiveRecord
 {
 
 
-
     /**
      * @inheritdoc
      */
+    public $file1;
     public static function tableName()
     {
         return 'dokter';
@@ -50,6 +52,7 @@ abstract class Dokter extends \yii\db\ActiveRecord
             [['email'], 'string', 'max' => 50],
             [['alamat_rumah', 'alamat_praktik', 'nama_dokter', 'password'], 'string', 'max' => 255],
             [['no_telp'], 'string', 'max' => 15],
+            [['file1'], 'file', 'extensions'=>'png,jpg'],
             [['id_no_izin'], 'exist', 'skipOnError' => true, 'targetClass' => \app\models\IzinDokter::className(), 'targetAttribute' => ['id_no_izin' => 'id_no_izin']]
         ];
     }
@@ -71,6 +74,7 @@ abstract class Dokter extends \yii\db\ActiveRecord
             'id_kota' => 'Id Kota',
             'id_provinsi' => 'Id Provinsi',
             'id_user' => 'Id User',
+             'image' => 'Image',
         ];
     }
 
@@ -89,6 +93,22 @@ abstract class Dokter extends \yii\db\ActiveRecord
     {
         return $this->hasMany(\app\models\Riwayat::className(), ['id_dokter' => 'id_dokter']);
     }
+    public function beforeSave($insert){
+    if(parent::beforeSave($insert)){
+        if (Yii::$app->request->isPost) {
+            $this->file1 = UploadedFile::getInstance($this, 'file1');
+            if ($this->file1 && $this->validate()) {
+
+                $this->file1->saveAs('uploads/dokter/' . $this->file1->baseName . '.' .$this->file1->extension);
+                $this->image = 'uploads/dokter/'.$this->file1->baseName . '.' .$this->file1->extension;
+                return true;
+            }
+        }
+    }
+    else{
+      return false;
+    }
+  }
 
 
 
