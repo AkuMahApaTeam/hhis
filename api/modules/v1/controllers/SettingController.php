@@ -43,6 +43,7 @@ class SettingController extends Controller
                 'nama_pasien' => $model->nama_pasien,
                 'no_telp' => $model->no_telp_pasien,
                 'alamat' => $model->alamat,
+                'image' => $model->image,
             ];
         }
 
