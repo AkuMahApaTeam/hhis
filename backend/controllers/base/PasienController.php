@@ -143,15 +143,14 @@ return $this->render('create', ['model' => $model]);
 */
 public function actionUpdate($id_pasien)
 {
-$model = $this->findModel($id_pasien);
-
-if ($model->load($_POST) && $model->save()) {
-return $this->redirect(Url::previous());
-} else {
-return $this->render('update', [
-'model' => $model,
-]);
-}
+    $model = $this->findModel($id_pasien);
+    if ($model->load($_POST) && $model->save()) {
+        return $this->redirect(Url::previous());
+    } else {
+        return $this->render('update', [
+            'model' => $model,
+        ]);
+    }
 }
 
 /**

@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Html;
+use app\models\Pasien;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -27,16 +28,30 @@ use yii\helpers\Html;
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="<?=Yii::getAlias('@web')?>/uploads/img/user.png" width="20px" height="auto" class="img-circle" alt="User Image"/>
+                            <?php
+                                     $id_user =Yii::$app->user->identity->id;
+                                    $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+                                ?>
+                            <img src="<?php echo Yii::$app->urlManager->createUrl('../../backend/web/'.$id_pasien->image); ?>" width="20px" height="auto" class="img-circle" alt="User Image"/>
 
                             <p>
                                 <?=Yii::$app->user->identity->username?>
-                                <small>Member since Nov. 2012</small>
-                            </p>
+                               <!--  <small>Member since Nov. 2012</small>
+ -->                            </p>
                         </li>
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <?php
+                                     $id_user =Yii::$app->user->identity->id;
+                                    $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+                                ?>
+                                 <?= Html::a(
+                                    'Profile',
+                                    ['/pasien/update','id_pasien'=>$id_pasien->id_pasien],
+                                    ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
+                                ) ?>
+
+                                <!-- <a href="" class="btn btn-default btn-flat">Profile</a> -->
                             </div>
                             <div class="pull-right">
                                 <?= Html::a(

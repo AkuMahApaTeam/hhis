@@ -13,7 +13,7 @@ use dmstr\bootstrap\Tabs;
 */
 $copyParams = $model->attributes;
 
-$this->title =  'Dokter';
+$this->title =  'Dokter'.' '.$model->nama_dokter;
 $this->params['breadcrumbs'][] = ['label' =>  'Dokters', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => (string)$model->id_dokter, 'url' => ['view', 'id_dokter' => $model->id_dokter]];
 $this->params['breadcrumbs'][] = 'View';
@@ -29,12 +29,10 @@ $this->params['breadcrumbs'][] = 'View';
         </span>
     <?php endif; ?>
 
-    <h1>
-        'Dokter'
-        <small>
-            <?= $model->id_dokter ?>
-        </small>
-    </h1>
+
+    <?php
+    if(\Yii::$app->user->identity->role == 8){
+    ?>
 
 
     <div class="clearfix crud-navigation">
@@ -63,6 +61,8 @@ $this->params['breadcrumbs'][] = 'View';
         </div>
 
     </div>
+    <?php
+    }?>
 
     <hr />
 
@@ -83,27 +83,28 @@ $this->params['breadcrumbs'][] = 'View';
         : 
         '<span class="label label-warning">?</span>'),
 ],
-        'password',
-        'id_kota',
-        'id_provinsi',
-        'id_user',
+        'nama_dokter',
         'email:email',
         'alamat_rumah',
         'alamat_praktik',
-        'nama_dokter',
         'no_telp',
     ],
     ]); ?>
 
     
     <hr/>
-
+ <?php
+    if(\Yii::$app->user->identity->role == 8){
+    ?>
     <?= Html::a('<span class="glyphicon glyphicon-trash"></span> ' . 'Delete', ['delete', 'id_dokter' => $model->id_dokter],
     [
     'class' => 'btn btn-danger',
     'data-confirm' => '' . 'Are you sure to delete this item?' . '',
     'data-method' => 'post',
     ]); ?>
+    <?php
+}
+    ?>
     <?php $this->endBlock(); ?>
 
 
@@ -181,7 +182,7 @@ $this->params['breadcrumbs'][] = 'View';
     'class' => yii\grid\DataColumn::className(),
     'attribute' => 'diagnosa',
     'value' => function ($model) {
-        if ($rel = $model->getDiagnosa()->one()) {
+        if ($rel = $model->getDiagnosa0()->one()) {
             return Html::a($rel->id, ['daftar-penyakit/view', 'id' => $rel->id,], ['data-pjax' => 0]);
         } else {
             return '';
@@ -197,7 +198,9 @@ $this->params['breadcrumbs'][] = 'View';
 <?php Pjax::end() ?>
 <?php $this->endBlock() ?>
 
-
+ <?php
+    if(\Yii::$app->user->identity->role == 8){
+    ?>
     <?= Tabs::widget(
                  [
                      'id' => 'relation-tabs',
@@ -216,5 +219,28 @@ $this->params['breadcrumbs'][] = 'View';
  ]
                  ]
     );
+    ?>
+    <?php
+}else{
+    ?>
+ <?= Tabs::widget(
+                 [
+                     'id' => 'relation-tabs',
+                     'encodeLabels' => false,
+                     'items' => [
+ [
+    'label'   => '<b class=""># '.$model->id_dokter.'</b>',
+    'content' => $this->blocks['app\models\Dokter'],
+    'active'  => true,
+],
+ ]
+                 ]
+    );
+    ?>
+
+
+
+    <?php
+}
     ?>
 </div>

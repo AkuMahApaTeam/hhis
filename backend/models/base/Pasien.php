@@ -5,6 +5,7 @@
 namespace app\models\base;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the base-model class for table "pasien".
@@ -19,6 +20,7 @@ use Yii;
  * @property integer $id_kota
  * @property integer $id_provinsi
  * @property integer $id_user
+ * @property string $image
  * @property string $email 
  * @property string $password 
  *
@@ -33,6 +35,7 @@ abstract class Pasien extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $file1;
     public static function tableName()
     {
         return 'pasien';
@@ -53,12 +56,28 @@ abstract class Pasien extends \yii\db\ActiveRecord
             [['jenis_kelamin'], 'string', 'max' => 10],
             ['nik', 'trim'],
             ['nik', 'required'],
-            [['nik'], 'unique', 'skipOnError' => true, 'targetClass' => Pasien::className(), 'targetAttribute' => ['nik' => 'nik']],
+            [
+                ['nik'], 'unique', 'skipOnError' => true, 
+                'targetClass' => Pasien::className(), 
+                'targetAttribute' => ['nik' => 'nik'],
+                'when' => function($model,$attribute){
+                    return $model->{$attribute} !== $model->getOldAttribute($attribute); 
+                    //this rules work when attribute nik change 
+
+                },
+            ],
             ['email', 'trim'],
             ['email', 'required'],
             ['email', 'email'],
-            ['email', 'unique', 'targetClass' => 'frontend\models\Pasien', 'message' => 'This email address has already been taken.'],
+            ['email', 'unique', 
+            'targetClass' => 'frontend\models\Pasien', 
+            'message' => 'This email address has already been taken.',
+            'when' => function($model,$attribute){
+                    return $model->{$attribute} !== $model->getOldAttribute($attribute);
 
+                },
+            ],
+            [['file1'], 'file', 'extensions'=>'png,jpg'],
 
             [['password'], 'string', 'max' => 25]
         ];
@@ -82,6 +101,7 @@ abstract class Pasien extends \yii\db\ActiveRecord
             'id_user' => 'Id User',
             'email' => 'Email', 
             'password' => 'Password', 
+              'image' => 'Image',
         ];
     }
 
@@ -92,6 +112,22 @@ abstract class Pasien extends \yii\db\ActiveRecord
     {
         return $this->hasMany(\app\models\Riwayat::className(), ['id_pasien' => 'id_pasien']);
     }
+     public function beforeSave($insert){
+    if(parent::beforeSave($insert)){
+        if (Yii::$app->request->isPost) {
+            $this->file1 = UploadedFile::getInstance($this, 'file1');
+            if ($this->file1 && $this->validate()) {
+
+                $this->file1->saveAs('uploads/pasien/' . $this->file1->baseName . '.' .$this->file1->extension);
+                $this->image = 'uploads/pasien/'.$this->file1->baseName . '.' .$this->file1->extension;
+                return true;
+            }
+        }
+    }
+    else{
+      return false;
+    }
+  }
 
 
 
