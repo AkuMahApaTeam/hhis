@@ -176,42 +176,81 @@ class RiwayatController extends Controller
         ];
     }
 
-    public function actionOne_months()
+    public function actionOne_months($id_user)
     {
-        $id_user =Yii::$app->user->identity->id;
-        $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
-        $searchModel = new RiwayatSearch;
-        $dataProvider = $searchModel->searchGrafik_one($_GET, $id_pasien->id_pasien);
-        // $modelPasien = $this->findModelPasien($id);
+        $date_one = date('m');
+        $year_one = date('Y');
 
-        Tabs::clearLocalStorage();
+         $objpasien= \api\modules\v1\models\Pasien::find()
+            ->select('id_pasien')
+            ->where(['id_user' => $id_user])
+            ->one();
 
-        Url::remember();
-        \Yii::$app->session['__crudReturnUrl'] = null;
+        $id_pasien = $objpasien->id_pasien;
+//
+//        SELECT count(r.diagnosa),d.nama_penyakit from riwayat r, daftar_penyakit d where r.id_pasien =1 AND r.diagnosa = d.id GROUP BY r.diagnosa
+        $db = Yii::$app->db;
+        $dataProvider = $db->createCommand("SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=".$id_pasien."  AND r.diagnosa = d.id AND r.tgl_periksa LIKE '".$year_one."_".$date_one."___' GROUP BY(r.diagnosa)
+        ")->queryAll();
 
-        return $this->render('grafik', [
-            'dataProvider' => $dataProvider,
 
-        ]);
+        foreach ($dataProvider as $model){
+            $diagnosa[] = (int)($model['diagno']);
+            $nama[] = ($model['namanya']);
+        }
+
+
+        return [
+            "status" => "sukses",
+            "data" => [
+                'id_pasien' => $id_pasien,
+                'jumlah' => $diagnosa,
+                'nama' => $nama
+            ]
+
+        ];
     }
 
-    public function actionThree_months()
+    public function actionThree_months($id_user)
     {
-        $id_user =Yii::$app->user->identity->id;
-        $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
-        $searchModel = new RiwayatSearch;
-        $dataProvider = $searchModel->searchGrafik_three($_GET, $id_pasien->id_pasien);
-        // $modelPasien = $this->findModelPasien($id);
+            $date_one = date('m');
+            $year_one = date('Y');
+            $day = 1;
+            $date_three =  $date_one-3;
+            $year_three = $year_one;
+            if($date_three < 0){
+                $old_three = $date_three;
+                $date_three = 13 + $old_three;
+                $year_three = $year_one-1;
+            }
 
-        Tabs::clearLocalStorage();
+         $objpasien= \api\modules\v1\models\Pasien::find()
+            ->select('id_pasien')
+            ->where(['id_user' => $id_user])
+            ->one();
 
-        Url::remember();
-        \Yii::$app->session['__crudReturnUrl'] = null;
+        $id_pasien = $objpasien->id_pasien;
+//
+//        SELECT count(r.diagnosa),d.nama_penyakit from riwayat r, daftar_penyakit d where r.id_pasien =1 AND r.diagnosa = d.id GROUP BY r.diagnosa
+        $db = Yii::$app->db;
+        $dataProvider = $db->createCommand("SELECT count(r.diagnosa) as diagno,d.nama_penyakit as namanya,r.keluhan_utama as keluhan,r.larangan as larangan from riwayat r, daftar_penyakit d WHERE r.id_pasien=".$id_pasien."  AND r.diagnosa = d.id AND r.tgl_periksa BETWEEN '".$year_three."-".$date_three."-".$day."' AND '".$year_one."-".$date_one."-".$day."' GROUP BY(r.diagnosa)")->queryAll();
 
-        return $this->render('grafik', [
-            'dataProvider' => $dataProvider,
 
-        ]);
+        foreach ($dataProvider as $model){
+            $diagnosa[] = (int)($model['diagno']);
+            $nama[] = ($model['namanya']);
+        }
+
+
+        return [
+            "status" => "sukses",
+            "data" => [
+                'id_pasien' => $id_pasien,
+                'jumlah' => $diagnosa,
+                'nama' => $nama
+            ]
+
+        ];
     }
 
     public $modelClass = 'api\modules\v1\models\Riwayat';
