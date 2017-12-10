@@ -181,6 +181,8 @@ class RiwayatController extends Controller
         $AmodelDokter = $this->findModelDokter($Aid_dokter);
 
         // for main api sms notification
+       // url using MAIN API : 'https://api.mainapi.net/smsnotification/1.0.0/messages'
+        // token : 'Bearer f93bc16e7b193e9ec6f362e282b143f6'
 
         try {
 
@@ -188,8 +190,9 @@ class RiwayatController extends Controller
                 $client = new Client();
                 $response = $client->createRequest()
                     ->setMethod('post')
-                    ->addHeaders(['Authorization' => 'Bearer f93bc16e7b193e9ec6f362e282b143f6'])
-                    ->setUrl('https://api.mainapi.net/smsnotification/1.0.0/messages')
+                    ->addHeaders(['Authorization' =>'Bearer 80b3cfbc6c2c2ae05064aec77300ae67',
+                        'X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff'])
+                    ->setUrl('https://api.pometera.id/smsnotif/messages')
                     ->setData(['msisdn' => $Pasienmodel_forapi->no_telp_pasien, 'content' => 'Halo'.' '.$Pasienmodel_forapi->nama_pasien.' '.'kamu telah melakukan pemeriksaan pada tanggal '.' '.$date_now.' '.'oleh dokter'.' '.$AmodelDokter->nama_dokter.' '.'data kamu telah masuk dalam sistem kami, kami bisa pastikan data kamu bisa aman bersama kami.. SALAM PAMEDHIS, INDONESIA SEHAT !!! semoga kamu bisa segera sembuh dan melanjutkan aktivitas seperti biasanya '])
                     ->send();
 
