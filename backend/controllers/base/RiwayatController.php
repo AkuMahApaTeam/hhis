@@ -171,7 +171,9 @@ class RiwayatController extends Controller
         $model = new Riwayat;
         // for main api sms notification
         $Pasienmodel_forapi = $this->findModelPasien($id);
+        date_default_timezone_set('Asia/Jakarta');
         $date_now = date('Y-m-d');
+        $time_now = date('h:i:sa');
         $Aquery = new \yii\db\Query();
         $AshowId = $Aquery->select('id_dokter')->from('dokter')->where(['email' => $username])->one();
 
@@ -187,14 +189,25 @@ class RiwayatController extends Controller
         try {
 
             if ($model->load($_POST) && $model->validate() && $model->save()) {
+
                 $client = new Client();
-                $response = $client->createRequest()
+                $response_token = $client->createRequest()
                     ->setMethod('post')
-                    ->addHeaders(['Authorization' =>'Bearer 80b3cfbc6c2c2ae05064aec77300ae67',
+                    ->addHeaders(['X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff','Content-Type' => 'application/x-www-form-urlencoded'])
+                    ->setUrl('https://api.pometera.id/smsnotif/token')
+                    ->setData(['grant_type' => 'client_credentials'])
+                    ->send();
+                if($response_token->isOk){
+                     $client = new Client();
+                    $response = $client->createRequest()
+                    ->setMethod('post')
+                    ->addHeaders(['Authorization' =>'Bearer'.' '.$response_token->data['access_token'],
                         'X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff'])
                     ->setUrl('https://api.pometera.id/smsnotif/messages')
-                    ->setData(['msisdn' => $Pasienmodel_forapi->no_telp_pasien, 'content' => 'Halo'.' '.$Pasienmodel_forapi->nama_pasien.' '.'kamu telah melakukan pemeriksaan pada tanggal '.' '.$date_now.' '.'oleh dokter'.' '.$AmodelDokter->nama_dokter.' '.'data kamu telah masuk dalam sistem kami, kami bisa pastikan data kamu bisa aman bersama kami.. SALAM PAMEDHIS, INDONESIA SEHAT !!! semoga kamu bisa segera sembuh dan melanjutkan aktivitas seperti biasanya '])
+                    ->setData(['msisdn' => $Pasienmodel_forapi->no_telp_pasien, 'content' => 'Halo'.' '.$Pasienmodel_forapi->nama_pasien.' '.'kamu telah melakukan pemeriksaan pada tanggal '.' '.$date_now.' '.'jam'.' '.$time_now.' '.'oleh dokter'.' '.$AmodelDokter->nama_dokter.' '.'data kamu telah masuk dalam sistem kami, kami bisa pastikan data kamu bisa aman bersama kami.. SALAM PAMEDHIS, INDONESIA SEHAT !!! semoga kamu bisa segera sembuh dan melanjutkan aktivitas seperti biasanya '])
                     ->send();
+
+                }
 
                 return $this->redirect(['detail', 'id' => $id]);
             } elseif (!\Yii::$app->request->isPost) {
