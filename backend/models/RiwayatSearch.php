@@ -17,10 +17,11 @@ class RiwayatSearch extends Riwayat
 */
 public function rules()
 {
-return [
-[['id_riwayat', 'id_pasien', 'id_dokter', 'umur', 'berat_badan', 'tinggi_badan', 'diagnosa'], 'integer'],
-            [['riwayat_kesehatan_keluarga', 'keluhan_utama', 'larangan',  'tgl_periksa', 'perawatan'], 'safe'],
-];
+    return [
+//[['id_riwayat', 'id_pasien', 'id_dokter', 'umur', 'berat_badan', 'tinggi_badan', 'diagnosa'], 'integer'],
+           // [['riwayat_kesehatan_keluarga', 'keluhan_utama', 'larangan',  'tgl_periksa', 'perawatan','diagnosa_text'], 'safe'],
+        [['tgl_periksa'], 'safe'],
+    ];
 }
 
 /**
@@ -29,7 +30,7 @@ return [
 public function scenarios()
 {
 // bypass scenarios() implementation in the parent class
-return Model::scenarios();
+    return Model::scenarios();
 }
 
 /**
@@ -41,71 +42,73 @@ return Model::scenarios();
 */
 public function search($params)
 {
-$query = Riwayat::find();
+    $query = Riwayat::find();
 
-$dataProvider = new ActiveDataProvider([
-'query' => $query,
-]);
+    $dataProvider = new ActiveDataProvider([
+        'query' => $query,
+        'pagination' =>['pageSize' => 5],
+    ]);
 
-$this->load($params);
+    $this->load($params);
 
-if (!$this->validate()) {
+    if (!$this->validate()) {
 // uncomment the following line if you do not want to any records when validation fails
 // $query->where('0=1');
-return $dataProvider;
-}
+        return $dataProvider;
+    }
 
-$query->andFilterWhere([
-            'id_riwayat' => $this->id_riwayat,
-            'id_pasien' => $this->id_pasien,
-            'id_dokter' => $this->id_dokter,
-            'umur' => $this->umur,
-            'berat_badan' => $this->berat_badan,
-            'tinggi_badan' => $this->tinggi_badan,
-            'diagnosa' => $this->diagnosa,
-            'tgl_periksa' => $this->tgl_periksa,
-        ]);
+    $query->andFilterWhere([
+        'id_riwayat' => $this->id_riwayat,
+        'id_pasien' => $this->id_pasien,
+        'id_dokter' => $this->id_dokter,
+        'umur' => $this->umur,
+        'berat_badan' => $this->berat_badan,
+        'tinggi_badan' => $this->tinggi_badan,
+        'diagnosa' => $this->diagnosa,
+        'tgl_periksa' => $this->tgl_periksa,
+    ]);
 
-        $query->andFilterWhere(['like', 'riwayat_kesehatan_keluarga', $this->riwayat_kesehatan_keluarga])
-            ->andFilterWhere(['like', 'keluhan_utama', $this->keluhan_utama])
-            ->andFilterWhere(['like', 'larangan', $this->larangan])
-            ->andFilterWhere(['like', 'perawatan', $this->perawatan]);
+    $query->andFilterWhere(['like', 'riwayat_kesehatan_keluarga', $this->riwayat_kesehatan_keluarga])
+    ->andFilterWhere(['like', 'keluhan_utama', $this->keluhan_utama])
+    ->andFilterWhere(['like', 'larangan', $this->larangan])
+    ->andFilterWhere(['like', 'perawatan', $this->perawatan]);
 
-return $dataProvider;
+    return $dataProvider;
 }
 public function searchDetail($params,$id_pasien)
 {
-$query = Riwayat::find();
+    $query = Riwayat::find();
 
-$dataProvider = new ActiveDataProvider([
-'query' => $query,
-]);
+    $dataProvider = new ActiveDataProvider([
+        'query' => $query,
+        'pagination' =>['pageSize' => 5],
+    ]);
 
-$this->load($params);
+    $this->load($params);
 
-if (!$this->validate()) {
+    if (!$this->validate()) {
 // uncomment the following line if you do not want to any records when validation fails
 // $query->where('0=1');
-return $dataProvider;
-}
+        return $dataProvider;
+    }
 
-$query->andFilterWhere([
-            'id_riwayat' => $this->id_riwayat,
-            'id_pasien' => $id_pasien,
-            'id_dokter' => $this->id_dokter,
-            'umur' => $this->umur,
-            'berat_badan' => $this->berat_badan,
-            'tinggi_badan' => $this->tinggi_badan,
-            'diagnosa' => $this->diagnosa,
-            'tgl_periksa' => $this->tgl_periksa,
-        ]);
+    $query->andFilterWhere([
+        'id_riwayat' => $this->id_riwayat,
+        'id_pasien' => $id_pasien,
+        'id_dokter' => $this->id_dokter,
+        'umur' => $this->umur,
+        'berat_badan' => $this->berat_badan,
+        'tinggi_badan' => $this->tinggi_badan,
+        'diagnosa' => $this->diagnosa,
+        'tgl_periksa' => $this->tgl_periksa,
+    ]);
 
-        $query->andFilterWhere(['like', 'riwayat_kesehatan_keluarga', $this->riwayat_kesehatan_keluarga])
-            ->andFilterWhere(['like', 'keluhan_utama', $this->keluhan_utama])
-            ->andFilterWhere(['like', 'larangan', $this->larangan])
-            ->andFilterWhere(['like', 'perawatan', $this->perawatan]);
-
-return $dataProvider;
+    $query->andFilterWhere(['like', 'riwayat_kesehatan_keluarga', $this->riwayat_kesehatan_keluarga])
+    ->andFilterWhere(['like', 'keluhan_utama', $this->keluhan_utama])
+    ->andFilterWhere(['like', 'larangan', $this->larangan])
+    ->andFilterWhere(['like', 'perawatan', $this->perawatan]);
+    
+    return $dataProvider;
 }
 public function searchGrafik($params,$id_pasien)
 {
@@ -124,14 +127,14 @@ public function searchGrafik($params,$id_pasien)
 // ]);
 //var_dump($dataProvider);
 
-$this->load($params);
+    $this->load($params);
 
-if (!$this->validate()) {
+    if (!$this->validate()) {
 // uncomment the following line if you do not want to any records when validation fails
 // $query->where('0=1');
-return $dataProvider;
-}
-return $dataProvider;
+        return $dataProvider;
+    }
+    return $dataProvider;
 }
 
 public function searchGrafik_one($params,$id_pasien)
@@ -156,30 +159,28 @@ public function searchGrafik_one($params,$id_pasien)
 // ]);
 //var_dump($dataProvider);
 
-$this->load($params);
+    $this->load($params);
 
-if (!$this->validate()) {
+    if (!$this->validate()) {
 // uncomment the following line if you do not want to any records when validation fails
 // $query->where('0=1');
-return $dataProvider;
-}
-return $dataProvider;
+        return $dataProvider;
+    }
+    return $dataProvider;
 }
 
 public function searchGrafik_three($params,$id_pasien)
 {
     $date_one = date('m');
     $year_one = date('Y');
-    $day = 1;
-    $date_three =  $date_one-3;
-   $year_three = $year_one;
+    $day = date('d');
+    $date_three = (string)$date_one-3;
+    $year_three = $year_one;
     if($date_three < 0){
         $old_three = $date_three;
-        $date_three = 13 + $old_three;
-        $year_three = $year_one-1;
+        $date_three = (string) 13 + $old_three;
+        $year_three = (string) $year_one-1;
     }
-
-    //var_dump($year_one);
 // $query = Riwayat::find()
 // ->select([
 //     'COUNT(Riwayat.diagnosa) AS jum_diagnosa ',
@@ -198,14 +199,14 @@ public function searchGrafik_three($params,$id_pasien)
 // ]);
 //var_dump($dataProvider);
 
-$this->load($params);
+    $this->load($params);
 
-if (!$this->validate()) {
+    if (!$this->validate()) {
 // uncomment the following line if you do not want to any records when validation fails
 // $query->where('0=1');
-return $dataProvider;
-}
-return $dataProvider;
+        return $dataProvider;
+    }
+    return $dataProvider;
 }
 
 }

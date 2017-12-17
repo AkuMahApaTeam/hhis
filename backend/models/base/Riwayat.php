@@ -18,6 +18,7 @@ use Yii;
  * @property string $riwayat_kesehatan_keluarga
  * @property string $keluhan_utama
  * @property integer $diagnosa
+ * @property string $diagnosa_text 
  * @property string $larangan
  * @property string $pemeriksa_penunjang
  * @property string $tgl_periksa
@@ -56,7 +57,7 @@ abstract class Riwayat extends \yii\db\ActiveRecord
         return [
              [['id_pasien', 'id_dokter', 'diagnosa', 'perawatan', 'advis', 'head', 'neck', 'thorax', 'abdomen', 'ekstremitas'], 'required'],
             [['id_pasien', 'id_dokter', 'umur', 'berat_badan', 'tinggi_badan', 'diagnosa'], 'integer'],
-             [['riwayat_kesehatan_keluarga', 'keluhan_utama', 'larangan', 'pemeriksa_penunjang', 'advis', 'head', 'neck', 'thorax', 'abdomen', 'ekstremitas'], 'string'],
+             [['riwayat_kesehatan_keluarga', 'keluhan_utama', 'larangan','diagnosa_text','pemeriksa_penunjang', 'advis', 'head', 'neck', 'thorax', 'abdomen', 'ekstremitas'], 'string'],
             [['tgl_periksa'], 'safe'],
             [['perawatan'], 'string', 'max' => 25],
             [['id_pasien'], 'exist', 'skipOnError' => true, 'targetClass' => \app\models\Pasien::className(), 'targetAttribute' => ['id_pasien' => 'id_pasien']],
@@ -80,6 +81,7 @@ abstract class Riwayat extends \yii\db\ActiveRecord
             'riwayat_kesehatan_keluarga' => 'Riwayat Kesehatan Keluarga',
             'keluhan_utama' => 'Keluhan Utama',
             'diagnosa' => 'Diagnosa',
+             'diagnosa_text' => 'Diagnosa_text',
             'larangan' => 'Larangan',
              'pemeriksa_penunjang' => 'Pemeriksa Penunjang',
             'tgl_periksa' => 'Tgl Periksa',

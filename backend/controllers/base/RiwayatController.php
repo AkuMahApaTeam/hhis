@@ -7,6 +7,7 @@ namespace backend\controllers\base;
 use app\models\Riwayat;
 use app\models\Pasien;
 use app\models\Dokter;
+use app\models\DaftarPenyakit;
 use backend\models\RiwayatSearch;
 use yii\web\Controller;
 use yii\web\HttpException;
@@ -15,6 +16,7 @@ use yii\filters\AccessControl;
 use dmstr\bootstrap\Tabs;
 use yii\httpclient\Client;
 use Yii;
+use mPDF;
 
 /**
  * RiwayatController implements the CRUD actions for Riwayat model.
@@ -29,13 +31,13 @@ class RiwayatController extends Controller
      */
     protected function verbs()
     {
-        return [
-            'index' => ['GET', 'HEAD'],
-            'view' => ['GET', 'HEAD'],
-            'create' => ['POST'],
-            'update' => ['PUT', 'PATCH'],
-            'delete' => ['DELETE'],
-        ];
+      return [
+        'index' => ['GET', 'HEAD'],
+        'view' => ['GET', 'HEAD'],
+        'create' => ['POST'],
+        'update' => ['PUT', 'PATCH'],
+        'delete' => ['DELETE'],
+      ];
     }
     public $enableCsrfValidation = false;
 
@@ -47,18 +49,18 @@ class RiwayatController extends Controller
 
     public function actionIndex()
     {
-        $searchModel = new RiwayatSearch;
-        $dataProvider = $searchModel->search($_GET);
+      $searchModel = new RiwayatSearch;
+      $dataProvider = $searchModel->search($_GET);
 
-        Tabs::clearLocalStorage();
+      Tabs::clearLocalStorage();
 
-        Url::remember();
-        \Yii::$app->session['__crudReturnUrl'] = null;
+      Url::remember();
+      \Yii::$app->session['__crudReturnUrl'] = null;
 
-        return $this->render('index', [
-            'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
-        ]);
+      return $this->render('index', [
+        'dataProvider' => $dataProvider,
+        'searchModel' => $searchModel,
+      ]);
     }
 
     public function actionDetail($id)
@@ -67,78 +69,115 @@ class RiwayatController extends Controller
 
 
         //            $kontrak = $mitra-> getMasterKontraks()->andWhere('status=1')->andWhere('flag=1')->all();
-        $searchModel = new RiwayatSearch;
-        $dataProvider = $searchModel->searchDetail($_GET, $id);
-        $modelPasien = $this->findModelPasien($id);
-        $dataGrafik = $searchModel->searchGrafik_three($_GET, $id);
+      $searchModel = new RiwayatSearch;
+      $dataProvider = $searchModel->searchDetail($_GET, $id);
+      $modelPasien = $this->findModelPasien($id);
+      $dataGrafik = $searchModel->searchGrafik_three($_GET, $id);
 
-        Tabs::clearLocalStorage();
+      Tabs::clearLocalStorage();
 
-        Url::remember();
-        \Yii::$app->session['__crudReturnUrl'] = null;
+      Url::remember();
+      \Yii::$app->session['__crudReturnUrl'] = null;
 
-        return $this->render('index', [
-            'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
-            'modelPasien' => $modelPasien,
-            'dataGrafik' => $dataGrafik,
-        ]);
+      return $this->render('index', [
+        'dataProvider' => $dataProvider,
+        'searchModel' => $searchModel,
+        'modelPasien' => $modelPasien,
+        'dataGrafik' => $dataGrafik,
+      ]);
     }
     public function actionGrafik()
     {
-        $id_user =Yii::$app->user->identity->id;
-        $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
-        $searchModel = new RiwayatSearch;
-        $dataProvider = $searchModel->searchGrafik($_GET, $id_pasien->id_pasien);
+      $id_user =Yii::$app->user->identity->id;
+      $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+      $searchModel = new RiwayatSearch;
+      $dataProvider = $searchModel->searchGrafik($_GET, $id_pasien->id_pasien);
        // $modelPasien = $this->findModelPasien($id);
 
-        Tabs::clearLocalStorage();
+      Tabs::clearLocalStorage();
 
-        Url::remember();
-        \Yii::$app->session['__crudReturnUrl'] = null;
+      Url::remember();
+      \Yii::$app->session['__crudReturnUrl'] = null;
 
-        return $this->render('grafik', [
-            'dataProvider' => $dataProvider,
-           
-        ]);
+      return $this->render('grafik', [
+        'dataProvider' => $dataProvider,
+        
+      ]);
     }
 
     public function actionOne_months()
     {
-        $id_user =Yii::$app->user->identity->id;
-        $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
-        $searchModel = new RiwayatSearch;
-        $dataProvider = $searchModel->searchGrafik_one($_GET, $id_pasien->id_pasien);
+      $id_user =Yii::$app->user->identity->id;
+      $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+      $searchModel = new RiwayatSearch;
+      $dataProvider = $searchModel->searchGrafik_one($_GET, $id_pasien->id_pasien);
        // $modelPasien = $this->findModelPasien($id);
 
-        Tabs::clearLocalStorage();
+      Tabs::clearLocalStorage();
 
-        Url::remember();
-        \Yii::$app->session['__crudReturnUrl'] = null;
+      Url::remember();
+      \Yii::$app->session['__crudReturnUrl'] = null;
 
-        return $this->render('grafik', [
-            'dataProvider' => $dataProvider,
-           
-        ]);
+      return $this->render('grafik', [
+        'dataProvider' => $dataProvider,
+        
+      ]);
     }
     
     public function actionThree_months()
     {
-        $id_user =Yii::$app->user->identity->id;
-        $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
-        $searchModel = new RiwayatSearch;
-        $dataProvider = $searchModel->searchGrafik_three($_GET, $id_pasien->id_pasien);
+      $id_user =Yii::$app->user->identity->id;
+      $id_pasien= Pasien::find()->andWhere('id_user = '.$id_user)->one();
+      $searchModel = new RiwayatSearch;
+      $dataProvider = $searchModel->searchGrafik_three($_GET, $id_pasien->id_pasien);
        // $modelPasien = $this->findModelPasien($id);
 
-        Tabs::clearLocalStorage();
+      Tabs::clearLocalStorage();
 
-        Url::remember();
-        \Yii::$app->session['__crudReturnUrl'] = null;
+      Url::remember();
+      \Yii::$app->session['__crudReturnUrl'] = null;
 
-        return $this->render('grafik', [
-            'dataProvider' => $dataProvider,
-           
-        ]);
+      return $this->render('grafik', [
+        'dataProvider' => $dataProvider,
+        
+      ]);
+    }
+
+    public function actionPdf($id_riwayat) {
+      $query = new \yii\db\Query();
+      $dataRiwayat = $query->select('*')
+      ->from('riwayat')
+      ->where(['id_riwayat'=>$id_riwayat])
+      ->all();
+      foreach ($dataRiwayat as $key => $valueR) {
+        $id_dokter = $valueR['id_dokter'];
+        $id_pasien = $valueR['id_pasien'];
+        $id_diagnosa = $valueR['diagnosa'];
+      }
+      $dataDokter = $query->select('*')
+      ->from('dokter')
+      ->where(['id_dokter'=>$id_dokter])
+      ->all();
+      foreach ($dataDokter as $key => $valueD) {
+        $id_SIP = $valueD['id_no_izin'];
+      }
+      $dataSIP = $query->select('no_izin')
+      ->from('no_izin_dokter')
+      ->where(['id_no_izin'=>$id_SIP])
+      ->all();
+      $dataPasien = $query->select('*')
+      ->from('pasien')
+      ->where(['id_pasien'=>$id_pasien])
+      ->all();
+      $dataPenyakit = $query->select('*')
+      ->from('daftar_penyakit')
+      ->where(['id'=>$id_diagnosa])
+      ->all();
+
+      $mpdf = new \Mpdf\Mpdf();
+      $mpdf->WriteHTML($this->renderPartial('createPdf',['dataRiwayat'=>$dataRiwayat,'dataPasien'=>$dataPasien,'dataDokter'=>$dataDokter,'dataSIP'=>$dataSIP,'dataPenyakit'=>$dataPenyakit,]));
+      $mpdf->Output();
+      exit;
     }
     
 
@@ -151,13 +190,13 @@ class RiwayatController extends Controller
      */
     public function actionView($id_riwayat)
     {
-        \Yii::$app->session['__crudReturnUrl'] = Url::previous();
-        Url::remember();
-        Tabs::rememberActiveState();
+      \Yii::$app->session['__crudReturnUrl'] = Url::previous();
+      Url::remember();
+      Tabs::rememberActiveState();
 
-        return $this->render('view', [
-            'model' => $this->findModel($id_riwayat),
-        ]);
+      return $this->render('view', [
+        'model' => $this->findModel($id_riwayat),
+      ]);
     }
 
     /**
@@ -168,80 +207,79 @@ class RiwayatController extends Controller
     public function actionCreate($id, $username)
     {
 
-        $model = new Riwayat;
+      $model = new Riwayat;
         // for main api sms notification
-        $Pasienmodel_forapi = $this->findModelPasien($id);
-        date_default_timezone_set('Asia/Jakarta');
-        $date_now = date('Y-m-d');
-        $time_now = date('h:i:sa');
-        $Aquery = new \yii\db\Query();
-        $AshowId = $Aquery->select('id_dokter')->from('dokter')->where(['email' => $username])->one();
+      $Pasienmodel_forapi = $this->findModelPasien($id);
+      date_default_timezone_set('Asia/Jakarta');
+      $date_now = date('Y-m-d');
+      $time_now = date('h:i:sa');
+      $Aquery = new \yii\db\Query();
+      $AshowId = $Aquery->select('id_dokter')->from('dokter')->where(['email' => $username])->one();
 
-        foreach ($AshowId as $val) {
-            $Aid_dokter = $val[0];
-        }
-        $AmodelDokter = $this->findModelDokter($Aid_dokter);
+      foreach ($AshowId as $val) {
+        $Aid_dokter = $val[0];
+      }
+      $AmodelDokter = $this->findModelDokter($Aid_dokter);
 
         // for main api sms notification
        // url using MAIN API : 'https://api.mainapi.net/smsnotification/1.0.0/messages'
         // token : 'Bearer f93bc16e7b193e9ec6f362e282b143f6'
 
-        try {
+      try {
 
-            if ($model->load($_POST) && $model->validate() && $model->save()) {
+        if ($model->load($_POST) && $model->validate() && $model->save()) {
+          $client = new Client();
+          $response_token = $client->createRequest()
+          ->setMethod('post')
+          ->addHeaders(['X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff','Content-Type' => 'application/x-www-form-urlencoded'])
+          ->setUrl('https://api.pometera.id/smsnotif/token')
+          ->setData(['grant_type' => 'client_credentials'])
+          ->send();
+          if($response_token->isOk){
+           $client = new Client();
+           $response = $client->createRequest()
+           ->setMethod('post')
+           ->addHeaders(['Authorization' =>'Bearer'.' '.$response_token->data['access_token'],
+            'X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff'])
+           ->setUrl('https://api.pometera.id/smsnotif/messages')
+           ->setData(['msisdn' => $Pasienmodel_forapi->no_telp_pasien, 'content' => 'Halo'.' '.$Pasienmodel_forapi->nama_pasien.' '.'kamu telah melakukan pemeriksaan pada tanggal '.' '.$date_now.' '.'jam'.' '.$time_now.' '.'oleh dokter'.' '.$AmodelDokter->nama_dokter.' '.'data kamu telah masuk dalam sistem kami, kami bisa pastikan data kamu bisa aman bersama kami.. SALAM PAMEDHIS, INDONESIA SEHAT !!! semoga kamu bisa segera sembuh dan melanjutkan aktivitas seperti biasanya '])
+           ->send();
 
-                $client = new Client();
-                $response_token = $client->createRequest()
-                    ->setMethod('post')
-                    ->addHeaders(['X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff','Content-Type' => 'application/x-www-form-urlencoded'])
-                    ->setUrl('https://api.pometera.id/smsnotif/token')
-                    ->setData(['grant_type' => 'client_credentials'])
-                    ->send();
-                if($response_token->isOk){
-                     $client = new Client();
-                    $response = $client->createRequest()
-                    ->setMethod('post')
-                    ->addHeaders(['Authorization' =>'Bearer'.' '.$response_token->data['access_token'],
-                        'X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff'])
-                    ->setUrl('https://api.pometera.id/smsnotif/messages')
-                    ->setData(['msisdn' => $Pasienmodel_forapi->no_telp_pasien, 'content' => 'Halo'.' '.$Pasienmodel_forapi->nama_pasien.' '.'kamu telah melakukan pemeriksaan pada tanggal '.' '.$date_now.' '.'jam'.' '.$time_now.' '.'oleh dokter'.' '.$AmodelDokter->nama_dokter.' '.'data kamu telah masuk dalam sistem kami, kami bisa pastikan data kamu bisa aman bersama kami.. SALAM PAMEDHIS, INDONESIA SEHAT !!! semoga kamu bisa segera sembuh dan melanjutkan aktivitas seperti biasanya '])
-                    ->send();
+         }
 
-                }
-
-                return $this->redirect(['detail', 'id' => $id]);
-            } elseif (!\Yii::$app->request->isPost) {
-                $model->load($_GET);
-                $modelPasien = $this->findModelPasien($id);
-                $query = new \yii\db\Query();
-                $showId = $query->select('id_dokter')->from('dokter')->where(['email' => $username])->one();
-
-                foreach ($showId as $val) {
-                    $id_dokter = $val[0];
-                }
-                $modelDokter = $this->findModelDokter($id_dokter);
-            }
-        } catch (\Exception $e) {
-            $msg = (isset($e->errorInfo[2])) ? $e->errorInfo[2] : $e->getMessage();
-            $model->addError('_exception', $msg);
-        }
+         return $this->redirect(['detail', 'id' => $id]);
+       } elseif (!\Yii::$app->request->isPost) {
+        $model->load($_GET);
         $modelPasien = $this->findModelPasien($id);
         $query = new \yii\db\Query();
         $showId = $query->select('id_dokter')->from('dokter')->where(['email' => $username])->one();
+
         foreach ($showId as $val) {
-            $id_dokter = $val[0];
+          $id_dokter = $val[0];
         }
         $modelDokter = $this->findModelDokter($id_dokter);
-
-
-
-        return $this->render('create',
-            ['model' => $model,
-                'modelPasien' => $modelPasien,
-                'modelDokter' => $modelDokter,
-
-            ]);
+      }
+    } catch (\Exception $e) {
+      $msg = (isset($e->errorInfo[2])) ? $e->errorInfo[2] : $e->getMessage();
+      $model->addError('_exception', $msg);
     }
+    $modelPasien = $this->findModelPasien($id);
+    $query = new \yii\db\Query();
+    $showId = $query->select('id_dokter')->from('dokter')->where(['email' => $username])->one();
+    foreach ($showId as $val) {
+      $id_dokter = $val[0];
+    }
+    $modelDokter = $this->findModelDokter($id_dokter);
+
+
+
+    return $this->render('create',
+      ['model' => $model,
+      'modelPasien' => $modelPasien,
+      'modelDokter' => $modelDokter,
+
+    ]);
+  }
 
     /**
      * Updates an existing Riwayat model.
@@ -251,15 +289,15 @@ class RiwayatController extends Controller
      */
     public function actionUpdate($id_riwayat)
     {
-        $model = $this->findModel($id_riwayat);
+      $model = $this->findModel($id_riwayat);
 
-        if ($model->load($_POST) && $model->save()) {
-            return $this->redirect(Url::previous());
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
+      if ($model->load($_POST) && $model->save()) {
+        return $this->redirect(Url::previous());
+      } else {
+        return $this->render('update', [
+          'model' => $model,
+        ]);
+      }
     }
 
     /**
@@ -270,27 +308,27 @@ class RiwayatController extends Controller
      */
     public function actionDelete($id_riwayat)
     {
-        try {
-            $this->findModel($id_riwayat)->delete();
-        } catch (\Exception $e) {
-            $msg = (isset($e->errorInfo[2])) ? $e->errorInfo[2] : $e->getMessage();
-            \Yii::$app->getSession()->addFlash('error', $msg);
-            return $this->redirect(Url::previous());
-        }
+      try {
+        $this->findModel($id_riwayat)->delete();
+      } catch (\Exception $e) {
+        $msg = (isset($e->errorInfo[2])) ? $e->errorInfo[2] : $e->getMessage();
+        \Yii::$app->getSession()->addFlash('error', $msg);
+        return $this->redirect(Url::previous());
+      }
 
 // TODO: improve detection
-        $isPivot = strstr('$id_riwayat', ',');
-        if ($isPivot == true) {
-            return $this->redirect(Url::previous());
-        } elseif (isset(\Yii::$app->session['__crudReturnUrl']) && \Yii::$app->session['__crudReturnUrl'] != '/') {
-            Url::remember(null);
-            $url = \Yii::$app->session['__crudReturnUrl'];
-            \Yii::$app->session['__crudReturnUrl'] = null;
+      $isPivot = strstr('$id_riwayat', ',');
+      if ($isPivot == true) {
+        return $this->redirect(Url::previous());
+      } elseif (isset(\Yii::$app->session['__crudReturnUrl']) && \Yii::$app->session['__crudReturnUrl'] != '/') {
+        Url::remember(null);
+        $url = \Yii::$app->session['__crudReturnUrl'];
+        \Yii::$app->session['__crudReturnUrl'] = null;
 
-            return $this->redirect($url);
-        } else {
-            return $this->redirect(['index']);
-        }
+        return $this->redirect($url);
+      } else {
+        return $this->redirect(['index']);
+      }
     }
 
     /**
@@ -302,28 +340,28 @@ class RiwayatController extends Controller
      */
     protected function findModel($id_riwayat)
     {
-        if (($model = Riwayat::findOne($id_riwayat)) !== null) {
-            return $model;
-        } else {
-            throw new HttpException(404, 'The requested page does not exist.');
-        }
+      if (($model = Riwayat::findOne($id_riwayat)) !== null) {
+        return $model;
+      } else {
+        throw new HttpException(404, 'The requested page does not exist.');
+      }
     }
 
     protected function findModelPasien($id)
     {
-        if (($model = Pasien::findOne($id)) !== null) {
-            return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
+      if (($model = Pasien::findOne($id)) !== null) {
+        return $model;
+      } else {
+        throw new NotFoundHttpException('The requested page does not exist.');
+      }
     }
 
     protected function findModelDokter($id)
     {
-        if (($model = Dokter::findOne($id)) !== null) {
-            return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
+      if (($model = Dokter::findOne($id)) !== null) {
+        return $model;
+      } else {
+        throw new NotFoundHttpException('The requested page does not exist.');
+      }
     }
-}
+  }

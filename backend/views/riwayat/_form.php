@@ -29,18 +29,27 @@ use yii\helpers\ArrayHelper;
         <?php $this->beginBlock('main'); ?>
 
         <p>
-          
-             <!-- attribute tgl_periksa -->
+           
+                <div class="row">
+                    <h4 style="text-align: center; color: #16a085">DATA DIRI</h4>
+                    <div class="col-md-6 col-sm-6">
+                                       <!-- attribute tgl_periksa -->
             <?= $form->field($model, 'tgl_periksa')->textInput(['readonly'=>true,   'value'=>date('Y-m-d')]) ?>
 
 <!-- attribute umur -->
             <?= $form->field($model, 'umur')->textInput() ?>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
 
 <!-- attribute berat_badan -->
             <?= $form->field($model, 'berat_badan')->textInput()->label('Berat Badan (Kg)') ?>
 
 <!-- attribute tinggi_badan -->
             <?= $form->field($model, 'tinggi_badan')->textInput()->label('Tinggi Badan (Cm)') ?>
+                    </div>
+                    <br><br><br>
+
+                      <h4 style="text-align: center;color: #16a085">PEMERIKSAAN</h4>
             <!-- attribute keluhan_utama -->
             <?= $form->field($model, 'keluhan_utama')->textarea(['rows' => 6]) ?>
                 <!-- attribute head -->
@@ -64,13 +73,14 @@ use yii\helpers\ArrayHelper;
                 'disabled' => \Yii::$app->user->identity->role == 6 ? true : false,
                 'options' => [
                     'prompt' => 'Pilih Jenis Penyakit',
+                    'id' => 'diagnoasa',
+
                 ],
-            ])->label('Diagnosa'); ?>
+            ])->label('Diagnosa')->hint('*pilih lainnya jika pilihan diagnosa tidak ditemukan'); ?>
 
-
-
+            <?= $form->field($model, 'diagnosa_text')->textarea(['rows' => 6,'class'=>'diag_text'])->label('Diagnosa Lainnya')->hint('* diisi apabila tidak ditemukan pada pilihan diagnosa') ?>
 <!-- attribute larangan -->
-			<?= $form->field($model, 'larangan')->textarea(['rows' => 6])->label('Terapi/Penata Laksana') ?>
+            <?= $form->field($model, 'larangan')->textarea(['rows' => 6])->label('Terapi/Penata Laksana') ?>
 
 <!-- attribute advis -->
            <?= $form->field($model, 'advis')->textarea(['rows' => 6]) ?>
@@ -82,6 +92,10 @@ use yii\helpers\ArrayHelper;
 
               <?= $form->field($model, 'id_pasien')->hiddenInput(['value'=>$modelPasien->id_pasien])->label(false) ?>
             <?= $form->field($model, 'id_dokter')->hiddenInput(['value'=>$modelDokter->id_dokter])->label(false) ?>
+                </div>
+         
+          
+         
         </p>
         <?php $this->endBlock(); ?>
         
@@ -118,3 +132,16 @@ use yii\helpers\ArrayHelper;
 
 
 </div>
+<script>
+    $(document).ready(function () {
+        $('.diag_text').hide();
+    $(document.body).on('change', '#diagnoasa', function () {
+        var val = $('#diagnoasa').val();
+        if(val == 1 ) {
+          $('.diag_text').show();
+        } else {
+          $('.diag_text').hide();
+        }
+    });
+});
+    </script>

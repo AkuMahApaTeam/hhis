@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2017 at 07:29 AM
+-- Generation Time: Dec 17, 2017 at 03:58 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -134,21 +134,8 @@ INSERT INTO `artikel` (`id_artikel`, `judul`, `deskripsi`, `image`, `abstrak`) V
 (7, 'Segudang Bahaya Merokok Terhadap Tubuh', '<p>Salah satu konsekuensi utama yang bisa Anda dapatkan dari rokok adalah menderita penyakit jantung. Diperkirakan, sebanyak 20% kematian akibat penyakit jantung terkait langsung dengan kebiasaan merokok. Kenapa rokok begitu berbahaya? Apa saja efek negatif lainnya dari rokok?</p>\r\n<p>Lihat saja kandungan yang terdapat pada sebatang rokok. Lebih dari 4000 bahan kimia terdapat di dalamnya. Ratusan di antaranya zat beracun dan sekitar 70 bahan di dalamnya bersifat kanker. Bahan-bahan berbahaya pada sebatang rokok, antara lain:</p>\r\n<ul>\r\n<li><strong>Karbon monoksida.</strong>&nbsp;Zat yang kerap ditemukan pada asap knalpot mobil ini bisa mengikat diri pada hemoglobin dalam darah secara permanen sehingga menghalang penyediaan oksigen ke tubuh. Hal tersebut membuat Anda cepat lelah.</li>\r\n<li><strong>Tar.</strong>&nbsp;Ketika merokok, kandungan tar di dalam rokok akan ikut terisap. Zat ini akan mengendap di paru-paru Anda dan berdampak negatif pada kinerja rambut kecil yang melapisi paru-paru. Padahal rambut tersebut bertugas untuk membersihkan kuman dan hal lainnya keluar dari paru-paru Anda.</li>\r\n<li><strong>Gas oksidan.</strong>&nbsp;Gas ini bisa bereaksi dengan oksigen. Keberadaannya pada tubuh lebih meningkatkan risiko stroke dan serangan jantung akibat penggumpalan darah.</li>\r\n<li><strong>Benzene.</strong>&nbsp;Zat yang ditambahkan ke dalam bahan bakar minyak ini bisa merusak sel pada tingkat genetik. Zat ini juga dikaitkan dengan berbagai jenis kanker seperti&nbsp;<a href="http://www.alodokter.com/kanker-ginjal" target="_blank">kanker ginjal</a>&nbsp;dan leukimia.</li>\r\n</ul>\r\n<p>Selain bahan-bahan di atas, masih banyak kandungan beracun pada sebatang rokok seperti&nbsp;<em>arsenic</em>&nbsp;(digunakan dalam&nbsp;<a href="http://www.alodokter.com/sedekat-inilah-pestisida-dengan-kita" target="_blank">pestisida)</a>,&nbsp;<em>toluene</em>&nbsp;(ditemukan pada pengencer cat),&nbsp;<em>formaldehyde</em>&nbsp;(digunakan untuk mengawetkan mayat),&nbsp;<em>hydrogen cyanide</em>&nbsp;(digunakan untuk membuat senjata kimia), dan&nbsp;<em>cadmium</em>&nbsp;(digunakan untuk membuat baterai).</p>\r\n<p>&nbsp;</p>\r\n<p>Ketika Anda merokok, Anda akan lebih mungkin terkena serangan jantung. Perokok berisiko dua hingga empat kali lebih tinggi menderita penyakit jantung. Risiko lebih tinggi lagi jika Anda perokok wanita yang sedang&nbsp;<a href="http://www.alodokter.com/ingin-tahu-efek-samping-pil-kb" target="_blank">mengonsumsi pil KB</a>.</p>\r\n<p>Saat merokok, Anda akan turut memasukkan zat-zat berbahaya yang bisa berdampak buruk tubuh, khususnya jantung. Contohnya zat nikotin. Ketika nikotin masuk ke tubuh, zat itu bisa mengurangi kadar oksigen yang akan masuk ke darah. Zat yang bersifat candu ini juga bisa mempercepat detak jantung, menaikkan tekanan darah, merusak&nbsp;<a href="http://www.alodokter.com/Ini-Serius-Jaga-Baik-baik-Kesehatan-Pembuluh-Darah" target="_blank">pembuluh darah&nbsp;</a>dalam jantung, dan mempercepat pembekuan darah yang bisa memicu serangan jantung. Begitu juga dengan akibat-akibat buruk terhadap organ tubuh yang lainnya.</p>\r\n<p><strong>Otak</strong></p>\r\n<p>Merokok bisa meningkatkan risiko terkena stroke sebesar 50 persen. Hal tersebut bisa menyebabkan kerusakan otak dan kematian. Merokok juga dapat meningkatkan risiko mengalami aneurisma otak. Aneurisma otak adalah pembengkakan pembuluh darah yang terjadi akibat melemahnya dinding pembuluh darah. Sewaktu-waktu bisa pecah dan mengakibatkan pendarahan di otak.</p>\r\n<p><strong>Mulut dan tenggorokan</strong></p>\r\n<p><a href="http://www.alodokter.com/bahaya-merokok-bagi-kesehatan-mulut" target="_blank">Bau mulut dan gigi bernoda merupakan efek yang akan timbul akibat merokok</a>. Penyakit gusi dan kerusakan indera perasa pun dapat timbul. Masalah serius yang akan hinggap pada mulut dan tenggorokan adalah meningkatnya risiko kanker pada lidah, tenggorokan, bibir, dan pita suara.</p>\r\n<p><strong>Paru-paru</strong></p>\r\n<p>Salah satu efek paling berbahaya akibat merokok adalah kanker paru-paru. Bahan-bahan kimia pada rokok berpotensi merusak sel-sel pada paru-paru yang bisa membentuk sel kanker. Penyakit serius lainnya yang bisa Anda alami adalah bronkitis, pneumonia, dan emfisema.</p>\r\n<p><strong>Lambung</strong></p>\r\n<p>Merokok bisa melemahkan otot yang mengontrol bagian bawah kerongkongan Anda. Hal tersebut memungkinkan asam dari lambung bergerak ke arah yang salah, yaitu ke kerongkongan. Kondisi tersebut dinamakan penyakit asam lambung. Beberapa risiko penyakit yang akan dihadapi oleh seorang perokok adalah ulkus atau tukak dan&nbsp;<a href="http://www.alodokter.com/hiperemsis-gravidarum" target="_blank">kanker lambung.</a></p>\r\n<p><strong>Tulang</strong></p>\r\n<p>Racun pada rokok bisa merusak tulang dengan cara menghentikan kerja sel-sel konstruksi. Oleh sebab itu, perokok lebih berisiko mengalami tulang rapuh atau osteoporosis. Racun rokok juga bisa mengganggu keseimbangan hormon-hormon yang bertugas menjaga tulang tetap kuat, seperti hormon estrogen.</p>\r\n<p><strong>Kulit</strong></p>\r\n<p>Perokok akan terlihat lebih tua ketimbang yang bukan perokok karena kurangnya asupan oksigen ke kulit. Penuaan dini akan dirasakan, seperti kemunculan&nbsp;<a href="http://www.alodokter.com/wajah-berkerut-inilah-prosedur-untuk-mengatasinya" target="_blank">kerutan</a>di sekitar mata dan mulut. Racun rokok juga bisa menyebabkan selulit pada kulit.</p>\r\n<p><strong>Organ reproduksi</strong></p>\r\n<p>Merokok bisa mengganggu sistem reproduksi dan kesuburan Anda. Pada pria, merokok bisa menyebabkan impotensi, mengurangi produksi sperma, dan&nbsp;<a href="http://www.alodokter.com/kanker-testis" target="_blank">kanker testis</a>.&nbsp;<a href="http://www.alodokter.com/penyebab-infertilitas-wanita-yang-perlu-diketahui" target="_blank">Sementara pada wanita, merokok dapat mengurangi kesuburan</a>. Selain itu, risiko terkena kanker serviks pun lebih tinggi karena rokok mengurangi kemampuan alami tubuh dalam melawan infeksi&nbsp;<em>human papillomavirus</em>&nbsp;atau HPV.</p>\r\n<p>Selain penyakit pada fisik, perokok juga mengalami tingkat stres yang lebih tinggi dibandingkan mereka yang tidak merokok. Selama ini mungkin Anda mengira merokok bisa membuat lebih rileks. Anda menganggap kandungan nikotin bisa menenangkan pikiran Anda, tapi ternyata itu salah. Yang membuat perokok gelisah dan cemas adalah gejala putus obat terhadap nikotin. Dengan merokok, kecanduan terhadap nikotin akan terpenuhi dan perokok merasa seperti rokok tersebut menurunkan stres.</p>\r\n<p>&nbsp;</p>\r\n<p>Memang tidak semua perokok akan meninggal karena penyakit jantung, kanker paru-paru, atau stroke, namun kebiasaan merokok bisa sangat mengganggu dan mengurangi kualitas hidup Anda sehari-hari. Efek rokok yang bisa Anda rasakan sehari-hari adalah batuk-batuk, sesak napas, lebih mudah lelah, lebih rentan terhadap infeksi, atau mengalami&nbsp;<a href="http://www.alodokter.com/gangguan-tidur" target="_blank">gangguan tidur</a>&nbsp;yang ditandai dengan sulit bernapas pada malam hari kemudian merasa kelelahan di pagi hari.</p>\r\n<p>Mungkin Anda sudah terbiasa mendengar bahaya merokok terhadap tubuh, namun Anda tetap tidak menghentikan kebiasaan mengisap rokok karena merasa saat ini kesehatan Anda masih baik-baik saja.</p>\r\n<p>Perlu diingat, merokok sama saja seperti menabung racun pada tubuh yang sedikit demi sedikit bisa menumpuk jika dilakukan terus-menerus. Dengan begitu, risiko menderita penyakit pun akan lebih tinggi pada masa tua.&nbsp;<a href="http://www.alodokter.com/bahaya-menjadi-perokok-pasif" target="_blank">Tidak hanya Anda, orang-orang terdekat pun akan merasakan efeknya karena menghirup asap rokok yang beracun.</a></p>', 'uploads/rokoko.jpg', 'Pasti Anda sudah tidak asing lagi dengan peringatan dilarang merokok. Dua kata itu bisa dengan mudahnya dijumpai di mana saja. Sepertinya tidak mengherankan jika mengingat dampak-dampak negatif yang ditimbulkan akibat merokok pada tubuh Anda.'),
 (8, '5 Cara Mengatasi Wajah Berminyak dalam 30 Menit Saja', '<p><span style="font-style: inherit; font-weight: inherit;">Apa yang kamu lakukan ketika mengetahui muka berminyak? Mengambil tisu kah, mengusapnya dengan tangan, atau malah pergi ke kamar mandi lalu menggunakan facial foam?&nbsp;Semua itu salah besar. Kali&nbsp;ini saya akan&nbsp;bagikan cara paling ampuh agarwajah berminyak tak menghantuimu lagi.</span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;">Sebenarnya wajah berminyak itu tidak selamanya buruk. Dengan adanya minyak di wajah, maka kulit akan menjadi lebih lembab. Kondisi lembab inilah yang dapat membantu mencegah penuaan dini. Dengan demikian, seseorang yang memiliki muka berminyak, mereka cenderung lebih&nbsp;<strong><strong style="font-style: inherit;"><a style="font-style: inherit; font-weight: inherit;" href="http://www.cantikitu.com/2015/07/11-tips-sederhana-agar-anda-selalu-awet.html">awet muda</a></strong></strong>.<br /></span></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Penyebab Muka Berminyak</span></span></span></strong></strong></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Minyak muncul di wajah itu sangatlah wajah. Adanya minyak ini akan membantu mencegah kekeringan di kulit. Akan tetapi apabila berlebihan, minyak tersebut justru akan berpotensi menyebabkan masalah seperti jerawat, muka mengkilap, penyumbatan pori, komedo, dll. Berikut beberapa penyebab wajah berminyak:</span></span></p>\r\n<ul style="font-style: inherit; font-weight: inherit;">\r\n<li style="font-style: inherit; font-weight: inherit;"><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Kondisi hormon seseorang</span></span></strong></strong></li>\r\n</ul>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Biasanya para wanita yang sedang menstruasi akan cenderung mengalami produksi minyak berlebih pada bagian wajah. Munculnya kondisi ini dapat disebabkan karena hormon dalam tubuh sedang tidak stabil. Selain pada wanita yang mengalami mens, kamu yang sedang masa puber juga akan mengalami hal yang sama.</span></span></p>\r\n<ul style="font-style: inherit; font-weight: inherit;">\r\n<li style="font-style: inherit; font-weight: inherit;"><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Stres</span></span></strong></strong></li>\r\n</ul>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Stres mendorong hormon kartisol yang merupakan penunjang produksi minyak di wajah. Oleh karenanya, kebanyakan orang yang stres mereka lebih cenderung memiliki minyak berlebih pada wajahnya. Bahkan jika stres tersebut berlebihan, wajah kamu juga akan sangat mudah terserang jerawat.</span></span></p>\r\n<ul style="font-style: inherit; font-weight: inherit;">\r\n<li style="font-style: inherit; font-weight: inherit;"><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Cuaca panas</span></span></strong></strong></li>\r\n</ul>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Cuaca panas dapat mengakibatkan tubuh kita lebih mudah berkeringat. Sambil mengeluarkan keringat, sebenarnya dalam cuaca panas tubuh juga memproduksi banyak minyak pada kulit. Apabila keringat dan minyak tidak segera dibersihkan, maka akan menyebabkan muculnya&nbsp;<strong><strong style="font-style: inherit;"><a style="font-style: inherit; font-weight: inherit;" href="http://www.cantikitu.com/2015/09/16-cara-menghilangkan-bau-badan.html">bau badan</a></strong></strong>.</span></span></p>\r\n<ul style="font-style: inherit; font-weight: inherit;">\r\n<li style="font-style: inherit; font-weight: inherit;"><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Kosmetika yang tidak cocok</span></span></strong></strong></li>\r\n</ul>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Apakah kamu suka menggunakan pelembab wajah? Pelembab wajah sebenarnya hanya direkomendasikan kepada pemilik kulit kering, bukannya berminyak. Nah apabila kulitmu berminyak, cobalah untuk menghindari kosmetik dalam bentuk pelembab, cream, lotion, dll.</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Beberapa penyebab diatas bisa kamu hindari sebisa mungkin supaya keluarnya minyak dapat diminimalisir. Langsung saja berikut beberapa cara mengatasi wajah berminyak secara alami hanya dalam 30 menit saja.</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><strong>1. Masker jeruk nipis</strong><br /></span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Jeruk nipis termasuk buah yang memiliki rasa masam cukup tinggi. Rasa masamnya inilah yang bertindak untuk mengurangi minyak di wajah kamu. Selain itu, kandungan vitamin C yang cukup tinggi juga dapat membuat kulitmu nampak lebih cerah dan bebas dari jerawat.</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Namun jangan kaget, biasanya penggunaan masker jeruk nipis akan menyebabkan rasa gatal dan bahkan perih. Apalagi jika wajah kamu berjerawat. Rasa gatal tersebut akan hilang sendirinya seiring dengan perawatan rutin.</span></span></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Cara menghilangkan minyak di wajah dengan jeruk nipis:</span></span></strong></strong></p>\r\n<ul>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Siapkan buah jeruk nipis sebanyak 1 butir saja</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Belah jeruk nipis menjadi 2 bagian, lalu peras dalam wadah</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Gunakan bantuan kapas untuk mengoleskan masker jeruk nipis tersebut</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Diamkan sekitar 30 menitan, kemudian bilas dengan air hangat</span></span></li>\r\n</ul>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;">Catatan:</span></strong></strong>&nbsp;apabila tidak ada jeruk nipis, kamu bisa menggantinya dengan lemon.<span style="font-style: inherit; font-weight: inherit;">Keduanya memiliki manfaat yang sam<span style="font-style: inherit; font-weight: inherit;">a kok.</span></span></span></span></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<ol start="2">\r\n<li><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"> Gunakan buah apel dan madu</span></span></strong></strong></li>\r\n</ol>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Apel merupakan buah yang mengandung senyawa anti-lemak. Sifat anti-lemaknya inilah yang dapat membantu mengatasi wajah berminyak. Kamu bisa menggunakan apel jenis apapun, mulai dari apel&nbsp;<span style="font-style: inherit; font-weight: inherit;">hijau</span>&nbsp;<span style="font-style: inherit; font-weight: inherit;">atau merah.</span></span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;">Kelebihan cara ini ialah tak menyebabkan rasa gatal atau perih. Sehingga sangat cocok untuk kulitmu yang sekaligus jerawatan.</span></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Cara mengatasi wajah berminyak dengan apel:</span></span></strong></strong></p>\r\n<ul>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Siapkan 1 buah apel segar dan 3 sendok makan madu</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Haluskan apel dengan blender (tanpa dikupas)</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Campur dengan madu sampai merata, lalu masukan kedalam kulkas</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Setelah dingin, oleskan masker apel secara merata keseluruh bagian wajah</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Agar bekerja maksimal beri pijatan lembut 5 menit dan diamkan 25 menit</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Apabila sudah, bilas dengan menggunakan air dingin.</span></span></li>\r\n</ul>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<ol start="3">\r\n<li><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"> Tomat</span></span></strong></strong></li>\r\n</ol>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Manfaat tomat</span><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></strong></strong><span style="font-style: inherit; font-weight: inherit;">ada banyak sekali, mulai dari meningkatkan imun tubuh sampai dengan perawatan kecantikan. Salah satu manfaat untuk kecantikan adalah dapat membantu mengurangi minyak di wajah secara alami.</span></span></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Cara mengatasi muka berminyak dengan tomat:</span></span></strong></strong></p>\r\n<ul>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Haluskan buah tomat segar, lalu campur dengan madu (bila ada)</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Aplikasikan masker tomat tersebut secara merata keseluruh bagian wajah</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Pijat lembut selama kurang lebih 15 menit, dan diamkan 15 menit</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Setelah itu, bilas dengan menggunakan air hangat sampai bersih</span></span></li>\r\n</ul>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<ol start="4">\r\n<li><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"> Mentimun</span></span></strong></strong></li>\r\n</ol>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Timun atau mentimun, merupakan buah yang mengandung banyak air di dalamnya. Kandungan tersebut memiliki sifat antibakterial, anti-inflamasi, dan kaya akan mineral alami yang baik untuk kesehatan kulit.</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Perawatan dengan masker timun rutin sangat baik untuk mengatasi jerawat, mencegah peradangan, menghilangkan minyak di wajah, dan lain sebagainya.</span></span></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Cara mengatasi wajah berminyak dengan mentimun:</span></span></strong></strong></p>\r\n<ul>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Siapkan timun segar secukupnya saja</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Haluskan timun tersebut dengan menggunakan blender (tanpa dikupas)</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Setelah halus, diamkan sejenak dalam kulkas</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Selanjutnya oleskan masker timun secara merata keseluruh bagian wajah</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Diamkan selama 30 menit, lalu bilas dengan menggunakan air hangat.</span></span></li>\r\n</ul>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<ol start="5">\r\n<li><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"> Masker semangka</span></span></strong></strong></li>\r\n</ol>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Semangkat mengandung kalium yang cukup tingg, menurut para ahli kandungan kalium tersebut bisa menurunkan tekanan darah tinggi, mencegah diabetes, stroke, penyumbatan pembuluh darah, dan bahkan serangan jantung.</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></p>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Selain kalium, semangka dipercaya juga mengandung vitamin E dan C yang dapat membantu mengontrol minyak di wajah. Bahkan beberapa mineral alaminya juga cukup baik untuk mengecilkan pori wajah secara alami</span></span></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">&nbsp;</span></span></strong></strong></p>\r\n<p><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Cara mengatasi wajah berminyak dengan semangka:</span></span></strong></strong></p>\r\n<ul>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Haluskan daging buah semangka segar (bisa ditumbuk atau diblender)</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Bila ada, tambahkan sedikit yoghurt tawar atau susu</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Setelah selesai mandi, aplikasikan masker semangka secara merata keseluruh bagian wajah</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Diamkan sekiranya 30 menit, apabila sudah terasa kaku bilas dengan air dingin sampai bersih. Selesai.</span></span></li>\r\n</ul>\r\n<h3 style="font-style: inherit;"><strong><strong style="font-style: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Cara Merawat Wajah Berminyak dengan Baik dan Benar</span></span></span></strong></strong></h3>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Setelah minyak di wajah hilang, bukan berarti kamu membiarkannya begitu saja tanpa melakukan perawatan lagi. Sebab kondisi alamiah wajah mau tidak mau akan menyebabkan munculnya minyak kembali. Berikut beberapa tips merawat muka berminyak yang bisa kamu terapkan:</span></span></p>\r\n<ul>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Bersihkan wajah secara rutin minimal 2x sehari (bisa setiap kali mandi)</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Setelah selesai beraktivitas olahraga, usahakan membersihkan sisa keringat dan minyak</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Hindari menggunakan kosmetik berlebihan, termasuk cream pelembab</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Hindari makanan gorengan, mie instan, dan makanan berminyak lainnya</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Jangan membersihkan muka berminyak dengan tangan kotor, tisu, ataupun sabun muka yang tidak cocok dengan jenis kulit</span></span></li>\r\n<li style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Perbanyak konsumsi buah dan sayur yang kaya akan serat, dll.</span></span></li>\r\n</ul>\r\n<p><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">Itulah beberapa cara&nbsp;<span style="font-style: inherit; font-weight: inherit;">atasi</span>&nbsp;wajah berminyak secara alami dalam 30 menit.&nbsp;<span style="font-style: inherit; font-weight: inherit;">Pilih salah satu saja kemudian coba terapkan selama sebulan. Jika tak ada perubahan kamu bisa berkonsultasi ke dokter agar mendapatkan saran terbaik.</span></span></span></p>', 'uploads/cara-mengatasi-muka-berminyak.gif', 'Apa yang kamu lakukan ketika mengetahui muka berminyak? Mengambil tisu kah, mengusapnya dengan tangan, atau malah pergi ke kamar mandi lalu menggunakan facial foam? Semua itu salah besar. Kali ini saya akan bagikan cara paling ampuh agar wajah berminyak tak menghantuimu lagi.\r\n'),
 (9, 'Waspadai 7 Penyakit Tanpa Gejala Ini', '<p><strong>1. Hipertensi dan Kolesterol Tinggi</strong></p>\r\n<p>Dua masalah ini sangat populer di tengah masyarakat. Hipertensi dan kolesterol yang tinggi pada dasarnya tidak memberikan keluhan apapun bagi penderitanya. Idealnya tekanan darah normal untuk dewasa ialah &le;120/80 mmHg, dan disebut hipertensi grade I apabila tensi &ge;140/90 serta hipertensi grade II bila tensi &ge;160/100. Tekanan darah yang melebihi 180/120 disebut juga hipertensi krisis (berbahaya).</p>\r\n<p><br />Namun ironisnya, hipertensi hingga &ge; 200/120 pun kadang tidak memberikan gejala apapun! Atau pada kebanyakan kasus, orang tersebut hanya mengeluh pusing-pusing ringan dan pegal-pegal ringan. Tak heran, banyak orang yang menyepelakan dan tidak mau berobat karena tidak ada keluhan. Itu adalah persepsi yang keliru. Disadari atau tidak, dampak hipertensi sebenarnya telah terjadi apabila tekanan &ge; 120/80; efek kerusakan akan terakumulasi hingga bertahun-tahun kemudian baru menimbulkan penyakit jantung dan pembuluh darah. Khusus untuk hipertensi krisis, bahaya stroke, penyakit jantung, serta pecah pembuluh darah dapat mengancam setiap saat.</p>\r\n<p>Serupa halnya dengan kolesterol tinggi. Kadar kolesterol yang tinggi ibarat bom waktu yang akan terakumulasi di pembuluh darah atau jaringan hati (<em>fatty liver</em>) dan berakibat fatal. Padahal, obatnya sangat sederhana dan relatif murah.</p>\r\n<p><strong>2. Penyakit Ginjal Kronis</strong></p>\r\n<p>Fungsi utama ginjal ialah menyaring darah dan membuang sisa-sisa metabolisme melalui urin. Namun, penyakit ginjal tidak selalu ditandai dengan masalah pada urin atau berkemih. Dalam pengalaman penulis, gejala baru disadari saat penyakit sudah memasuki stadium III atau IV, bahkan ada yang harus langsung menjalani cuci darah (hemodialisis). Sedih rasanya melihat kondisi tersebut.</p>\r\n<p>Disebut penyakit ginjal kronis (<em>chronic kidney disease</em>/CKD) apabila fungsi ginjal telah menurun secara progresif. Hal yang dikhawatirkan pasien dari CKD ini ialah tindakan pengganti ginjal (cuci darah rutin atau transplantasi ginjal), apabila sudah stadium terminal (<em>stage</em>&nbsp;V). CKD stage IV tidak akan kembali menjadi stage III atau II lagi, demikian seterusnya, sehingga fokus terapi ialah mencegah penurunan fungsi ginjal lebih lanjut.</p>\r\n<p>Apa penyebab penyakit ginjal kronis ini? Nomor satu ialah&nbsp;<a class="inner-link" href="http://indeks.kompas.com/tag/diabetes" target="_blank">diabetes</a>melitus yang tidak terkontrol (gula darah terus tinggi), dan berikutnya ialah hipertensi yang tidak terkontrol.</p>\r\n<p><strong>3.&nbsp;<a class="inner-link" href="http://indeks.kompas.com/tag/diabetes" target="_blank">Diabetes</a>&nbsp;Melitus (DM)</strong></p>\r\n<p>Terutama di Indonesia, penyakit kencing manis atau diabetes melitus masih banyak yang tak terdeteksi. Pasien kadang baru datang berobat setelah ada penyakit jantung, ginjal, luka yang tak kunjung sembuh, hingga luka yang telah membusuk sekalipun. Padahal penyebabnya sederhana: kadar gula darah yang tinggi.</p>\r\n<p>Patut diakui, para dokter sulit menentukan dengan tepat kapan sebenarnya penyakit ini dimulai. Ada literatur yang mengatakan, apabila kadar HbA1C &ge; 6,5 (ini adalah patokan angka diagnosis DM) sesungguhnya sudah terjadi kerusakan pembuluh darah mikro di retina mata akibat kadar gula yang tinggi (retinopati).</p>\r\n<p>Beberapa pasien pada awalnya mengeluhkan gejala 3P: poliuria (sering berkemih), polidipsi (sering haus), dan polifagia (sering lapar), serta penurunan berat badan tanpa sebab. Itu adalah gejala klasik DM. Walaupun telah muncul, gejala tersebut kadang terabaikan atau dianggap bukan yang penting. Padahal, keluhan tersebut dapat membuka pintu untuk deteksi DM secara dini dan tepat.</p>\r\n<p><strong>4. Osteoporosis</strong></p>\r\n<p>Siapa yang tak kenal penyakit ini? Meski familiar, namun Anda dan saya tidak tahu apakah sedang mengalami pengeroposan tulang atau tidak. Osteoporosis tidak memiliki gejala atau keluhan apapun, seringkali pasien datang sudah dengan nyeri akibat patah tulang (fraktur) atau kejadian jatuh akibat tulang yang rapuh. Angka tertinggi osteoporosis terjadi pada wanita yang menopause, terutama yang memiliki berat badan rendah.</p>\r\n<p>Cara pasti untuk mendeteksi secara dini ialah dengan pemeriksaan kepadatan tulang (<em>bone densitometry</em>), atau pada kasus-kasus awal dapat dilakukan dengan pemeriksaan radiologi. Namun sayangnya, pemeriksaan tersebut belum rutin dilakukan pada orang sehat.</p>\r\n<p><strong>5. Penyakit Jantung Koroner (PJK)</strong></p>\r\n<p>Masihkan ingatkah Anda sesosok artis dan politisi muda dengan porsi tubuh ideal dan rutin berolahraga, namun meninggal mendadak akibat satu kali serangan jantung? Ya, tak heran PJK disebut sebagai pembunuh nomor satu. Dalam ilmu kedokteran, jenis kelamin laki-laki dan usia &ge; 45 tahun saja (belum ditambah faktor lain) sudah termasuk sebagai faktor risiko PJK.</p>\r\n<p>PJK biasa muncul sebagai nyeri dada sebelah kiri, seperti ditekan benda berat, yang kadang menjalar ke lengan, rahang bawah, serta pundak. Artinya, ada sumbatan di pembuluh darah koroner. Namun faktanya, PJK bisa muncul tanpa gejala apapun! Pasien dapat tiba-tiba jatuh tergeletak tanpa diketahui sebabnya. Setelah diperiksa rekam jantung, barulah diketahui bahwa pasien mengalami PJK.</p>\r\n<p><strong>6. Infeksi Menular (HIV dan Hepatitis)</strong></p>\r\n<p>Penyakit ini boleh dibilang berbeda golongan dari lima yang telah dibahas sebelumnya. Namun, infeksi menular seperti HIV dan hepatitis dapat muncul tanpa gejala sedikitpun. Selain tidak menimbulkan gejala, penyakit ini mudah menular bila tidak berhati-hati!<br />Pada kasus HIV, butuh bertahun-tahun sejak virus masuk ke dalam darah hingga muncul sebagai gejala.</p>\r\n<p>Banyak pasien yang baru diketahui mengalami HIV setelah dirinya terjangkit berbagai infeksi sekunder lainnya. Seperti yang diketahui, pasien HIV memiliki imunitas yang rendah sehingga rentan terkena infeksi. Dengan kata lain, virus HIV tidak membunuh pasien secara langsung, melainkan melalui infeksi-infeksi sekunder tersebut. Pasien HIV paling sering meninggal akibat tuberkulosis atau hepatitis C.</p>\r\n<p>Untungnya, pemeriksaan HIV dan hepatitis telah rutin dilakukan pada orang sehat, misalnya saat melamar kerja. Penulis sering menemukan, seseorang baru mengetahui dirinya mengidap hepatitis B kronis saat pemeriksaan rutin sewaktu melamar kerja. Tiba-tiba saja hasil laboratorium menunjukkan nilai HbsAg posititf (penanda hepatitis B). Ia tidak tahu dari mana sumbernya, dan mengaku tidak menggunakan obat-obatan suntik, seks bebas, atau transfusi darah. Dan tidak ada keluhan kesehatan selama ini; murni hanya hasil lab saja yang bermasalah.</p>\r\n<p>Itulah kesulitan dari hepatitis B. Di Indonesia, mayoritas kasus hepatitis B kronis terjadi akibat infeksi melalui plasenta sewaktu dalam kandungan. Misalnya seorang ibu hamil dengan hepatitis B positif, sang bayi memiliki risiko yang sangat besar untuk mengidap hepatitis juga, namun dengan sifat penyakit kronis: tidak ada gejala pada tahun-tahun awal.</p>\r\n<p><strong>7. Sirosis hepar (penciutan hati)</strong></p>\r\n<p>Seperti halnya penyakit ginjal kronis, masalah kronis pada hati juga dapat mengakibatkan perubahan struktur dan penurunan fungsi. Disebut sirosis hati, apabila sel-sel normal telah mati, digantikan oleh serabut-serabut fibrosa, ukurannya menciut, dan tidak bisa dipulihkan lagi. Lazimnya kondisi ini diketahui melalui USG hati.</p>\r\n<p>Namun, ceritanya agak berbeda dengan penyakit-penyakit di atas. Biasanya pasien memiliki riwayat penyakit hati yang berangsur-angsur dan tidak diobati hingga terjadilah sirosis. Penyebab tersering ialah hepatitis kronis yang disepelekan karena tidak ada gejala. Sampai suatu ketika, barulah pasien mengalami muntah darah atau bengkak yang menandakan telah terjadi sirosis.</p>\r\n<p>Sejatinya, tak semua penyakit menimbulkan gejala pada awalnya. Keluhan yang muncul malah menandakan bahwa penyakit telah memasuki tahap lanjut, bahkan terminal. Di sinilah pentingnya bagi kita semua untuk waspada dan mau periksa kesehatan. Periksa tekanan darah, kadar gula darah, serta waspada terhadap semua faktor risiko adalah hal sederhana nan esensial mencegah tujuh penyakit di atas. Mengutip pepatah tua, mencegah akan selalu lebih baik daripada mengobati. Itupun kalau penyakitnya bisa diobati&hellip;</p>', 'uploads/Waspadai penyakit stroke.jpg', '“Dok, kok saya dibilang sakit padahal tidak ada keluhan apapun?”\r\n“Dok, kok hasil laboratoriumnya tidak normal padahal saya merasa sehat saja?”\r\n\r\nMungkin sebagian besar dari kita pernah bertanya begitu ketika divonis mengalami suatu penyakit, padahal jasmani kita merasa sehat. '),
-(10, 'Anjuran Penting untuk Perawatan Bayi', '<p>.</p>\r\n<ol>\r\n<li><strong>Anda akan membuat anak Anda manja jika sering menggendong mereka.&nbsp;</strong>Bayi yang baru lahir biasanya menangis karena mereka memerlukan sesuatu. Apakah mereka perlu diganti popoknya, lapar atau hanya ingin dipeluk, menenangkan bayi Anda akan sangat membantu mereka merasa aman dan dicintai. Bayi tidak akan bisa menjadi manja. Bahkan makin konsisten Anda memenuhi kebutuhan mereka sebelum mereka berumur 6 bulan, bayi Anda akan menjadi makin jarang menuntut ke depannya.</li>\r\n<li><strong>Jaga ketenangan saat bayi Anda tidur.&nbsp;</strong>Ternyata bayi Anda sebenarnya sering mendengar suara bising ketika mereka masih berada di dalam rahim. Cobalah menyalakan penyedot debu ketika mereka sedang tidur siang. Dengungan mesin bisa saja membuat bayi Anda tidur lebih pulas dan Anda juga bisa sekalian membersihkan rumah.</li>\r\n<li><strong>Berikan bayi Anda jadwal makan yang ketat.&nbsp;</strong>Sebelumnya sering dianjurkan untuk memberi makan bayi setiap empat jam setelah mereka dibawa pulang dari rumah sakit. Kepercayaan bahwa memberi makan bayi hanya ketika mereka lapar akan menganggu kesehatan bayi dan bahkan bisa meningkatkan risiko infeksi usus. Namun sekarang banyak dokter yang menyarankan untuk memberi makan bayi ketika mereka mulai merasa lapar.</li>\r\n</ol>\r\n<p>Anjuran perawatan bayi telah berubah dari waktu ke waktu, akan tetapi satu hal tentang pengasuhan anak yang tetap pasti: Keinginan untuk membuat bayi Anda tetap senang dan sehat. Dan ingatlah: Anda pasti tahu yang paling baik untuk bayi Anda !</p>', 'uploads/newborn-baby-advice.jpg', 'Walaupun keluarga dan teman Anda peduli dan mempunyai niat baik dengan memberi nasihat, akan tetapi bisa saja nasihat mereka bisa menyesatkan. Berikut ini adalah tiga nasihat orang tua yang sudah ketinggalan zaman yang bisa Anda abaikan.');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `berita`
---
-
-CREATE TABLE `berita` (
-  `id` int(11) NOT NULL,
-  `judul` varchar(500) NOT NULL,
-  `isi` text NOT NULL,
-  `gambar` varchar(100) NOT NULL,
-  `tanggal` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(10, 'Anjuran Penting untuk Perawatan Bayi', '<p>.</p>\r\n<ol>\r\n<li><strong>Anda akan membuat anak Anda manja jika sering menggendong mereka.&nbsp;</strong>Bayi yang baru lahir biasanya menangis karena mereka memerlukan sesuatu. Apakah mereka perlu diganti popoknya, lapar atau hanya ingin dipeluk, menenangkan bayi Anda akan sangat membantu mereka merasa aman dan dicintai. Bayi tidak akan bisa menjadi manja. Bahkan makin konsisten Anda memenuhi kebutuhan mereka sebelum mereka berumur 6 bulan, bayi Anda akan menjadi makin jarang menuntut ke depannya.</li>\r\n<li><strong>Jaga ketenangan saat bayi Anda tidur.&nbsp;</strong>Ternyata bayi Anda sebenarnya sering mendengar suara bising ketika mereka masih berada di dalam rahim. Cobalah menyalakan penyedot debu ketika mereka sedang tidur siang. Dengungan mesin bisa saja membuat bayi Anda tidur lebih pulas dan Anda juga bisa sekalian membersihkan rumah.</li>\r\n<li><strong>Berikan bayi Anda jadwal makan yang ketat.&nbsp;</strong>Sebelumnya sering dianjurkan untuk memberi makan bayi setiap empat jam setelah mereka dibawa pulang dari rumah sakit. Kepercayaan bahwa memberi makan bayi hanya ketika mereka lapar akan menganggu kesehatan bayi dan bahkan bisa meningkatkan risiko infeksi usus. Namun sekarang banyak dokter yang menyarankan untuk memberi makan bayi ketika mereka mulai merasa lapar.</li>\r\n</ol>\r\n<p>Anjuran perawatan bayi telah berubah dari waktu ke waktu, akan tetapi satu hal tentang pengasuhan anak yang tetap pasti: Keinginan untuk membuat bayi Anda tetap senang dan sehat. Dan ingatlah: Anda pasti tahu yang paling baik untuk bayi Anda !</p>', 'uploads/newborn-baby-advice.jpg', 'Walaupun keluarga dan teman Anda peduli dan mempunyai niat baik dengan memberi nasihat, akan tetapi bisa saja nasihat mereka bisa menyesatkan. Berikut ini adalah tiga nasihat orang tua yang sudah ketinggalan zaman yang bisa Anda abaikan.'),
+(11, 'SISTEM BILANGAN DAN OPERASI PADA KOMPUTER', '<p>SISTEM BILANGAN</p>\r\n<p>System bilangan (number system) adalah&nbsp; suatu cara untuk mewakili besaran dari suatu item fisik. Sistem bilanan yang banyak dipergunakan oleh manusia adalah system biilangan desimal, yaitu sisitem bilangan yang menggunakan 10 macam symbol untuk mewakili suatu besaran.Sistem ini banyak digunakan karena manusia mempunyai sepuluh jari untuk dapat membantu perhitungan. Lain halnya dengan komputer, logika di komputer diwakili oleh bentuk elemen dua keadaan yaitu <em>off</em> (tidak ada arus) dan <em>on </em>(ada arus). Konsep inilah yang dipakai dalam sistem bilangan binary yang mempunyai dua macam nilai&nbsp; untuk mewakili suatu besaran nilai.</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Selain system bilangan biner, komputer juga menggunakan system bilangan octal dan hexadesimal.</p>', 'uploads/8.jpg', 'System bilangan (number system) adalah  suatu cara untuk mewakili besaran dari suatu item fisik. Sistem bilanan yang banyak dipergunakan oleh manusia adalah system biilangan desimal, yaitu sisitem bilangan yang menggunakan 10 macam symbol untuk mewakili suatu besaran.Sistem ini banyak digunakan karena manusia mempunyai sepuluh jari untuk dapat membantu perhitungan.');
 
 -- --------------------------------------------------------
 
@@ -166,6 +153,7 @@ CREATE TABLE `daftar_penyakit` (
 --
 
 INSERT INTO `daftar_penyakit` (`nama_penyakit`, `id`) VALUES
+('lainnya', 1),
 ('Kejang demam', 4),
 ('Tetanus', 5),
 ('HIV AIDS tanpa komplikasi', 6),
@@ -328,143 +316,17 @@ CREATE TABLE `dokter` (
   `password` varchar(255) NOT NULL,
   `id_kota` int(11) NOT NULL,
   `id_provinsi` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL
+  `id_user` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `dokter`
 --
 
-INSERT INTO `dokter` (`id_dokter`, `id_no_izin`, `email`, `alamat_rumah`, `alamat_praktik`, `nama_dokter`, `no_telp`, `password`, `id_kota`, `id_provinsi`, `id_user`) VALUES
-(1, 2, 'faruqfadhil7@gmail.com', 'SHDHSADVGHSV', 'HSDGHJS', 'sherly', 'HSDGS', 'frq03051997', 1105, 12, 47),
-(3, 3, 'dokter2@gmail.com', 'socah', 'bangkalan', 'ainun', '098736372', 'ainun03051997', 3526, 35, 60);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `donasi`
---
-
-CREATE TABLE `donasi` (
-  `id` int(11) NOT NULL,
-  `id_mahasiswa` int(11) NOT NULL,
-  `jumlah` int(16) NOT NULL,
-  `tgl_donasi` date NOT NULL,
-  `valid` int(5) NOT NULL DEFAULT '1',
-  `tgl_valid` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `donasi_event`
---
-
-CREATE TABLE `donasi_event` (
-  `id` int(11) NOT NULL,
-  `event` int(11) NOT NULL,
-  `donatur` int(11) NOT NULL,
-  `jumlah` int(11) NOT NULL,
-  `tanggal` varchar(100) NOT NULL,
-  `valid` int(11) NOT NULL,
-  `tgl_valid` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `donasi_event`
---
-
-INSERT INTO `donasi_event` (`id`, `event`, `donatur`, `jumlah`, `tanggal`, `valid`, `tgl_valid`) VALUES
-(1, 1, 9, 50000, '20-Feb-2017', 1, '20-Feb-2017');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `donasi_rutin`
---
-
-CREATE TABLE `donasi_rutin` (
-  `id` int(11) NOT NULL,
-  `id_mahasiswa` int(11) NOT NULL,
-  `jumlah` int(11) NOT NULL,
-  `bulan` varchar(100) NOT NULL,
-  `tahun` int(11) NOT NULL,
-  `tanggal` varchar(20) NOT NULL,
-  `valid` int(11) NOT NULL,
-  `tgl_valid` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `donasi_rutin`
---
-
-INSERT INTO `donasi_rutin` (`id`, `id_mahasiswa`, `jumlah`, `bulan`, `tahun`, `tanggal`, `valid`, `tgl_valid`) VALUES
-(1, 18, 50000, 'januari', 2017, '20-Feb-2017', 1, '20-Feb-2017'),
-(2, 18, 50000, 'februari', 2017, '20-Feb-2017', 1, '20-Feb-2017');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `event`
---
-
-CREATE TABLE `event` (
-  `id` int(11) NOT NULL,
-  `judul` varchar(500) NOT NULL,
-  `isi` text NOT NULL,
-  `gambar` varchar(100) NOT NULL,
-  `tanggal` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `event`
---
-
-INSERT INTO `event` (`id`, `judul`, `isi`, `gambar`, `tanggal`) VALUES
-(1, 'kampus bazar', '<p>asdsdsd</p>', '1487600306.jpg', '20-Feb-2017');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `fakultas`
---
-
-CREATE TABLE `fakultas` (
-  `id` int(11) NOT NULL,
-  `nama_fakultas` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `fakultas`
---
-
-INSERT INTO `fakultas` (`id`, `nama_fakultas`) VALUES
-(1, 'Matematika dan Ilmu Pengetahuan Alam'),
-(2, 'Teknologi Industri'),
-(3, 'Teknik Sipil dan Perencanaan'),
-(4, 'Teknologi Kelautan'),
-(5, 'Teknologi Informasi');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `index_nilai`
---
-
-CREATE TABLE `index_nilai` (
-  `id` int(11) NOT NULL,
-  `index_nilai` varchar(10) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `index_nilai`
---
-
-INSERT INTO `index_nilai` (`id`, `index_nilai`) VALUES
-(1, 'A+'),
-(2, 'A'),
-(3, 'A-'),
-(4, 'B+');
+INSERT INTO `dokter` (`id_dokter`, `id_no_izin`, `email`, `alamat_rumah`, `alamat_praktik`, `nama_dokter`, `no_telp`, `password`, `id_kota`, `id_provinsi`, `id_user`, `image`) VALUES
+(1, 2, 'faruqfadhil7@gmail.com', 'SHDHSADVGHSV', 'HSDGHJS', 'sherly', 'HSDGS', 'frq03051997', 1105, 12, 47, 'uploads/dokter/vsvs.jpg'),
+(3, 3, 'dokter2@gmail.com', 'socah', 'bangkalan', 'ainun', '098736372', 'ainun03051997', 3526, 35, 60, '');
 
 -- --------------------------------------------------------
 
@@ -486,45 +348,6 @@ INSERT INTO `jenis` (`id_jenis`, `nama`) VALUES
 (2, 'kota'),
 (3, 'kelurahan'),
 (4, 'desa');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `jenis_kegiatan`
---
-
-CREATE TABLE `jenis_kegiatan` (
-  `id` int(11) NOT NULL,
-  `type_kegiatan` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `jenis_kegiatan`
---
-
-INSERT INTO `jenis_kegiatan` (`id`, `type_kegiatan`) VALUES
-(1, 'Research'),
-(2, 'Social');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `jurusan`
---
-
-CREATE TABLE `jurusan` (
-  `id` int(11) NOT NULL,
-  `fakultas` int(11) NOT NULL,
-  `nama_jurusan` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `jurusan`
---
-
-INSERT INTO `jurusan` (`id`, `fakultas`, `nama_jurusan`) VALUES
-(1, 1, 'Bahasa & Sastra Arab (BSA)'),
-(2, 3, 'Pendidikan Guru MI (PGMI)');
 
 -- --------------------------------------------------------
 
@@ -1061,333 +884,6 @@ INSERT INTO `kabupaten` (`id_kab`, `id_prov`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mahasiswa`
---
-
-CREATE TABLE `mahasiswa` (
-  `id` int(11) NOT NULL,
-  `username` varchar(25) DEFAULT NULL,
-  `auth_key` varchar(32) DEFAULT NULL,
-  `password_hash` varchar(255) DEFAULT NULL,
-  `password_reset_token` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `created_at` int(11) DEFAULT NULL,
-  `updated_at` int(11) DEFAULT NULL,
-  `nama_lengkap` varchar(100) DEFAULT NULL,
-  `nimrn` varchar(100) DEFAULT NULL,
-  `tempat_lahir` varchar(100) DEFAULT NULL,
-  `tanggal_lahir` varchar(100) DEFAULT NULL,
-  `alamat` varchar(100) DEFAULT NULL,
-  `tahun_masuk` varchar(4) DEFAULT NULL,
-  `status` varchar(20) DEFAULT NULL,
-  `foto` varchar(120) DEFAULT 'default.png',
-  `fakultas` int(11) DEFAULT NULL,
-  `jurusan` int(11) DEFAULT NULL,
-  `pekerjaan` varchar(100) DEFAULT NULL,
-  `deskripsi` text,
-  `donasi_rutin` int(5) DEFAULT '0',
-  `jumlah_donasi` int(16) DEFAULT NULL,
-  `lat` double DEFAULT NULL,
-  `lng` double DEFAULT NULL,
-  `kota` varchar(200) DEFAULT NULL,
-  `provinsi` varchar(200) DEFAULT NULL,
-  `negara` varchar(200) DEFAULT NULL,
-  `aprroved` int(5) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `mahasiswa`
---
-
-INSERT INTO `mahasiswa` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `created_at`, `updated_at`, `nama_lengkap`, `nimrn`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `tahun_masuk`, `status`, `foto`, `fakultas`, `jurusan`, `pekerjaan`, `deskripsi`, `donasi_rutin`, `jumlah_donasi`, `lat`, `lng`, `kota`, `provinsi`, `negara`, `aprroved`) VALUES
-(19, 'agus1234', 'yDlGwOhez5vx9ZP9jLBwvpL0r-nv9Als', '$2y$13$UUScwGMRZD1P9Opl9Q7U2Ozl6NF246ulkmnrQs236b4w7.oFGT7q.', NULL, 'agus.khoiruddin@gmail.com', 1487634654, 1487650275, 'Agus Khoiruddin', '78687687689768768', 'Surabaya', '', '', '', NULL, 'default.png', 1, 1, 'Software Architect', '', 1, 20000, NULL, NULL, NULL, NULL, NULL, 2),
-(20, 'didik1234', 'YpzY8xqr4fIN4qNndhfIiQNDkwIcX5ge', '$2y$10$hl5jvg1daRVGa.AQyGEEBOqVHU9xgLoVq7UrjyLkF2ucdU.ajkdxC', NULL, 'didikts@mail.com', 1487636619, 1502042186, 'Didik Tri S', '123123', 'Ponorogo', '05-02-1979', 'Jalan Keputih Timur Jaya III, Keputih, Kota Surabaya, Jawa Timur, Indonesia', '2016', NULL, 'MKTB1IFBVetOztosvYUlktea2wmiVdwM.png', 1, 2, 'Programmer', 'Ini percobaan', 1, 10000, -7.2905464, 112.810676, 'Kota Surabaya', 'Jawa Timur', 'Indonesia', 2),
-(21, 'tes1234', '7KdNH-iF7GQEl-s4G0KIc2EUTheNpq93', '$2y$13$rmvNtqTXvVY.GpovvRBLsO6WTgs2tDybJcDgA2socFdhc.jYkOuB.', NULL, 'fckislife@mail.com', 1502042255, 1502042255, 'admin tes', '123123', NULL, NULL, NULL, '2010', NULL, 'default.png', 4, 1, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_categori`
---
-
-CREATE TABLE `master_categori` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `valid` int(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_categori`
---
-
-INSERT INTO `master_categori` (`id`, `nama`, `valid`) VALUES
-(1, 'Information Tech', 0),
-(2, 'Startup Bussiness', 0),
-(3, 'Edukasi', 0),
-(4, 'Book Literature', 0),
-(5, 'baru', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_donasi`
---
-
-CREATE TABLE `master_donasi` (
-  `id` int(11) NOT NULL,
-  `nilai` int(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_donasi`
---
-
-INSERT INTO `master_donasi` (`id`, `nilai`) VALUES
-(1, 5000),
-(2, 10000),
-(3, 20000),
-(4, 50000),
-(5, 70000),
-(6, 100000),
-(7, 120000);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_kategori_mitra`
---
-
-CREATE TABLE `master_kategori_mitra` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_kategori_mitra`
---
-
-INSERT INTO `master_kategori_mitra` (`id`, `nama`) VALUES
-(1, 'Swasta Nasional'),
-(2, 'Swasta Asing'),
-(3, 'Pemerintah'),
-(4, 'Lembaga Pendidikan'),
-(5, 'Lembaga Internasional'),
-(6, 'BUMN'),
-(7, 'BUMD');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_kegiatan`
---
-
-CREATE TABLE `master_kegiatan` (
-  `id` int(11) NOT NULL,
-  `id_mitra` int(11) NOT NULL,
-  `id_jenis` int(11) NOT NULL,
-  `id_kontrak` int(11) NOT NULL,
-  `id_tahun_ajar` int(11) NOT NULL,
-  `deskripsi_kegiatan` varchar(255) DEFAULT NULL,
-  `nominal` bigint(20) NOT NULL,
-  `tanggal_mulai` date NOT NULL,
-  `tanggal_selesai` date NOT NULL,
-  `status` int(2) NOT NULL,
-  `created_at` int(11) NOT NULL,
-  `updated_at` int(11) NOT NULL,
-  `created_by` int(11) NOT NULL,
-  `updated_by` int(11) NOT NULL,
-  `flag` int(2) NOT NULL,
-  `id_jurusan` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_kegiatan`
---
-
-INSERT INTO `master_kegiatan` (`id`, `id_mitra`, `id_jenis`, `id_kontrak`, `id_tahun_ajar`, `deskripsi_kegiatan`, `nominal`, `tanggal_mulai`, `tanggal_selesai`, `status`, `created_at`, `updated_at`, `created_by`, `updated_by`, `flag`, `id_jurusan`) VALUES
-(1, 1, 1, 1, 6, 'installasi listrik', 100000000, '2017-08-01', '2017-08-02', 1, 1504023643, 1504023643, 6, 6, 1, 2),
-(3, 1, 2, 3, 5, 'Pembangunan di  Gedung Rektor', 250000000, '2017-08-31', '2017-09-05', 1, 1504025804, 1504025804, 6, 6, 1, 1),
-(5, 4, 1, 4, 5, 'Riset semen', 50000000, '2017-09-28', '2017-09-30', 1, 1504755772, 1504755772, 6, 6, 1, 2),
-(6, 4, 1, 4, 5, 'Riset bantuan', 150000000, '2017-09-10', '2017-09-12', 1, 1505047179, 1505047179, 6, 6, 1, 2),
-(7, 4, 1, 4, 5, 'Kegiatan akhir tahun ajar', 50000000, '2017-09-20', '2017-09-21', 1, 1505399889, 1505400106, 45, 6, 1, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_kontrak`
---
-
-CREATE TABLE `master_kontrak` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `id_mitra` int(11) NOT NULL,
-  `nilai_kontrak` bigint(20) NOT NULL,
-  `tanggal_mulai` date NOT NULL,
-  `tanggal_berakhir` date NOT NULL,
-  `status` int(2) NOT NULL,
-  `flag` int(2) NOT NULL,
-  `created_at` int(11) NOT NULL,
-  `updated_at` int(11) NOT NULL,
-  `created_by` int(11) NOT NULL,
-  `updated_by` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_kontrak`
---
-
-INSERT INTO `master_kontrak` (`id`, `nama`, `id_mitra`, `nilai_kontrak`, `tanggal_mulai`, `tanggal_berakhir`, `status`, `flag`, `created_at`, `updated_at`, `created_by`, `updated_by`) VALUES
-(1, 'Membangun Listrik', 1, 4000000000, '2016-05-01', '2017-05-01', 1, 1, 1504013413, 1504022947, 6, 6),
-(3, 'Pembangunan Trafo', 1, 3000000000, '2017-08-14', '2019-08-14', 1, 1, 1504024939, 1504024939, 6, 6),
-(4, 'Kontrak beasiswa', 4, 500000000, '2017-08-31', '2018-08-30', 1, 1, 1504741342, 1504741342, 6, 6);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_mitra`
---
-
-CREATE TABLE `master_mitra` (
-  `id` int(11) NOT NULL,
-  `id_kota` int(11) NOT NULL,
-  `id_provinsi` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `alamat` varchar(255) NOT NULL,
-  `kontak` varchar(50) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `id_kategori` int(11) NOT NULL,
-  `status_spk` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_mitra`
---
-
-INSERT INTO `master_mitra` (`id`, `id_kota`, `id_provinsi`, `nama`, `email`, `alamat`, `kontak`, `id_user`, `id_kategori`, `status_spk`) VALUES
-(1, 3174, 31, 'PT PLN (Persero)', 'faruqfadh@icloud.com', 'Jl. Trunojoyo Blok M/1 No. 135 RT: 000 RW: 000 Kel. Melawai Kec. Kebayoran', '03123456', 44, 6, 'iya'),
-(4, 3525, 35, 'PT SEMEN INDONESIA (Persero) Tbk.', 'sam.fauzy@gmail.com', 'Jl. Veteran, Sidokumpul, Kec. Gresik', '085730485464', 45, 6, 'iya');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_perusahaan`
---
-
-CREATE TABLE `master_perusahaan` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `alamat` varchar(255) NOT NULL,
-  `ruang_lingkup` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_perusahaan`
---
-
-INSERT INTO `master_perusahaan` (`id`, `nama`, `alamat`, `ruang_lingkup`) VALUES
-(1, 'PT Pertamina', '', 1),
-(2, 'ITS Surabaya', '', 1),
-(3, 'Indoartha Citra Media', '', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_ruang_lingkup`
---
-
-CREATE TABLE `master_ruang_lingkup` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_ruang_lingkup`
---
-
-INSERT INTO `master_ruang_lingkup` (`id`, `nama`) VALUES
-(1, 'Academic'),
-(2, 'Bussiness'),
-(3, 'Goverment'),
-(4, 'Society');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_skill`
---
-
-CREATE TABLE `master_skill` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `valid` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_skill`
---
-
-INSERT INTO `master_skill` (`id`, `nama`, `valid`) VALUES
-(1, 'Web Development', 0),
-(2, 'Employee Management', 0),
-(3, 'Supply Chain', 0),
-(4, 'GIS System', 0),
-(5, 'MySQL', 0),
-(6, 'Oracle', 0),
-(7, 'Employee Management', 0),
-(8, 'tes', 0),
-(9, 'mas', 0),
-(10, 'hehe', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `master_tahun_ajar`
---
-
-CREATE TABLE `master_tahun_ajar` (
-  `id` int(11) NOT NULL,
-  `awal` date NOT NULL,
-  `akhir` date NOT NULL,
-  `total_kuota` int(8) NOT NULL,
-  `jeda_akhir` int(11) NOT NULL,
-  `is_calculated` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `master_tahun_ajar`
---
-
-INSERT INTO `master_tahun_ajar` (`id`, `awal`, `akhir`, `total_kuota`, `jeda_akhir`, `is_calculated`) VALUES
-(5, '2017-08-30', '2017-09-27', 200, 3, 1),
-(6, '2016-08-30', '2017-08-29', 100, 3, 0),
-(7, '2018-08-30', '2019-08-29', 100, 3, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mata_kuliah`
---
-
-CREATE TABLE `mata_kuliah` (
-  `id` int(11) NOT NULL,
-  `id_jurusan` int(11) NOT NULL,
-  `mata_kuliah` varchar(100) NOT NULL,
-  `semester` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `mata_kuliah`
---
-
-INSERT INTO `mata_kuliah` (`id`, `id_jurusan`, `mata_kuliah`, `semester`) VALUES
-(1, 2, 'Pendidikan Matematika MI', 'Semester 1'),
-(2, 2, 'Managemen Lembaga Pendidikan Islam', 'Semester 2'),
-(3, 1, 'tes', '');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `menu`
 --
 
@@ -1435,81 +931,12 @@ INSERT INTO `menu` (`id`, `menu`, `icon`, `parent`, `module`, `controller`) VALU
 (29, 'SIP', 'fa fa-align-justify', '', '2', ''),
 (30, 'Cari SIP', 'fa fa-search', '29', '2', 'izin-dokter'),
 (31, 'Kelola Artikel', 'fa fa-book', '', '2', ''),
-(32, 'Tamba Artikel', 'fa fa-plus-circle', '31', '2', 'artikel'),
+(32, 'Tamba Artikel', 'fa fa-plus-circle', '31', '2', 'artikel/create'),
 (33, 'Daftar Artikel', 'fa fa-th-list', '31', '2', 'artikel'),
 (34, 'Riwayat', 'fa fa-search', '', '2', 'pasien'),
 (35, 'Cari Pasien', 'fa fa-search', '34', '2', 'pasien'),
 (36, 'Kesehatanku', 'fa fa-heartbeat', '', '2', ''),
 (37, 'Grafik', 'fa fa-pie-chart', '36', '2', 'riwayat/grafik');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mhs_minat`
---
-
-CREATE TABLE `mhs_minat` (
-  `id` int(11) NOT NULL,
-  `categori_id` int(11) NOT NULL,
-  `id_mahasiswa` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `mhs_minat`
---
-
-INSERT INTO `mhs_minat` (`id`, `categori_id`, `id_mahasiswa`) VALUES
-(2, 2, 20),
-(3, 3, 20);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mhs_pekerjaan`
---
-
-CREATE TABLE `mhs_pekerjaan` (
-  `id` int(11) NOT NULL,
-  `mahasiswa_id` int(11) NOT NULL,
-  `perusahaan_id` int(11) DEFAULT NULL,
-  `nama_perusahaan` varchar(150) NOT NULL,
-  `ruang_lingkup` int(11) NOT NULL,
-  `lokasi` varchar(150) NOT NULL,
-  `long` varchar(150) NOT NULL,
-  `lat` varchar(150) NOT NULL,
-  `status` varchar(150) NOT NULL,
-  `posisi` varchar(100) NOT NULL,
-  `deskripsi` text,
-  `tanggal_mulai` date NOT NULL,
-  `tanggal_akhir` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `mhs_pekerjaan`
---
-
-INSERT INTO `mhs_pekerjaan` (`id`, `mahasiswa_id`, `perusahaan_id`, `nama_perusahaan`, `ruang_lingkup`, `lokasi`, `long`, `lat`, `status`, `posisi`, `deskripsi`, `tanggal_mulai`, `tanggal_akhir`) VALUES
-(12, 20, 3, 'Indoartha Citra Media', 2, 'Jalan Raya Keputih Permai, Keputih, Kota Surabaya, Jawa Timur, Indonesia', '112.81007364365541', '-7.287699573448173', '1', 'Admin', NULL, '2015-07-21', '2017-04-20'),
-(13, 21, 2, 'ITS Surabaya', 1, 'Jalan Raya ITS, Keputih, Kota Surabaya, Jawa Timur, Indonesia', '112.79373469999996', '-7.275635800000001', '', 'Developer', NULL, '2017-08-07', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mhs_skill`
---
-
-CREATE TABLE `mhs_skill` (
-  `id` int(11) NOT NULL,
-  `skill_id` int(11) NOT NULL,
-  `id_mahasiswa` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `mhs_skill`
---
-
-INSERT INTO `mhs_skill` (`id`, `skill_id`, `id_mahasiswa`) VALUES
-(18, 1, 20);
 
 -- --------------------------------------------------------
 
@@ -1552,32 +979,6 @@ INSERT INTO `module` (`id`, `module`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nilai`
---
-
-CREATE TABLE `nilai` (
-  `id` int(11) NOT NULL,
-  `mahasiswa` int(11) NOT NULL,
-  `mata_kuliah` int(11) NOT NULL,
-  `nilai` varchar(5) NOT NULL,
-  `index` varchar(4) NOT NULL,
-  `semester` varchar(11) NOT NULL,
-  `jurusan` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `nilai`
---
-
-INSERT INTO `nilai` (`id`, `mahasiswa`, `mata_kuliah`, `nilai`, `index`, `semester`, `jurusan`) VALUES
-(1, 5, 1, '4.00', '0', '0', 0),
-(2, 5, 2, '3.90', '0', '0', 0),
-(3, 5, 2, '4.00', 'A+', 'Semester 1', 2),
-(4, 5, 2, '3.90', 'A+', 'Semester 3', 1);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `no_izin_dokter`
 --
 
@@ -1614,16 +1015,17 @@ CREATE TABLE `pasien` (
   `id_provinsi` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(25) NOT NULL
+  `password` varchar(25) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pasien`
 --
 
-INSERT INTO `pasien` (`id_pasien`, `nama_pasien`, `alamat`, `no_telp_pasien`, `gol_darah`, `jenis_kelamin`, `nik`, `id_kota`, `id_provinsi`, `id_user`, `email`, `password`) VALUES
-(1, 'faruq', 'bangkalan', '085859953545', 'A', 'PRIA', 3526020305970005, 1105, 12, 48, 'ristekbempens@gmail.com', 'frq03051997'),
-(2, 'Adhisma', 'tegal mulyorejo', '086756726322', 'O', 'PRIA', 3526020305971235, 1102, 13, 55, 'adhisma@gmail.com', 'adhisma');
+INSERT INTO `pasien` (`id_pasien`, `nama_pasien`, `alamat`, `no_telp_pasien`, `gol_darah`, `jenis_kelamin`, `nik`, `id_kota`, `id_provinsi`, `id_user`, `email`, `password`, `image`) VALUES
+(1, 'faruq', 'bangkalan', '085859953545', 'A', 'PRIA', 3526020305970005, 1105, 12, 48, 'ristekbempens@gmail.com', 'frq03051997', 'uploads/pasien/WIN_20171114_10_13_57_Pro.jpg'),
+(2, 'Adhisma', 'tegal mulyorejo', '086756726322', 'O', 'PRIA', 3526020305971235, 1102, 13, 55, 'adhisma@gmail.com', 'adhisma', '');
 
 -- --------------------------------------------------------
 
@@ -1692,6 +1094,7 @@ CREATE TABLE `riwayat` (
   `riwayat_kesehatan_keluarga` text,
   `keluhan_utama` text,
   `diagnosa` int(11) NOT NULL,
+  `diagnosa_text` text,
   `larangan` text,
   `pemeriksa_penunjang` text,
   `tgl_periksa` date DEFAULT NULL,
@@ -1708,72 +1111,87 @@ CREATE TABLE `riwayat` (
 -- Dumping data for table `riwayat`
 --
 
-INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `id_dokter`, `umur`, `berat_badan`, `tinggi_badan`, `riwayat_kesehatan_keluarga`, `keluhan_utama`, `diagnosa`, `larangan`, `pemeriksa_penunjang`, `tgl_periksa`, `perawatan`, `advis`, `head`, `neck`, `thorax`, `abdomen`, `ekstremitas`) VALUES
-(1, 1, 1, 32, 123, 123, 'tidak ada', 'pusing', 26, 'kurangi minum es', 'tidak ada', '2016-11-10', 'rumah', '', '', '', '', '', ''),
-(2, 1, 1, 23, 23, 123, 'tidak ada', 'sakit perut', 37, 'tidak boleh merokok', 'tidak ada', '2017-10-11', 'rumah', '', '', '', '', '', ''),
-(3, 1, 1, 33, 123, 123, 'tidak ada', 'sakit nyeri', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah', '', '', '', '', '', ''),
-(4, 1, 1, 22, 123, 123, 'tidak ada', 'mules', 46, 'tidak boleh konsumsi gula', 'tidak ada', '2017-11-13', 'rumah', '', '', '', '', '', ''),
-(5, 1, 1, 31, 123, 123, 'tidak ada', 'nyeri tulang', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-11-11', 'rumah', '', '', '', '', '', ''),
-(6, 1, 1, 44, 123, 123, 'tidak ada', 'mual,panas', 66, 'tidak boleh konsumsi lemak', 'tidak ada', '2017-12-14', 'rumah', '', '', '', '', '', ''),
-(7, 1, 1, 34, 123, 123, 'tidak ada', 'panas,batuk berdahak', 16, 'tidak boleh konsumsi junk food', 'tidak ada', '2017-10-16', 'rumah', '', '', '', '', '', ''),
-(8, 1, 1, 23, 123, 123, 'tidak ada', 'panas,batuk', 76, 'tidak boleh konsumsi gula', 'tidak ada', '2017-01-15', 'rumah', '', '', '', '', '', ''),
-(9, 1, 1, 23, 123, 123, 'tidak ada', 'rahang nyeri', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-02-17', 'rumah', '', '', '', '', '', ''),
-(10, 1, 1, 23, 123, 123, 'tidak ada', 'kepala sakit sebelah', 16, 'kurangi bergadang', 'tidak ada', '2017-03-18', 'rumah', '', '', '', '', '', ''),
-(11, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-19', 'rumah', '', '', '', '', '', ''),
-(12, 1, 1, 23, 123, 123, 'tidak ada', 'mata memerah', 16, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
-(13, 1, 1, 23, 123, 123, 'tidak ada', 'sakit kepala sebelah', 26, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-21', 'rumah', '', '', '', '', '', ''),
-(14, 1, 1, 23, 123, 123, 'tidak ada', 'badan nyeri semua', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-22', 'rumah', '', '', '', '', '', ''),
-(15, 1, 1, 23, 123, 123, 'tidak ada', 'perut kembung', 76, 'kurangi bergadang', 'tidak ada', '2017-11-10', 'rumah', '', '', '', '', '', ''),
-(16, 1, 1, 23, 123, 123, 'tidak ada', 'demam,batuk berdahak', 66, 'tidak boleh karbohidrat', 'tidak ada', '2017-12-10', 'rumah', '', '', '', '', '', ''),
-(17, 1, 1, 23, 123, 123, 'tidak ada', 'mual dan demam', 86, 'tidak boleh konsumsi gula', 'tidak ada', '2017-05-10', 'rumah', '', '', '', '', '', ''),
-(18, 1, 1, 23, 123, 123, 'tidak ada', 'muntah muntah', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-06-10', 'rumah', '', '', '', '', '', ''),
-(19, 1, 1, 23, 123, 123, 'tidak ada', 'mual dan muntah', 86, 'tidak boleh karbohidrat', 'tidak ada', '2017-01-10', 'rumah', '', '', '', '', '', ''),
-(20, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 16, 'kurangi bergadang', 'tidak ada', '2017-02-02', 'rumah', '', '', '', '', '', ''),
-(21, 1, 1, 23, 123, 123, 'tidak ada', 'panas dan demam', 36, 'tidak boleh karbohidrat', 'tidak ada', '2017-02-03', 'rumah', '', '', '', '', '', ''),
-(22, 1, 1, 23, 123, 123, 'tidak ada', 'demam tinggi', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-14', 'rumah', '', '', '', '', '', ''),
-(23, 1, 1, 23, 123, 123, 'tidak ada', 'demam tinggi', 16, 'tidak boleh karbohidrat', 'tidak ada', '2017-11-16', 'rumah', '', '', '', '', '', ''),
-(24, 1, 1, 23, 123, 123, 'tidak ada', 'menggigil', 86, 'tidak boleh konsumsi gula', 'tidak ada', '2017-04-17', 'rumah', '', '', '', '', '', ''),
-(25, 1, 1, 23, 123, 123, 'tidak ada', 'demam dan menggigil', 26, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-06', 'rumah', '', '', '', '', '', ''),
-(26, 1, 1, 23, 123, 123, 'tidak ada', 'pusing kepala sebelah', 56, 'kurangi bergadang', 'tidak ada', '2017-10-07', 'rumah', '', '', '', '', '', ''),
-(27, 1, 1, 23, 123, 123, 'tidak ada', 'pusing seluruh kepala', 76, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-09', 'rumah', '', '', '', '', '', ''),
-(28, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 66, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-30', 'rumah', '', '', '', '', '', ''),
-(29, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 67, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
-(30, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 68, 'kurangi bergadang', 'tidak ada', '2017-01-15', 'rumah', '', '', '', '', '', ''),
-(31, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 68, 'tidak boleh konsumsi gula', 'tidak ada', '2017-04-27', 'rumah', '', '', '', '', '', ''),
-(32, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 63, 'kurangi bergadang', 'tidak ada', '2017-06-23', 'rumah', '', '', '', '', '', ''),
-(33, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 61, 'tidak boleh konsumsi gula', 'tidak ada', '2017-08-26', 'rumah', '', '', '', '', '', ''),
-(34, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 64, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
-(35, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 46, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-29', 'rumah', '', '', '', '', '', ''),
-(36, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-25', 'rumah', '', '', '', '', '', ''),
-(37, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 26, 'kurangi bergadang', 'tidak ada', '2017-07-18', 'rumah', '', '', '', '', '', ''),
-(38, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'kurangi minum es', 'tidak ada', '2017-06-19', 'rumah', '', '', '', '', '', ''),
-(39, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 67, 'tidak boleh konsumsi gula', 'tidak ada', '2017-05-20', 'rumah', '', '', '', '', '', ''),
-(40, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 66, 'kurangi bergadang', 'tidak ada', '2017-04-20', 'rumah', '', '', '', '', '', ''),
-(41, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 65, 'kurangi minum es', 'tidak ada', '2017-03-21', 'rumah', '', '', '', '', '', ''),
-(42, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 64, 'tidak boleh memakan nasi', 'tidak ada', '2017-02-22', 'rumah', '', '', '', '', '', ''),
-(43, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-23', 'rumah', '', '', '', '', '', ''),
-(44, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 26, 'kurangi minum es', 'tidak ada', '2017-11-24', 'rumah', '', '', '', '', '', ''),
-(45, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
-(46, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'kurangi bergadang', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', ''),
-(47, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 26, 'kurangi minum es', 'tidak ada', '2017-10-30', 'rumah', '', '', '', '', '', ''),
-(48, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 16, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-12', 'rumah', '', '', '', '', '', ''),
-(49, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 65, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah', '', '', '', '', '', ''),
-(50, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
-(51, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 63, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', ''),
-(52, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 62, 'kurangi minum es', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
-(53, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 61, 'kurangi bergadang', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
-(54, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 96, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-25', 'rumah', '', '', '', '', '', ''),
-(55, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 86, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-28', 'rumah', '', '', '', '', '', ''),
-(56, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 76, 'tidak boleh karbohidrat', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
-(57, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 66, 'kurangi bergadang', 'tidak ada', '2017-10-21', 'rumah', '', '', '', '', '', ''),
-(58, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'tidak boleh karbohidrat', 'tidak ada', '2018-10-22', 'rumah', '', '', '', '', '', ''),
-(59, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 56, 'tidak boleh memakan nasi', 'tidak ada', '2017-10-23', 'rumah', '', '', '', '', '', ''),
-(60, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'kurangi minum es', 'tidak ada', '2017-10-22', 'rumah', '', '', '', '', '', ''),
-(61, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 56, 'tidak boleh konsumsi gula', 'tidak ada', '2018-10-21', 'rumah', '', '', '', '', '', ''),
-(62, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 46, 'kurangi bergadang', 'tidak ada', '2018-10-23', 'rumah', '', '', '', '', '', ''),
-(63, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-27', 'rumah', '', '', '', '', '', ''),
-(64, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, 'kurangi bergadang', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
-(65, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, 'tidak boleh memakan nasi', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', '');
+INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `id_dokter`, `umur`, `berat_badan`, `tinggi_badan`, `riwayat_kesehatan_keluarga`, `keluhan_utama`, `diagnosa`, `diagnosa_text`, `larangan`, `pemeriksa_penunjang`, `tgl_periksa`, `perawatan`, `advis`, `head`, `neck`, `thorax`, `abdomen`, `ekstremitas`) VALUES
+(1, 1, 1, 32, 123, 123, 'tidak ada', 'pusing', 26, '', 'kurangi minum es', 'tidak ada', '2016-11-10', 'rumah', '', '', '', '', '', ''),
+(2, 1, 1, 23, 23, 123, 'tidak ada', 'sakit perut', 37, '', 'tidak boleh merokok', 'tidak ada', '2017-10-11', 'rumah', '', '', '', '', '', ''),
+(3, 1, 1, 33, 123, 123, 'tidak ada', 'sakit nyeri', 16, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah', '', '', '', '', '', ''),
+(4, 1, 1, 22, 123, 123, 'tidak ada', 'mules', 46, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-11-13', 'rumah', '', '', '', '', '', ''),
+(5, 1, 1, 31, 123, 123, 'tidak ada', 'nyeri tulang', 56, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-11-11', 'rumah', '', '', '', '', '', ''),
+(6, 1, 1, 44, 123, 123, 'tidak ada', 'mual,panas', 66, '', 'tidak boleh konsumsi lemak', 'tidak ada', '2017-12-14', 'rumah', '', '', '', '', '', ''),
+(7, 1, 1, 34, 123, 123, 'tidak ada', 'panas,batuk berdahak', 16, '', 'tidak boleh konsumsi junk food', 'tidak ada', '2017-10-16', 'rumah', '', '', '', '', '', ''),
+(8, 1, 1, 23, 123, 123, 'tidak ada', 'panas,batuk', 76, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-01-15', 'rumah', '', '', '', '', '', ''),
+(9, 1, 1, 23, 123, 123, 'tidak ada', 'rahang nyeri', 16, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-02-17', 'rumah', '', '', '', '', '', ''),
+(10, 1, 1, 23, 123, 123, 'tidak ada', 'kepala sakit sebelah', 16, '', 'kurangi bergadang', 'tidak ada', '2017-03-18', 'rumah', '', '', '', '', '', ''),
+(11, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 36, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-02-19', 'rumah', '', '', '', '', '', ''),
+(12, 1, 1, 23, 123, 123, 'tidak ada', 'mata memerah', 16, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
+(13, 1, 1, 23, 123, 123, 'tidak ada', 'sakit kepala sebelah', 26, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-10-21', 'rumah', '', '', '', '', '', ''),
+(14, 1, 1, 23, 123, 123, 'tidak ada', 'badan nyeri semua', 56, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-10-22', 'rumah', '', '', '', '', '', ''),
+(15, 1, 1, 23, 123, 123, 'tidak ada', 'perut kembung', 76, '', 'kurangi bergadang', 'tidak ada', '2017-11-10', 'rumah', '', '', '', '', '', ''),
+(16, 1, 1, 23, 123, 123, 'tidak ada', 'demam,batuk berdahak', 66, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-12-10', 'rumah', '', '', '', '', '', ''),
+(17, 1, 1, 23, 123, 123, 'tidak ada', 'mual dan demam', 86, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-05-10', 'rumah', '', '', '', '', '', ''),
+(18, 1, 1, 23, 123, 123, 'tidak ada', 'muntah muntah', 36, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-06-10', 'rumah', '', '', '', '', '', ''),
+(19, 1, 1, 23, 123, 123, 'tidak ada', 'mual dan muntah', 86, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-01-10', 'rumah', '', '', '', '', '', ''),
+(20, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 16, '', 'kurangi bergadang', 'tidak ada', '2017-02-02', 'rumah', '', '', '', '', '', ''),
+(21, 1, 1, 23, 123, 123, 'tidak ada', 'panas dan demam', 36, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-02-03', 'rumah', '', '', '', '', '', ''),
+(22, 1, 1, 23, 123, 123, 'tidak ada', 'demam tinggi', 56, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-02-14', 'rumah', '', '', '', '', '', ''),
+(23, 1, 1, 23, 123, 123, 'tidak ada', 'demam tinggi', 16, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-11-16', 'rumah', '', '', '', '', '', ''),
+(24, 1, 1, 23, 123, 123, 'tidak ada', 'menggigil', 86, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-04-17', 'rumah', '', '', '', '', '', ''),
+(25, 1, 1, 23, 123, 123, 'tidak ada', 'demam dan menggigil', 26, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-10-06', 'rumah', '', '', '', '', '', ''),
+(26, 1, 1, 23, 123, 123, 'tidak ada', 'pusing kepala sebelah', 56, '', 'kurangi bergadang', 'tidak ada', '2017-10-07', 'rumah', '', '', '', '', '', ''),
+(27, 1, 1, 23, 123, 123, 'tidak ada', 'pusing seluruh kepala', 76, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-09', 'rumah', '', '', '', '', '', ''),
+(28, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 66, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-10-30', 'rumah', '', '', '', '', '', ''),
+(29, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 67, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
+(30, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 68, '', 'kurangi bergadang', 'tidak ada', '2017-01-15', 'rumah', '', '', '', '', '', ''),
+(31, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 68, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-04-27', 'rumah', '', '', '', '', '', ''),
+(32, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 63, '', 'kurangi bergadang', 'tidak ada', '2017-06-23', 'rumah', '', '', '', '', '', ''),
+(33, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 61, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-08-26', 'rumah', '', '', '', '', '', ''),
+(34, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 64, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
+(35, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 46, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-10-29', 'rumah', '', '', '', '', '', ''),
+(36, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-10-25', 'rumah', '', '', '', '', '', ''),
+(37, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 26, '', 'kurangi bergadang', 'tidak ada', '2017-07-18', 'rumah', '', '', '', '', '', ''),
+(38, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, '', 'kurangi minum es', 'tidak ada', '2017-06-19', 'rumah', '', '', '', '', '', ''),
+(39, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 67, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-05-20', 'rumah', '', '', '', '', '', ''),
+(40, 1, 1, 23, 123, 123, 'tidak ada', 'rambut rontok', 66, '', 'kurangi bergadang', 'tidak ada', '2017-04-20', 'rumah', '', '', '', '', '', ''),
+(41, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 65, '', 'kurangi minum es', 'tidak ada', '2017-03-21', 'rumah', '', '', '', '', '', ''),
+(42, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 64, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-02-22', 'rumah', '', '', '', '', '', ''),
+(43, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-23', 'rumah', '', '', '', '', '', ''),
+(44, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 26, '', 'kurangi minum es', 'tidak ada', '2017-11-24', 'rumah', '', '', '', '', '', ''),
+(45, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
+(46, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, '', 'kurangi bergadang', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', ''),
+(47, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 26, '', 'kurangi minum es', 'tidak ada', '2017-10-30', 'rumah', '', '', '', '', '', ''),
+(48, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 16, '', 'tidak boleh memakan nasi', 'tidak ada', '2018-10-12', 'rumah', '', '', '', '', '', ''),
+(49, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 65, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-10-12', 'rumah', '', '', '', '', '', ''),
+(50, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, '', 'tidak boleh konsumsi gula', 'tidak ada', '2017-10-27', 'rumah', '', '', '', '', '', ''),
+(51, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 63, '', 'tidak boleh memakan nasi', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', ''),
+(52, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 62, '', 'kurangi minum es', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
+(53, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 61, '', 'kurangi bergadang', 'tidak ada', '2017-10-26', 'rumah', '', '', '', '', '', ''),
+(54, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 96, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-10-25', 'rumah', '', '', '', '', '', ''),
+(55, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 86, '', 'tidak boleh memakan nasi', 'tidak ada', '2018-10-28', 'rumah', '', '', '', '', '', ''),
+(56, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 76, '', 'tidak boleh karbohidrat', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
+(57, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 66, '', 'kurangi bergadang', 'tidak ada', '2017-10-21', 'rumah', '', '', '', '', '', ''),
+(58, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, '', 'tidak boleh karbohidrat', 'tidak ada', '2018-10-22', 'rumah', '', '', '', '', '', ''),
+(59, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 56, '', 'tidak boleh memakan nasi', 'tidak ada', '2017-10-23', 'rumah', '', '', '', '', '', ''),
+(60, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, '', 'kurangi minum es', 'tidak ada', '2017-10-22', 'rumah', '', '', '', '', '', ''),
+(61, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 56, '', 'tidak boleh konsumsi gula', 'tidak ada', '2018-10-21', 'rumah', '', '', '', '', '', ''),
+(62, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 46, '', 'kurangi bergadang', 'tidak ada', '2018-10-23', 'rumah', '', '', '', '', '', ''),
+(63, 1, 1, 23, 123, 123, 'tidak ada', 'demam', 36, '', 'tidak boleh memakan nasi', 'tidak ada', '2018-10-27', 'rumah', '', '', '', '', '', ''),
+(64, 1, 1, 23, 123, 123, 'tidak ada', 'sakit perut', 6, '', 'kurangi bergadang', 'tidak ada', '2017-10-20', 'rumah', '', '', '', '', '', ''),
+(65, 1, 1, 23, 123, 123, 'tidak ada', 'rasa nyeri di dada', 16, '', 'tidak boleh memakan nasi', 'tidak ada', '2018-10-29', 'rumah', '', '', '', '', '', ''),
+(66, 1, 1, 13, 90, 140, 'tidak ada', 'sakit kepala, pusng', 8, '', 'perbanyak istirahat', 'tidak ada', '2017-12-10', 'dirwayat dirumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(67, 1, 1, 13, 90, 140, 'tidak ada', 'sakit kepala, pusng', 8, '', 'perbanyak istirahat', 'tidak ada', '2017-12-10', 'dirwayat dirumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(68, 1, 1, 33, 180, 120, 'tidak ada', 'pusing sakit kepala', 8, '', 'perbanyak istirahat', 'tidak ada', '2017-12-10', 'rumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(69, 1, 1, 33, 100, 111, 'tidak ada', 'sakit kepala', 7, '', 'istirahat', 'tidak ada', '2017-12-10', 'rumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(70, 1, 1, 22, 130, 140, 'tidak ada', 'sakit perut', 9, '', 'tidak boleh memakan lemak', 'lab scan', '2017-12-10', 'rumah sakit rujukan', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(71, 1, 1, 23, 111, 123, 'tidak ada', 'sakit perut', 56, '', 'minum air degan', 'tidak ada', '2017-12-10', 'rujukan', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(72, 1, 1, 23, 111, 123, 'tidak ada', 'sakit perut', 56, '', 'minum air degan', 'tidak ada', '2017-12-10', 'rujukan', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(73, 1, 1, 33, 130, 122, 'tidak ada', 'sakit perut', 16, '', 'istirahat yang cukup', 'lab', '2017-12-10', 'rumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(74, 1, 1, 23, 33, 130, 'tidak ada', 'kelapa pusing', 10, '', 'istirahat yang cukup', 'tidak ada', '2017-12-10', 'rujukan rs', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(75, 1, 1, 23, 33, 1111, 'tidak ada', 'sakit kepala', 8, '', 'istirahat', 'hasil lab', '2017-12-10', 'rujuk rs', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(76, 1, 1, 23, 33, 111, 'tidak ada', 'sakit kepala', 8, '', 'Rawat inap', 'tidak ada', '2017-12-10', 'menuju rs', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(77, 1, 1, 22, 65, 77, 'tidak ada', 'sakit perut', 5, NULL, 'istirahat', 'labs', '2017-12-12', 'rumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(78, 1, 1, 122, 23, 33, 'gula', 'pusing,mual', 1, NULL, 'istirahat', 'hasil lab', '2017-12-12', 'rujukan rs', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(79, 2, 1, 120, 30, 100, 'tidak ada', 'sakit kepala', 1, 'sakit perut biasa', 'istirahat saja', 'labs', '2017-12-12', 'rujukan rs', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(80, 2, 1, 20, 30, 177, 'mag', 'sakit perut akut', 56, '', 'minum degan ijo', 'labs', '2017-12-12', 'istirahat dirumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada');
 
 -- --------------------------------------------------------
 
@@ -1794,9 +1212,6 @@ INSERT INTO `role` (`id`, `role`) VALUES
 (1, 'developer'),
 (2, 'administrator'),
 (3, 'user'),
-(4, 'fakultas'),
-(5, 'jurusan'),
-(6, 'mitra'),
 (7, 'pasien'),
 (8, 'dokter');
 
@@ -1864,78 +1279,6 @@ INSERT INTO `role_menu` (`id`, `role`, `menu`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `semester`
---
-
-CREATE TABLE `semester` (
-  `id` int(11) NOT NULL,
-  `semester` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `semester`
---
-
-INSERT INTO `semester` (`id`, `semester`) VALUES
-(1, 'Semester 1'),
-(2, 'Semester 2'),
-(3, 'Semester 3'),
-(4, 'Semester 4'),
-(5, 'Semester 5'),
-(6, 'Semester 6'),
-(7, 'Semester 7'),
-(8, 'Semester 8');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `seminar`
---
-
-CREATE TABLE `seminar` (
-  `id` int(11) NOT NULL,
-  `judul` varchar(100) NOT NULL,
-  `isi` text NOT NULL,
-  `tanggal` date NOT NULL,
-  `lokasi` varchar(250) NOT NULL,
-  `foto` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `seminar`
---
-
-INSERT INTO `seminar` (`id`, `judul`, `isi`, `tanggal`, `lokasi`, `foto`) VALUES
-(1, 'Surabaya Developer Day 2017', 'Kegiatan ini akan diselenggarakan selama 2 hari. Hari pertama merupakan kegiatan yang berbentuk seminar bertemakan “Technology and Innovation”, sedangkan hari kedua merupakan kegiatan yang berbentuk kompetisi bertemakan “Hack the box. Take the money!”.\r\n<p>\r\nPengunjung umum dapat mendatangi booth/stand perusahaan yang tersedia meskipun tidak mengikuti seminar atau contest.\r\nPemateri hari pertama untuk seminar akan diisi oleh:\r\n<p>\r\nIrfan Maulana (blibli.com)\r\nAlbert Sudiro (LinkedIn Indonesia)\r\nRedhuan Daniel Oon (Leader Adempiere Open Source ERP)\r\nElisha Tan(Facebook).\r\nHari kedua dalam kompetisi bekerjasama dengan komunitas Surabaya Hackerlink.\r\nKita juga mengadakan 4 perlombaan sebelum acara di mulai, yaitu:\r\nBlog competition\r\nVideography competition\r\nPhotography competition\r\nPoster competition\r\nRundown acara:\r\n\r\nSeminar : 25 Februari 2017 (09.00 – 16.00 WIB)\r\nKontes : 26 Februari 2017 (09.00 – 16.00 WIB)\r\nPameran : 25-26 Februari 2017 (09.00 – 16.00 WIB)\r\n===========\r\n\r\nPendaftaran\r\n\r\nBergabung dengan gerakan ini sekarang dan Daftar sekarang juga!\r\n\r\nUntuk seminar : bit.ly/SeminarSDD2017\r\nUntuk kontes : bit.ly/KontesSDD2017\r\n===========\r\n\r\nInfo dan kontak:\r\n\r\nIlla\r\nWhatsapp: 085810187939\r\nLine: @illarhs\r\nKiki\r\nWhatsapp: 081289846568\r\nLine: @ivonesarii\r\n\r\nKegiatan ini akan diselenggarakan selama 2 hari. Hari pertama merupakan kegiatan yang berbentuk seminar bertemakan “Technology and Innovation”, sedangkan hari kedua merupakan kegiatan yang berbentuk kompetisi bertemakan “Hack the box. Take the money!”.\r\n\r\nPengunjung umum dapat mendatangi booth/stand perusahaan yang tersedia meskipun tidak mengikuti seminar atau contest.\r\nPemateri hari pertama untuk seminar akan diisi oleh:\r\nIrfan Maulana (blibli.com)\r\nAlbert Sudiro (LinkedIn Indonesia)\r\nRedhuan Daniel Oon (Leader Adempiere Open Source ERP)\r\nElisha Tan(Facebook).\r\nHari kedua dalam kompetisi bekerjasama dengan komunitas Surabaya Hackerlink.\r\nKita juga mengadakan 4 perlombaan sebelum acara di mulai, yaitu:\r\nBlog competition\r\nVideography competition\r\nPhotography competition\r\nPoster competition\r\nRundown acara:\r\n\r\nSeminar : 25 Februari 2017 (09.00 – 16.00 WIB)\r\nKontes : 26 Februari 2017 (09.00 – 16.00 WIB)\r\nPameran : 25-26 Februari 2017 (09.00 – 16.00 WIB)\r\n===========\r\n\r\nPendaftaran\r\n\r\nBergabung dengan gerakan ini sekarang dan Daftar sekarang juga!\r\n\r\nUntuk seminar : bit.ly/SeminarSDD2017\r\nUntuk kontes : bit.ly/KontesSDD2017\r\n===========\r\n\r\nInfo dan kontak:\r\n\r\nIlla\r\nWhatsapp: 085810187939\r\nLine: @illarhs\r\nKiki\r\nWhatsapp: 081289846568\r\nLine: @ivonesarii', '2017-10-10', 'Surabaya', 'default.png'),
-(2, 'Seminar 2', 'tes seminar 2', '2017-10-11', 'Kampus ITS', 'default.png');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `skenario1`
---
-
-CREATE TABLE `skenario1` (
-  `id` int(11) NOT NULL,
-  `id_mitra` int(11) NOT NULL,
-  `id_tahun_ajar` int(11) NOT NULL,
-  `kuota` int(11) NOT NULL,
-  `diambil` int(11) NOT NULL,
-  `request` int(11) DEFAULT NULL,
-  `kuota_fix` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `skenario1`
---
-
-INSERT INTO `skenario1` (`id`, `id_mitra`, `id_tahun_ajar`, `kuota`, `diambil`, `request`, `kuota_fix`) VALUES
-(1, 4, 5, 100, 100, 3, 103),
-(2, 1, 5, 100, 90, NULL, 90);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `spesialis`
 --
 
@@ -1998,33 +1341,6 @@ INSERT INTO `spesialis` (`spesialis`, `id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `status_mahasiswa`
---
-
-CREATE TABLE `status_mahasiswa` (
-  `id` int(11) NOT NULL,
-  `status` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `status_mahasiswa`
---
-
-INSERT INTO `status_mahasiswa` (`id`, `status`) VALUES
-(1, 'Semester 1'),
-(2, 'Semester 2'),
-(3, 'Semester 3'),
-(4, 'Semester 4'),
-(5, 'Semester 5'),
-(6, 'Semester 6'),
-(7, 'Semester 7'),
-(8, 'Semester 8'),
-(9, 'Tidak Aktif'),
-(10, 'Lulus');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user`
 --
 
@@ -2073,12 +1389,6 @@ ALTER TABLE `artikel`
   ADD PRIMARY KEY (`id_artikel`);
 
 --
--- Indexes for table `berita`
---
-ALTER TABLE `berita`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `daftar_penyakit`
 --
 ALTER TABLE `daftar_penyakit`
@@ -2094,154 +1404,10 @@ ALTER TABLE `dokter`
   ADD KEY `id_no_izin` (`id_no_izin`);
 
 --
--- Indexes for table `donasi`
---
-ALTER TABLE `donasi`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `donasi_event`
---
-ALTER TABLE `donasi_event`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `donatur` (`donatur`);
-
---
--- Indexes for table `donasi_rutin`
---
-ALTER TABLE `donasi_rutin`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_mahasiswa` (`id_mahasiswa`);
-
---
--- Indexes for table `event`
---
-ALTER TABLE `event`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `fakultas`
---
-ALTER TABLE `fakultas`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `index_nilai`
---
-ALTER TABLE `index_nilai`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `jenis_kegiatan`
---
-ALTER TABLE `jenis_kegiatan`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`);
-
---
--- Indexes for table `jurusan`
---
-ALTER TABLE `jurusan`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fakultas` (`fakultas`);
-
---
 -- Indexes for table `kabupaten`
 --
 ALTER TABLE `kabupaten`
   ADD PRIMARY KEY (`id_kab`);
-
---
--- Indexes for table `mahasiswa`
---
-ALTER TABLE `mahasiswa`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fakultas` (`fakultas`,`jurusan`),
-  ADD KEY `jurusan` (`jurusan`);
-
---
--- Indexes for table `master_categori`
---
-ALTER TABLE `master_categori`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `master_donasi`
---
-ALTER TABLE `master_donasi`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `master_kategori_mitra`
---
-ALTER TABLE `master_kategori_mitra`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`);
-
---
--- Indexes for table `master_kegiatan`
---
-ALTER TABLE `master_kegiatan`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `id_mitra` (`id_mitra`),
-  ADD KEY `id_jenis` (`id_jenis`),
-  ADD KEY `id_kontrak` (`id_kontrak`),
-  ADD KEY `id_tahun_ajar` (`id_tahun_ajar`),
-  ADD KEY `id_jurusan` (`id_jurusan`);
-
---
--- Indexes for table `master_kontrak`
---
-ALTER TABLE `master_kontrak`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `id_mitra` (`id_mitra`);
-
---
--- Indexes for table `master_mitra`
---
-ALTER TABLE `master_mitra`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `id_user` (`id_user`),
-  ADD KEY `id_kategori` (`id_kategori`),
-  ADD KEY `id_kategori_2` (`id_kategori`),
-  ADD KEY `id_kota` (`id_kota`),
-  ADD KEY `id_provinsi` (`id_provinsi`);
-
---
--- Indexes for table `master_perusahaan`
---
-ALTER TABLE `master_perusahaan`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `ruang_lingkup` (`ruang_lingkup`);
-
---
--- Indexes for table `master_ruang_lingkup`
---
-ALTER TABLE `master_ruang_lingkup`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `master_skill`
---
-ALTER TABLE `master_skill`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `master_tahun_ajar`
---
-ALTER TABLE `master_tahun_ajar`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`);
-
---
--- Indexes for table `mata_kuliah`
---
-ALTER TABLE `mata_kuliah`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_jurusan` (`id_jurusan`);
 
 --
 -- Indexes for table `menu`
@@ -2249,31 +1415,6 @@ ALTER TABLE `mata_kuliah`
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`),
   ADD KEY `module` (`module`);
-
---
--- Indexes for table `mhs_minat`
---
-ALTER TABLE `mhs_minat`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `categori_id` (`categori_id`),
-  ADD KEY `id_mahasiswa` (`id_mahasiswa`);
-
---
--- Indexes for table `mhs_pekerjaan`
---
-ALTER TABLE `mhs_pekerjaan`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `mahasiswa_id` (`mahasiswa_id`),
-  ADD KEY `perusahaan_id` (`perusahaan_id`),
-  ADD KEY `ruang_lingkup` (`ruang_lingkup`);
-
---
--- Indexes for table `mhs_skill`
---
-ALTER TABLE `mhs_skill`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `skill_id` (`skill_id`),
-  ADD KEY `id_mahasiswa` (`id_mahasiswa`);
 
 --
 -- Indexes for table `migration`
@@ -2286,15 +1427,6 @@ ALTER TABLE `migration`
 --
 ALTER TABLE `module`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `nilai`
---
-ALTER TABLE `nilai`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `mahasiswa` (`mahasiswa`,`mata_kuliah`),
-  ADD KEY `pelajaran` (`mata_kuliah`),
-  ADD KEY `jurusan` (`jurusan`);
 
 --
 -- Indexes for table `no_izin_dokter`
@@ -2342,27 +1474,6 @@ ALTER TABLE `role_menu`
   ADD KEY `menu` (`menu`);
 
 --
--- Indexes for table `semester`
---
-ALTER TABLE `semester`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `seminar`
---
-ALTER TABLE `seminar`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `skenario1`
---
-ALTER TABLE `skenario1`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `id_mitra` (`id_mitra`),
-  ADD KEY `id_tahun_ajar` (`id_tahun_ajar`);
-
---
 -- Indexes for table `spesialis`
 --
 ALTER TABLE `spesialis`
@@ -2370,12 +1481,6 @@ ALTER TABLE `spesialis`
   ADD KEY `id` (`id`),
   ADD KEY `id_2` (`id`),
   ADD KEY `id_3` (`id`);
-
---
--- Indexes for table `status_mahasiswa`
---
-ALTER TABLE `status_mahasiswa`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -2401,12 +1506,7 @@ ALTER TABLE `action`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `berita`
---
-ALTER TABLE `berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `daftar_penyakit`
 --
@@ -2418,135 +1518,15 @@ ALTER TABLE `daftar_penyakit`
 ALTER TABLE `dokter`
   MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `donasi`
---
-ALTER TABLE `donasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `donasi_event`
---
-ALTER TABLE `donasi_event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `donasi_rutin`
---
-ALTER TABLE `donasi_rutin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `event`
---
-ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `fakultas`
---
-ALTER TABLE `fakultas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `index_nilai`
---
-ALTER TABLE `index_nilai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `jenis_kegiatan`
---
-ALTER TABLE `jenis_kegiatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `jurusan`
---
-ALTER TABLE `jurusan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `mahasiswa`
---
-ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
---
--- AUTO_INCREMENT for table `master_categori`
---
-ALTER TABLE `master_categori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `master_donasi`
---
-ALTER TABLE `master_donasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT for table `master_kategori_mitra`
---
-ALTER TABLE `master_kategori_mitra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT for table `master_kegiatan`
---
-ALTER TABLE `master_kegiatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT for table `master_kontrak`
---
-ALTER TABLE `master_kontrak`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `master_mitra`
---
-ALTER TABLE `master_mitra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `master_perusahaan`
---
-ALTER TABLE `master_perusahaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `master_ruang_lingkup`
---
-ALTER TABLE `master_ruang_lingkup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT for table `master_skill`
---
-ALTER TABLE `master_skill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `master_tahun_ajar`
---
-ALTER TABLE `master_tahun_ajar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT for table `mata_kuliah`
---
-ALTER TABLE `mata_kuliah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
--- AUTO_INCREMENT for table `mhs_minat`
---
-ALTER TABLE `mhs_minat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `mhs_pekerjaan`
---
-ALTER TABLE `mhs_pekerjaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
---
--- AUTO_INCREMENT for table `mhs_skill`
---
-ALTER TABLE `mhs_skill`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
---
 -- AUTO_INCREMENT for table `module`
 --
 ALTER TABLE `module`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `nilai`
---
-ALTER TABLE `nilai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `no_izin_dokter`
 --
@@ -2561,7 +1541,7 @@ ALTER TABLE `pasien`
 -- AUTO_INCREMENT for table `riwayat`
 --
 ALTER TABLE `riwayat`
-  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 --
 -- AUTO_INCREMENT for table `role`
 --
@@ -2573,30 +1553,10 @@ ALTER TABLE `role`
 ALTER TABLE `role_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=534;
 --
--- AUTO_INCREMENT for table `semester`
---
-ALTER TABLE `semester`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT for table `seminar`
---
-ALTER TABLE `seminar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `skenario1`
---
-ALTER TABLE `skenario1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
 -- AUTO_INCREMENT for table `spesialis`
 --
 ALTER TABLE `spesialis`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
---
--- AUTO_INCREMENT for table `status_mahasiswa`
---
-ALTER TABLE `status_mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `user`
 --
@@ -2613,49 +1573,6 @@ ALTER TABLE `dokter`
   ADD CONSTRAINT `dokter_ibfk_1` FOREIGN KEY (`id_no_izin`) REFERENCES `no_izin_dokter` (`id_no_izin`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `master_kegiatan`
---
-ALTER TABLE `master_kegiatan`
-  ADD CONSTRAINT `master_kegiatan_ibfk_1` FOREIGN KEY (`id_jenis`) REFERENCES `jenis_kegiatan` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `master_kegiatan_ibfk_2` FOREIGN KEY (`id_kontrak`) REFERENCES `master_kontrak` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `master_kegiatan_ibfk_3` FOREIGN KEY (`id_tahun_ajar`) REFERENCES `master_tahun_ajar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `master_kegiatan_ibfk_4` FOREIGN KEY (`id_mitra`) REFERENCES `master_mitra` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `master_kontrak`
---
-ALTER TABLE `master_kontrak`
-  ADD CONSTRAINT `master_kontrak_ibfk_1` FOREIGN KEY (`id_mitra`) REFERENCES `master_mitra` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `master_perusahaan`
---
-ALTER TABLE `master_perusahaan`
-  ADD CONSTRAINT `master_perusahaan_ibfk_1` FOREIGN KEY (`ruang_lingkup`) REFERENCES `master_ruang_lingkup` (`id`);
-
---
--- Constraints for table `mhs_minat`
---
-ALTER TABLE `mhs_minat`
-  ADD CONSTRAINT `mhs_minat_ibfk_1` FOREIGN KEY (`categori_id`) REFERENCES `master_categori` (`id`),
-  ADD CONSTRAINT `mhs_minat_ibfk_2` FOREIGN KEY (`id_mahasiswa`) REFERENCES `mahasiswa` (`id`);
-
---
--- Constraints for table `mhs_pekerjaan`
---
-ALTER TABLE `mhs_pekerjaan`
-  ADD CONSTRAINT `mhs_pekerjaan_ibfk_1` FOREIGN KEY (`mahasiswa_id`) REFERENCES `mahasiswa` (`id`),
-  ADD CONSTRAINT `mhs_pekerjaan_ibfk_2` FOREIGN KEY (`perusahaan_id`) REFERENCES `master_perusahaan` (`id`),
-  ADD CONSTRAINT `mhs_pekerjaan_ibfk_3` FOREIGN KEY (`ruang_lingkup`) REFERENCES `master_ruang_lingkup` (`id`);
-
---
--- Constraints for table `mhs_skill`
---
-ALTER TABLE `mhs_skill`
-  ADD CONSTRAINT `mhs_skill_ibfk_1` FOREIGN KEY (`skill_id`) REFERENCES `master_skill` (`id`),
-  ADD CONSTRAINT `mhs_skill_ibfk_2` FOREIGN KEY (`id_mahasiswa`) REFERENCES `mahasiswa` (`id`);
-
---
 -- Constraints for table `no_izin_dokter`
 --
 ALTER TABLE `no_izin_dokter`
@@ -2668,13 +1585,6 @@ ALTER TABLE `riwayat`
   ADD CONSTRAINT `riwayat_ibfk_1` FOREIGN KEY (`id_pasien`) REFERENCES `pasien` (`id_pasien`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `riwayat_ibfk_2` FOREIGN KEY (`id_dokter`) REFERENCES `dokter` (`id_dokter`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `riwayat_ibfk_3` FOREIGN KEY (`diagnosa`) REFERENCES `daftar_penyakit` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `skenario1`
---
-ALTER TABLE `skenario1`
-  ADD CONSTRAINT `skenario1_ibfk_1` FOREIGN KEY (`id_mitra`) REFERENCES `master_mitra` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `skenario1_ibfk_2` FOREIGN KEY (`id_tahun_ajar`) REFERENCES `master_tahun_ajar` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

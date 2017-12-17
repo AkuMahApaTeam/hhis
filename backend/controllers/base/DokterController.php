@@ -5,7 +5,7 @@
 namespace backend\controllers\base;
 
 use app\models\Dokter;
-    use backend\models\DokterSearch;
+use backend\models\DokterSearch;
 use yii\web\Controller;
 use yii\web\HttpException;
 use yii\helpers\Url;
@@ -32,18 +32,18 @@ public $enableCsrfValidation = false;
 */
 public function actionIndex()
 {
-    $searchModel  = new DokterSearch;
-    $dataProvider = $searchModel->search($_GET);
+	$searchModel  = new DokterSearch;
+	$dataProvider = $searchModel->search($_GET);
 
-Tabs::clearLocalStorage();
+	Tabs::clearLocalStorage();
 
-Url::remember();
-\Yii::$app->session['__crudReturnUrl'] = null;
+	Url::remember();
+	\Yii::$app->session['__crudReturnUrl'] = null;
 
-return $this->render('index', [
-'dataProvider' => $dataProvider,
-    'searchModel' => $searchModel,
-]);
+	return $this->render('index', [
+		'dataProvider' => $dataProvider,
+		'searchModel' => $searchModel,
+	]);
 }
 
 /**
@@ -54,13 +54,13 @@ return $this->render('index', [
 */
 public function actionView($id_dokter)
 {
-\Yii::$app->session['__crudReturnUrl'] = Url::previous();
-Url::remember();
-Tabs::rememberActiveState();
+	\Yii::$app->session['__crudReturnUrl'] = Url::previous();
+	Url::remember();
+	Tabs::rememberActiveState();
 
-return $this->render('view', [
-'model' => $this->findModel($id_dokter),
-]);
+	return $this->render('view', [
+		'model' => $this->findModel($id_dokter),
+	]);
 }
 
 /**
@@ -70,19 +70,19 @@ return $this->render('view', [
 */
 public function actionCreate()
 {
-$model = new Dokter;
+	$model = new Dokter;
 
-try {
-if ($model->load($_POST) && $model->save()) {
-return $this->redirect(['view', 'id_dokter' => $model->id_dokter]);
-} elseif (!\Yii::$app->request->isPost) {
-$model->load($_GET);
-}
-} catch (\Exception $e) {
-$msg = (isset($e->errorInfo[2]))?$e->errorInfo[2]:$e->getMessage();
-$model->addError('_exception', $msg);
-}
-return $this->render('create', ['model' => $model]);
+	try {
+		if ($model->load($_POST) && $model->save()) {
+			return $this->redirect(['view', 'id_dokter' => $model->id_dokter]);
+		} elseif (!\Yii::$app->request->isPost) {
+			$model->load($_GET);
+		}
+	} catch (\Exception $e) {
+		$msg = (isset($e->errorInfo[2]))?$e->errorInfo[2]:$e->getMessage();
+		$model->addError('_exception', $msg);
+	}
+	return $this->render('create', ['model' => $model]);
 }
 
 /**
@@ -93,15 +93,15 @@ return $this->render('create', ['model' => $model]);
 */
 public function actionUpdate($id_dokter)
 {
-$model = $this->findModel($id_dokter);
+	$model = $this->findModel($id_dokter);
 
-if ($model->load($_POST) && $model->save()) {
-return $this->redirect(Url::previous());
-} else {
-return $this->render('update', [
-'model' => $model,
-]);
-}
+	if ($model->load($_POST) && $model->save()) {
+		return $this->redirect(Url::previous());
+	} else {
+		return $this->render('update', [
+			'model' => $model,
+		]);
+	}
 }
 
 /**
@@ -112,27 +112,27 @@ return $this->render('update', [
 */
 public function actionDelete($id_dokter)
 {
-try {
-$this->findModel($id_dokter)->delete();
-} catch (\Exception $e) {
-$msg = (isset($e->errorInfo[2]))?$e->errorInfo[2]:$e->getMessage();
-\Yii::$app->getSession()->addFlash('error', $msg);
-return $this->redirect(Url::previous());
-}
+	try {
+		$this->findModel($id_dokter)->delete();
+	} catch (\Exception $e) {
+		$msg = (isset($e->errorInfo[2]))?$e->errorInfo[2]:$e->getMessage();
+		\Yii::$app->getSession()->addFlash('error', $msg);
+		return $this->redirect(Url::previous());
+	}
 
 // TODO: improve detection
-$isPivot = strstr('$id_dokter',',');
-if ($isPivot == true) {
-return $this->redirect(Url::previous());
-} elseif (isset(\Yii::$app->session['__crudReturnUrl']) && \Yii::$app->session['__crudReturnUrl'] != '/') {
-Url::remember(null);
-$url = \Yii::$app->session['__crudReturnUrl'];
-\Yii::$app->session['__crudReturnUrl'] = null;
+	$isPivot = strstr('$id_dokter',',');
+	if ($isPivot == true) {
+		return $this->redirect(Url::previous());
+	} elseif (isset(\Yii::$app->session['__crudReturnUrl']) && \Yii::$app->session['__crudReturnUrl'] != '/') {
+		Url::remember(null);
+		$url = \Yii::$app->session['__crudReturnUrl'];
+		\Yii::$app->session['__crudReturnUrl'] = null;
 
-return $this->redirect($url);
-} else {
-return $this->redirect(['index']);
-}
+		return $this->redirect($url);
+	} else {
+		return $this->redirect(['index']);
+	}
 }
 
 /**
@@ -144,10 +144,10 @@ return $this->redirect(['index']);
 */
 protected function findModel($id_dokter)
 {
-if (($model = Dokter::findOne($id_dokter)) !== null) {
-return $model;
-} else {
-throw new HttpException(404, 'The requested page does not exist.');
-}
+	if (($model = Dokter::findOne($id_dokter)) !== null) {
+		return $model;
+	} else {
+		throw new HttpException(404, 'The requested page does not exist.');
+	}
 }
 }

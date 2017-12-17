@@ -50,6 +50,17 @@ abstract class Dokter extends \yii\db\ActiveRecord
             [['id_no_izin', 'password', 'id_kota', 'id_provinsi', 'id_user'], 'required'],
             [['id_no_izin', 'id_kota', 'id_provinsi', 'id_user'], 'integer'],
             [['email'], 'string', 'max' => 50],
+            ['email', 'trim'],
+            ['email', 'required'],
+            ['email', 'email'],
+            ['email', 'unique', 
+            'targetClass' => 'app\models\Dokter', 
+            'message' => 'This email address has already been taken.',
+            'when' => function($model,$attribute){
+                    return $model->{$attribute} !== $model->getOldAttribute($attribute);
+
+                },
+            ],
             [['alamat_rumah', 'alamat_praktik', 'nama_dokter', 'password'], 'string', 'max' => 255],
             [['no_telp'], 'string', 'max' => 15],
             [['file1'], 'file', 'extensions'=>'png,jpg'],
