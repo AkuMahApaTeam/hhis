@@ -1,5 +1,6 @@
 
 <?php
+if($dataProvider !=null){
 foreach ($dataProvider as $key) {
      $b[] = ($key['namanya']);
      $a[] = (int)($key['diagno']);
@@ -116,3 +117,11 @@ foreach ($dataProvider as $key) {
     </tr>
   </tbody>
 </table>
+<?php
+}else{
+?>
+<div class="alert alert-danger" role="alert">Data Tidak Ditemukan, silahkan melakukan pemeriksaan terlebih dahulu
+</div>
+<?php
+}
+?>

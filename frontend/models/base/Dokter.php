@@ -5,7 +5,6 @@
 namespace frontend\models\base;
 
 use Yii;
-
 /**
  * This is the base-model class for table "dokter".
  *
@@ -27,7 +26,6 @@ use Yii;
  */
 abstract class Dokter extends \yii\db\ActiveRecord
 {
-
 
 
     /**
@@ -89,6 +87,7 @@ abstract class Dokter extends \yii\db\ActiveRecord
     {
         return $this->hasMany(\frontend\models\Riwayat::className(), ['id_dokter' => 'id_dokter']);
     }
+
 
 
 

@@ -108,7 +108,7 @@ class PasienSignupForm extends Model
             $pasien->id_user = $this->id_user;
             $pasien->email = $this->email;
             $pasien->password = $this->password;
-
+            $pasien->image = 'uploads/pasien/def_patient.png';
              return $pasien->save() ? $pasien : null;
 
         }        

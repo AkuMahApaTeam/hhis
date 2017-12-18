@@ -58,7 +58,6 @@ $this->params['breadcrumbs'][] = $this->title;
                             'prompt' => 'Pilih Provinsi',
                         ],
                      ])->label('Provinsi Tinggal'); ?>
-                  
                     <div class="form-group">
                         <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
                     </div>

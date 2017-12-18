@@ -105,6 +105,7 @@ class SignupForm extends Model
             $dokter->id_kota = $this->id_kota;
             $dokter->id_provinsi = $this->id_provinsi;
             $dokter->id_user = $this->id_user;
+            $dokter->image = 'uploads/dokter/def_dokter.png';
 
              return $dokter->save() ? $dokter : null;
 
