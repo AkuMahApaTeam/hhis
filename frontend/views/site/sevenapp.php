@@ -1,5 +1,17 @@
     <script src="<?= Yii::$app->request->baseUrl.'/themes/SevenApp/js/jquery.min.js' ?>"></script> 
      <script src="<?= Yii::$app->request->baseUrl.'/themes/SevenApp/js/script.js' ?>"></script> 
+     <style>
+div.box1 {
+  width: 50%;
+  padding: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+div.container-1 {
+  padding: 10px;
+}
+</style>
+
 <section id="features">
         <div class="container">
             <div class="row">
@@ -53,12 +65,6 @@
                                         </div>
                                     </div>
                                 </div>
-                         
-                   
-                       
-                       
-                    
-
                 </div>
             </div>
         </div>
@@ -131,32 +137,49 @@
             </div>
         </div>
     </section>
-<!-- 
+
     <section id="settings">
         <div class="container">
-            <div class="col-md-7">
+            <div class="row">
+            <div class="col-md-6">
                 <img src="<?= Yii::$app->request->baseUrl.'/themes/SevenApp/img/weather.png' ?>" alt="" class="scrollpoint sp-effect3">
-                <h2 class="scrollpoint sp-effect3">Seven App <span>Application Settings</span></h2>
-                <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut omnis nam non nemo quia provident, at saepe accusamus, minus, fugiat dignissimos. Sapiente dignissimos nostrum, vitae culpa unde enim eaque nulla. Maiores perspiciatis consequatur aut corporis accusamus facilis rerum vitae iure, temporibus perferendis harum cumque minus ratione iste soluta magni ipsa repellendus distinctio consectetur similique quod recusandae atque, dignissimos omnis beatae!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut omnis nam non nemo quia provident, at saepe accusamus, minus, fugiat dignissimos. Sapiente dignissimos nostrum, vitae culpa unde enim eaque nulla.</p>
-                <p>
-                    <a href="#" class="btn btn-default scrollpoint sp-effect1">download now!</a>
-                    <a href="#" class="btn btn-empty scrollpoint sp-effect2">learn more</a>
-                </p>
+                <h2 class="scrollpoint sp-effect3">PaMedHis <span>Web Application </span></h2>
             </div>
-            <div class="col-md-5 scrollpoint sp-effect5">
-                <img src="img/iphone1.png" class="img-responsive hidden-xs iphone-settings" alt="">
+            <div class="col-md-6 scrollpoint sp-effect5 box1">
+                          <img src="<?= Yii::$app->request->baseUrl.'/themes/SevenApp/img/dasdokter.png' ?>" class="animated fadeInDown" alt="" style="width:100%;margin: 0">
+                    <div class="container-1">
+                        <p>Dashboard for doctor</p>
+                    </div>
             </div>
         </div>
-    </section> -->
+        </div>
+    </section>
+
+    <section id="settings">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6 scrollpoint sp-effect5 box1">
+                          <img src="<?= Yii::$app->request->baseUrl.'/themes/SevenApp/img/daspasien.png' ?>" class="animated fadeInDown" alt="" style="width:100%;margin: 0">
+                    <div class="container-1">
+                        <p>Dashboard for patient</p>
+                    </div>
+            </div>
+              <div class="col-md-6">
+                <img src="<?= Yii::$app->request->baseUrl.'/themes/SevenApp/img/weather.png' ?>" alt="" class="scrollpoint sp-effect3">
+                <h2 class="scrollpoint sp-effect3">PaMedHis <span>Web Application </span></h2>
+            </div>
+        </div>
+        </div>
+    </section>
+     
 
 
-    <section id="packages">
+<!--     <section id="packages">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-push-2 clearfix">
                     <div class="section-heading scrollpoint sp-effect3">
-                        <h3>PaMedHis<span> Android & IOS</span></h3>
+                        <h3>PaMedHis<span> App</span></h3>
                         <span class="divider"></span>
 
                     </div>
@@ -173,7 +196,7 @@
             </div>
        
         </div>
-    </section>
+    </section> -->
 
 
  
