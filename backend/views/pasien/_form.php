@@ -64,6 +64,7 @@ use yii\helpers\ArrayHelper;
                             'prompt' => 'Pilih Provinsi',
                         ],
                      ])->label('Provinsi Tinggal'); ?>
+                     
                       <?= $form->field($model, 'file1')->fileInput()->label("Foto Profile") ?>
         </p>
         <?php $this->endBlock(); ?>

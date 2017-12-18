@@ -5,6 +5,7 @@
 namespace backend\controllers\base;
 
 use app\models\Pasien;
+use app\models\Dokter;
 use backend\models\PasienSearch;
 use common\models\User;
 use yii\web\Controller;
@@ -43,7 +44,17 @@ public function actionIndex()
        ]);
    }else{
     $searchModel  = new PasienSearch;
-    $dataProvider = $searchModel->search($_GET);
+    if($_GET!=null){
+        $dataProvider = $searchModel->search($_GET);
+    }else{
+        $id_usr = \Yii::$app->user->identity->id;
+        $id_dokt = Dokter::find()->andWhere('id_user= '.$id_usr)->One();
+        $id_dokter = $id_dokt->id_dokter;
+        $query = Pasien::find()->innerJoinWith('riwayats')->andWhere('riwayat.id_dokter = '.$id_dokter)->groupBy('pasien.id_pasien');
+        $dataProvider = new ActiveDataProvider([
+           'query' => $query,
+       ]);
+    }
 }
 Tabs::clearLocalStorage();
 
@@ -103,6 +114,7 @@ public function actionCreate()
                foreach ($showId as $key => $value) {
                 $model->id_user = $value['id'];
             }
+          //  $model->image = 'uploads/pasien/def_patient.png';
             $model->save();
 
             // $pasien = new Pasien();
