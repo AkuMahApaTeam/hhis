@@ -49,10 +49,10 @@ div.container-1 {
                                     <div class="col-md-3 col-sm-6">
                                         <div class="feature scrollpoint sp-effect1">
                                             <div class="icon">
-                                                <i class="fa fa-user-md fa-4x"></i>
+                                                <i class="fa fa-envelope fa-4x"></i>
                                             </div>
-                                            <h4>Doctor Advice</h4>
-                                            <p>We will help you to find the best doctor for you</p>
+                                            <h4>Sms Notifications</h4>
+                                            <p>we will notify you every time you check</p>
                                         </div>
                                     </div>
                                     <div class="col-md-3 col-sm-6">
