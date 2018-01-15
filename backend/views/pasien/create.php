@@ -13,13 +13,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="giiant-crud pasien-create">
 
-    <h1>
-       Pasien
-        <small>
-                        <?= $model->id_pasien ?>
-        </small>
-    </h1>
-
     <div class="clearfix crud-navigation">
         <div class="pull-left">
             <?=             Html::a(

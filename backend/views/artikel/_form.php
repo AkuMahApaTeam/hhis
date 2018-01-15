@@ -9,7 +9,8 @@ use zxbodya\yii2\elfinder\TinyMceElFinder;
 /* @var $model app\models\Artikel */
 /* @var $form yii\widgets\ActiveForm */
 ?>
-
+<div class="box box-primary">
+   <div class="box-body">
 <div class="artikel-form">
 
     <?php $form = ActiveForm::begin(); ?>
@@ -35,4 +36,6 @@ use zxbodya\yii2\elfinder\TinyMceElFinder;
 
     <?php ActiveForm::end(); ?>
 
+</div>
+</div>
 </div>

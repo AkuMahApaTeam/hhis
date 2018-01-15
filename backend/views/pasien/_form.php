@@ -14,7 +14,8 @@ use yii\helpers\ArrayHelper;
 */
 
 ?>
-
+<div class="box box-primary">
+   <div class="box-body">
 <div class="pasien-form">
 
     <?php $form = ActiveForm::begin([
@@ -102,4 +103,5 @@ use yii\helpers\ArrayHelper;
     </div>
 
 </div>
-
+</div>
+</div>

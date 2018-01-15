@@ -23,5 +23,27 @@ class KabupatenController extends ActiveController
           ],
       ];
   }
+
+    public function actionRead(){
+        $data = [];
+        $cek_kab = \api\modules\v1\models\Kabupaten::find()->all();        
+            foreach ($cek_kab as $kab) {
+                 $data[] = [
+                'id_kab' => $kab['id_kab'],
+                'id_prov' => $kab['id_prov'],
+                'nama' => $kab['nama']
+               
+            ];
+            }
+             return [
+                "datakota" => $data
+            ];
+
+        
+     }
+
+
+
+
     public $modelClass = 'api\modules\v1\models\Kabupaten';
 }

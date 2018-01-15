@@ -231,7 +231,7 @@ class RiwayatController extends Controller
           $client = new Client();
           $response_token = $client->createRequest()
           ->setMethod('post')
-          ->addHeaders(['X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff','Content-Type' => 'application/x-www-form-urlencoded'])
+          ->addHeaders(['X-Pometera-Api-Key' => '75b3b9e6-2331-4641-bfbb-e3b47cc35e74','Content-Type' => 'application/x-www-form-urlencoded'])
           ->setUrl('https://api.pometera.id/smsnotif/token')
           ->setData(['grant_type' => 'client_credentials'])
           ->send();
@@ -240,7 +240,7 @@ class RiwayatController extends Controller
            $response = $client->createRequest()
            ->setMethod('post')
            ->addHeaders(['Authorization' =>'Bearer'.' '.$response_token->data['access_token'],
-            'X-Pometera-Api-Key' => '8e21dbb1-82a2-482d-a8f7-0378c53468ff'])
+            'X-Pometera-Api-Key' => '75b3b9e6-2331-4641-bfbb-e3b47cc35e74'])
            ->setUrl('https://api.pometera.id/smsnotif/messages')
            ->setData(['msisdn' => $Pasienmodel_forapi->no_telp_pasien, 'content' => 'Halo'.' '.$Pasienmodel_forapi->nama_pasien.' '.'kamu telah melakukan pemeriksaan pada tanggal '.' '.$date_now.' '.'jam'.' '.$time_now.' '.'oleh dokter'.' '.$AmodelDokter->nama_dokter.' '.'data kamu telah masuk dalam sistem kami, kami bisa pastikan data kamu bisa aman bersama kami.. SALAM PAMEDHIS, INDONESIA SEHAT !!! semoga kamu bisa segera sembuh dan melanjutkan aktivitas seperti biasanya '])
            ->send();
