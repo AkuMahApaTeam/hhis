@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2017 at 03:58 PM
+-- Generation Time: Jan 16, 2018 at 03:59 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -325,8 +325,10 @@ CREATE TABLE `dokter` (
 --
 
 INSERT INTO `dokter` (`id_dokter`, `id_no_izin`, `email`, `alamat_rumah`, `alamat_praktik`, `nama_dokter`, `no_telp`, `password`, `id_kota`, `id_provinsi`, `id_user`, `image`) VALUES
-(1, 2, 'faruqfadhil7@gmail.com', 'SHDHSADVGHSV', 'HSDGHJS', 'sherly', 'HSDGS', 'frq03051997', 1105, 12, 47, 'uploads/dokter/vsvs.jpg'),
-(3, 3, 'dokter2@gmail.com', 'socah', 'bangkalan', 'ainun', '098736372', 'ainun03051997', 3526, 35, 60, '');
+(1, 2, 'faruqfadhil7@gmail.com', 'DSN JADDIH BARAT II SOCAH BKL', 'JL SOEKARNO HATTA BKL', 'sherly', '085859953545', 'frq03051997', 1105, 12, 47, 'uploads/dokter/vsvs.jpg'),
+(3, 3, 'dokter2@gmail.com', 'socah', 'bangkalan', 'ainun', '098736372', 'ainun03051997', 3526, 35, 60, ''),
+(4, 5, 'edi@gmail.com', 'pangeranan asri bangkalan', 'pangeranan asri', 'edi supratmo', '085859953545', 'frq03051997', 3526, 35, 72, 'uploads/dokter/def_dokter.png'),
+(5, 6, 'cp.ubiku@gmail.com', 'keputih gang 3 c sukolilo', 'keputih gang 3 c sukolilo', 'faruq fadhil', '085859953545', 'frq03051997', 3578, 35, 74, 'uploads/dokter/def_dokter.png');
 
 -- --------------------------------------------------------
 
@@ -995,7 +997,9 @@ CREATE TABLE `no_izin_dokter` (
 INSERT INTO `no_izin_dokter` (`id_no_izin`, `no_izin`, `keahlian`) VALUES
 (2, 'D001', 1),
 (3, 'D002', 5),
-(4, 'D003', 3);
+(4, 'D003', 3),
+(5, 'D004', 5),
+(6, 'D005', 5);
 
 -- --------------------------------------------------------
 
@@ -1024,8 +1028,10 @@ CREATE TABLE `pasien` (
 --
 
 INSERT INTO `pasien` (`id_pasien`, `nama_pasien`, `alamat`, `no_telp_pasien`, `gol_darah`, `jenis_kelamin`, `nik`, `id_kota`, `id_provinsi`, `id_user`, `email`, `password`, `image`) VALUES
-(1, 'faruq', 'bangkalan', '085859953545', 'A', 'PRIA', 3526020305970005, 1105, 12, 48, 'ristekbempens@gmail.com', 'frq03051997', 'uploads/pasien/WIN_20171114_10_13_57_Pro.jpg'),
-(2, 'Adhisma', 'tegal mulyorejo', '086756726322', 'O', 'PRIA', 3526020305971235, 1102, 13, 55, 'adhisma@gmail.com', 'adhisma', '');
+(1, 'faruq', 'bangkalan', '085859953545', 'A', 'PRIA', 3526020305970005, 1105, 12, 48, 'ristekbempens@gmail.com', 'frq03051997', 'uploads/pasien/IMG_1183.jpg'),
+(2, 'Adhisma', 'tegal mulyorejo', '086756726322', 'O', 'PRIA', 3526020305971235, 1102, 13, 55, 'adhisma@gmail.com', 'adhisma', ''),
+(3, 'wahyu abied', 'sidoarjo', '085859953545', 'O', 'PRIA', 3374723832738393, 3515, 35, 73, 'wahyu@gmail.com', 'frq03051997', 'uploads/pasien/def_patient.png'),
+(5, 'reza pahlevi', 'bangkalan ', '085859953545', 'O', 'PRIA', 325242635727262, 3526, 35, 78, 'levi@gmail.com', 'frq03051997', 'uploads/pasien/def_patient.png');
 
 -- --------------------------------------------------------
 
@@ -1191,7 +1197,12 @@ INSERT INTO `riwayat` (`id_riwayat`, `id_pasien`, `id_dokter`, `umur`, `berat_ba
 (77, 1, 1, 22, 65, 77, 'tidak ada', 'sakit perut', 5, NULL, 'istirahat', 'labs', '2017-12-12', 'rumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
 (78, 1, 1, 122, 23, 33, 'gula', 'pusing,mual', 1, NULL, 'istirahat', 'hasil lab', '2017-12-12', 'rujukan rs', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
 (79, 2, 1, 120, 30, 100, 'tidak ada', 'sakit kepala', 1, 'sakit perut biasa', 'istirahat saja', 'labs', '2017-12-12', 'rujukan rs', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
-(80, 2, 1, 20, 30, 177, 'mag', 'sakit perut akut', 56, '', 'minum degan ijo', 'labs', '2017-12-12', 'istirahat dirumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada');
+(80, 2, 1, 20, 30, 177, 'mag', 'sakit perut akut', 56, '', 'minum degan ijo', 'labs', '2017-12-12', 'istirahat dirumah', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(81, 5, 4, 20, 80, 165, 'tidak ada', 'sakit perut, mual, badan meriang', 56, '', 'meminum air putih yang banyak', 'tidak ada', '2017-12-19', 'istirahat dirumah', 'tidak ada gejala', 'tidak ada gejala', 'tidak ada gejala', 'tidak ada gejala', 'tidak ada gejala', 'tidak ada gejala'),
+(82, 5, 4, 20, 80, 165, 'tidak ada', 'sakit perut, mual', 56, '', 'meminum air putih yang banyak', 'tidak ada', '2017-12-19', 'istirahat dirumah', 'tidak ada gejala', 'tidak ada gejala', 'tidak ada gejala', 'tidak ada gejala', 'tidak ada gejala', 'tidak ada gejala'),
+(83, 1, 1, 20, 60, 170, 'tidak ada', 'sakit kepala,meriang', 8, '', 'istirahat yang cukup', 'tidak ada', '2017-12-19', 'istirahat dirumah', 'tidak ada', 'tidak ada kendala', 'tidak ada kendala', 'tidak ada kendala', 'tidak ada kendala', 'tidak ada kendala'),
+(84, 1, 1, 32, 78, 120, 'tidak ada', 'pusing', 8, '', 'istirahat yg cukup', 'lab ronsen', '2018-01-15', 'rujukan rs', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada'),
+(85, 1, 1, 55, 89, 87, 'tidak ada', 'sakit perut', 4, '', 'istirahat', 'lab', '2018-01-15', 'rumah sakit rujukan', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada', 'tidak ada');
 
 -- --------------------------------------------------------
 
@@ -1368,7 +1379,11 @@ INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_res
 (47, 'faruqfadhil7@gmail.com', 'apydnEJfGibjtXyaeKvqDCf_PVASXDcN', '$2y$13$LO6uiP7734OAS/hRfQ.Q7u7VYzoGc3dd8ZW7R9kefBQOmiMtHJEOW', NULL, 'faruqfadhil7@gmail.com', 10, 1507129608, 1507129608, 8),
 (48, 'ristekbempens@gmail.com', 'uwroUmK8ho9E0VffCrEwHEk4MKEeuo4J', '$2y$13$o8IlNVxpIKfLKPsft.pg6.c5uFNluyOFVbNLH4J1bFR/7UMaRChe6', NULL, 'ristekbempens@gmail.com', 10, 1507309719, 1507309719, 7),
 (55, 'adhisma@gmail.com', 'm4al26mcWB8RqBw-hNDTWxB_Bno0OjZK', '$2y$13$apAAUP2jSFG9TyT95Y.0JeOaJQ4mxr29YkQEaBPsE7Ry5c1kNhqcG', NULL, 'adhisma@gmail.com', 10, 1507653835, 1507653835, 7),
-(60, 'dokter2@gmail.com', '2NQdcLuVdbohlgVWZosCCloDQRZ7_Js_', '$2y$13$nEI5Gh6JG/CHTDzOYLW0POoWkAkE4qFmmm17/9ZCJLtjyvaaVv4ey', NULL, 'dokter2@gmail.com', 10, 1507876227, 1507876227, 8);
+(60, 'dokter2@gmail.com', '2NQdcLuVdbohlgVWZosCCloDQRZ7_Js_', '$2y$13$nEI5Gh6JG/CHTDzOYLW0POoWkAkE4qFmmm17/9ZCJLtjyvaaVv4ey', NULL, 'dokter2@gmail.com', 10, 1507876227, 1507876227, 8),
+(72, 'edi@gmail.com', 'ub0AmbtuylgSE8QobfEJPBFnS7zKwg9D', '$2y$13$w9D30a8zhOPfYRhkumU1rebAz6HuzGjQdJ4n3nJdxbmz5RMmQJfPC', NULL, 'edi@gmail.com', 10, 1513578916, 1513578916, 8),
+(73, 'wahyu@gmail.com', 'hw8VtG072LI2rsjTm63YcTvjNVOv39hy', '$2y$13$Qxsjj9Nd1aas/Z8DPbakku8VogLXEUUYns/tJL/zeTNi/4dGrV54a', NULL, 'wahyu@gmail.com', 10, 1513579398, 1513579398, 7),
+(74, 'cp.ubiku@gmail.com', '79TkNOwzj2D7R10xISjmSvbCpinC60jM', '$2y$13$c3dwR4EC1D6.6PV.x6s0suvCrv54MBjQHSjU5A5RGNVcaZ94RNni2', NULL, 'cp.ubiku@gmail.com', 10, 1513603542, 1513603542, 8),
+(78, 'levi@gmail.com', 'rag7wIQrP5BUFRxvBRYOvJ9YjwLyfZPa', '$2y$13$EXTzkvpRB/zr/Y3eEVIs5e33l145QvFt4q0kdFY9Kwom2LlqazopS', NULL, 'levi@gmail.com', 10, 1513617085, 1513617085, 7);
 
 --
 -- Indexes for dumped tables
@@ -1516,7 +1531,7 @@ ALTER TABLE `daftar_penyakit`
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
-  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `menu`
 --
@@ -1531,17 +1546,17 @@ ALTER TABLE `module`
 -- AUTO_INCREMENT for table `no_izin_dokter`
 --
 ALTER TABLE `no_izin_dokter`
-  MODIFY `id_no_izin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_no_izin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id_pasien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pasien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `riwayat`
 --
 ALTER TABLE `riwayat`
-  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 --
 -- AUTO_INCREMENT for table `role`
 --
@@ -1561,7 +1576,7 @@ ALTER TABLE `spesialis`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 --
 -- Constraints for dumped tables
 --
